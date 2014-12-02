@@ -1,0 +1,1273 @@
+\section{R\'{e}f\'{e}rence du fichier interaction.h}
+\label{interaction_8h}\index{interaction.h@{interaction.h}}
+en tete des fonctions g\'{e}rant l'interaction avec le joueur 
+
+\subsection*{Fonctions}
+\begin{CompactItemize}
+\item 
+int {\bf attente\_\-clic} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur pendant le jeu \item\end{CompactList}\item 
+int {\bf attente\_\-action\_\-accueil} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-boutons[4], SDL\_\-Surface $\ast$surf\_\-nombre[6], SDL\_\-Surface $\ast$surf\_\-fleche\_\-gauche, SDL\_\-Surface $\ast$surf\_\-fleche\_\-droite)
+\begin{CompactList}\small\item\em d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur sur la page d'accueil \item\end{CompactList}\item 
+int {\bf attente\_\-action\_\-config} (SDL\_\-Surface $\ast$surf\_\-ecran, char $\ast$$\ast$str\_\-nom\_\-joueur, SDL\_\-Surface $\ast$surf\_\-boutons[6], SDL\_\-Surface $\ast$surf\_\-champ, int nombre\_\-joueur)
+\begin{CompactList}\small\item\em d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur sur la page des noms des joueurs \item\end{CompactList}\item 
+int {\bf attente\_\-validation\_\-propriete} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$$\ast$plateau, SDL\_\-Surface $\ast$surf\_\-centre, {\bf cases} $\ast$pcase, {\bf joueur} $\ast$pj\_\-joueur, int int\_\-type\_\-action)
+\begin{CompactList}\small\item\em d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur losqu'il est tomb\'{e} sur une propri\'{e}t\'{e} \item\end{CompactList}\item 
+int {\bf attente\_\-validation\_\-message} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, char $\ast$titre, char $\ast$message, int int\_\-type\_\-message)
+\begin{CompactList}\small\item\em d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur lors de l'affichage d'un message \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Description d\'{e}taill\'{e}e}
+en tete des fonctions g\'{e}rant l'interaction avec le joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$ \end{Desc}
+\begin{Desc}
+\item[Date:]09/01/2006 \end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+
+
+D\'{e}finition dans le fichier {\bf interaction.h}.
+
+\subsection{Documentation des fonctions}
+\index{interaction.h@{interaction.h}!attente_clic@{attente\_\-clic}}
+\index{attente_clic@{attente\_\-clic}!interaction.h@{interaction.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int attente\_\-clic (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{interaction_8h_ceef01ee631e6d4f4a515f599e04dd2e}
+
+
+d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur pendant le jeu 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]-1 fonctionnement normal, 0 quitter le jeu, 1 tour du joueur termin\'{e} ce qui correspond \`{a} la derni\`{e}re action du joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 11 du fichier interaction.c.
+
+R\'{e}f\'{e}renc\'{e} par jeu().
+
+\begin{Code}\begin{verbatim}12 {
+13   //Variable de boucle
+14   int continuer;
+15   //-1 fonctionnement normal, 0 quitter le jeu, 1 tour du joueur terminé
+16   continuer=-1;
+17   //Postion du clic
+18   SDL_Rect position_clic;
+19   //Etat des boutons (false = normal et true =  surbrillance)
+20   bool bool_bouton_etat;
+21   //Mode par défaut
+22   bool_bouton_etat=false;
+23   //Variable d'état des dés
+24   int int_lancer;
+25   //1 si lancé, 0 autrement
+26   int_lancer=0;
+27   //Evénement sdl
+28     SDL_Event event;
+29     //Nombre tiré par les dés
+30     int int_nb_tire;
+31     //Nombre de propriété du joueur
+32     int int_nombre_propriete;
+33     //Action possible
+34     int int_action;
+35     
+36     //Calcul du nombre de propriété du joueur
+37   int_nombre_propriete=nombre_propriete(pj_joueur);
+38   
+39     //Tant que le joueur n'a pas quitter ou que le tour du joueur n'est pas terminé
+40     while (continuer==-1)
+41     {
+42       //On attend un événement
+43         SDL_WaitEvent(&event);
+44         //Selon l'événement
+45         switch(event.type)
+46         {
+47       //S'il s'agit d'un appui sur une touche
+48       case SDL_KEYDOWN:
+49         //Selon la touche
+50         switch(event.key.keysym.sym)
+51         {
+52           //Echap
+53           case SDLK_ESCAPE:
+54             //On quitte le prgm
+55             continuer = 0;
+56             break;
+57           //Pour toutes les autres touches
+58           default:
+59             //On fait rien...
+60             break;
+61         }
+62         break;
+63       //En cas de mouvement de la souris
+64       case SDL_MOUSEMOTION:
+65         //On sauvegarde les nouvelles coordonnées de la souris
+66         position_clic.x=event.button.x;
+67         position_clic.y=event.button.y;
+68         //Si la souris passe sur le bouton de fin de tour
+69         if(position_clic.x>PANNEAU_FDT_POS_X && position_clic.x<(PANNEAU_FDT_POS_X+PANNEAU_FDT_LARGEUR)
+70         && position_clic.y>PANNEAU_FDT_POS_Y && position_clic.y<(PANNEAU_FDT_POS_Y+PANNEAU_FDT_HAUTEUR) && int_lancer==1)
+71         {
+72           //On réaffiche le panneau avec le bouton fin de tour en surbrillance
+73           if(bool_bouton_etat==false) affich_panneau_fdt(surf_ecran, true);
+74           //Le bouton est en surbrillance
+75           bool_bouton_etat=true;
+76         }
+77         //Si le joueur passe la souris sur le bouton lancer dés
+78         else if(position_clic.x>PANNEAU_DES_POS_X && position_clic.x<(PANNEAU_DES_POS_X+PANNEAU_DES_LARGEUR)
+79         && position_clic.y>PANNEAU_DES_POS_Y && position_clic.y<(PANNEAU_DES_POS_Y+PANNEAU_DES_HAUTEUR) && int_lancer==0)
+80         {
+81           //On réaffiche le panneau avec le bouton lancer dés en surbrillance
+82           if(bool_bouton_etat==false) affich_panneau_des_bouton(surf_ecran,1);
+83           //L'un des boutons est en surbrillance
+84           bool_bouton_etat=true;
+85         }
+86         //Si le joueur clic sur l'un des  boutons de commande (coin supérieur gauche)
+87         else if(position_clic.x>PANNEAU_MENU_POS_X && position_clic.x<(PANNEAU_MENU_POS_X+PANNEAU_MENU_LARGEUR)
+88         && position_clic.y>PANNEAU_MENU_POS_Y && position_clic.y<(PANNEAU_MENU_POS_Y+PANNEAU_MENU_HAUTEUR))
+89         {
+90           //S'il s'agit du bouton quitter
+91           if(position_clic.x>PANNEAU_MENU_POS_X+30 && position_clic.x<(PANNEAU_MENU_POS_X+75)
+92           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+93           {
+94             
+95             //Affichage du panneau du menu avec le bouton quitter en surbrillance
+96             affich_panneau_menu(surf_ecran,1);
+97             bool_bouton_etat=true;
+98           }
+99           //S'il s'agit du bouton sauvegarder
+100           else if(position_clic.x>(PANNEAU_MENU_POS_X+60+PANNEAU_OBJET_TAILLE) && position_clic.x<(PANNEAU_MENU_POS_X+105+PANNEAU_OBJET_TAILLE)
+101           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+102           {
+103             //Affichage du panneau du menu avec le bouton sauvegarder
+104             affich_panneau_menu(surf_ecran,2);
+105             bool_bouton_etat=true;
+106           }
+107           //S'il s'agit du bouton tourner plateau
+108           else if(position_clic.x>(PANNEAU_MENU_POS_X+90+2*PANNEAU_OBJET_TAILLE) && position_clic.x<(PANNEAU_MENU_POS_X+135+2*PANNEAU_OBJET_TAILLE)
+109           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+110           {
+111             //Affichage du panneau du menu avec le bouton tourner en surbrillance
+112             affich_panneau_menu(surf_ecran,3);
+113             bool_bouton_etat=true;
+114           }
+115         }
+116         //Autrement, si l'un des boutons est en surbrillance
+117         else if(bool_bouton_etat==true)
+118         {
+119           //On réaffiche le panneau avec le bouton fin de tour en surbrillance
+120           affich_panneau_fdt(surf_ecran, false);
+121           //On réaffiche le panneau du menu
+122           affich_panneau_menu(surf_ecran,0);
+123           //On réaffiche le panneau avec le bouton lancer dés par défaut
+124           if(int_lancer==0) affich_panneau_des_bouton(surf_ecran,0);
+125           //Tout les boutons ne sont plus en surbrillance
+126           bool_bouton_etat=false;
+127         }
+128         
+129         break;
+130       //En cas de clic
+131       case SDL_MOUSEBUTTONUP:
+132         //Sauvegarde des coordonnées du clic
+133         position_clic.x=event.button.x;
+134         position_clic.y=event.button.y;
+135         //Si le joueur a cliqué sur le bouton lancer dés
+136         if(position_clic.x>PANNEAU_DES_POS_X && position_clic.x<(PANNEAU_DES_POS_X+PANNEAU_DES_LARGEUR)
+137         && position_clic.y>PANNEAU_DES_POS_Y && position_clic.y<(PANNEAU_DES_POS_Y+PANNEAU_DES_HAUTEUR) && int_lancer==0)
+138         {
+139           //on verifie que le joueur ne soit pas en prison
+140           if (pj_joueur->bool_laurence)
+141           {
+142             traitement_bureau_laurence(surf_ecran, surf_centre, plateau, pj_joueur, bureau_de_krystel, bureau_de_nadege);
+143             //Le joueur a lancé les dés
+144             int_lancer=1;
+145           }
+146           else
+147           {
+148             //On lance les dés
+149             int_nb_tire=lancer_des(surf_ecran,surf_centre,pj_joueur, plateau);
+150             //On appelle la fonction traitement s'il n'a pas était envoyé en prison
+151             if (!pj_joueur->bool_laurence)
+152             {
+153               avancer_jeton (surf_ecran, surf_centre, int_nb_tire,pj_joueur,plateau,bureau_de_krystel,bureau_de_nadege);
+154             }
+155             
+156             //Affichage du panneau contenant les informations joueurs
+157             affich_panneau_possessions(surf_ecran,pj_joueur);
+158   
+159             //Affichage du panneau contenant les informations joueurs
+160             affich_panneau_joueur(surf_ecran,pj_joueur);
+161 
+162             //Le joueur a lancé les dés
+163             int_lancer=1;
+164           }
+165 
+166         }
+167         //Si le joueur clic sur l'un des  boutons de commande (coin supérieur gauche)
+168         else if(position_clic.x>PANNEAU_MENU_POS_X && position_clic.x<(PANNEAU_MENU_POS_X+PANNEAU_MENU_LARGEUR)
+169         && position_clic.y>PANNEAU_MENU_POS_Y && position_clic.y<(PANNEAU_MENU_POS_Y+PANNEAU_MENU_HAUTEUR))
+170         {
+171           //S'il s'agit du bouton quitter
+172           if(position_clic.x>PANNEAU_MENU_POS_X+30 && position_clic.x<(PANNEAU_MENU_POS_X+75)
+173           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+174           {
+175             //On quitte le prgm
+176             continuer = 0;
+177           }
+178           //S'il s'agit du bouton sauvegarder
+179           else if(position_clic.x>(PANNEAU_MENU_POS_X+60+PANNEAU_OBJET_TAILLE) && position_clic.x<(PANNEAU_MENU_POS_X+105+PANNEAU_OBJET_TAILLE)
+180           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+181           {
+182             sauvegarde(plateau, pj_joueur);
+183             attente_validation_message(surf_ecran, surf_centre, "Sauvegarde", "La sauvegarde à été effectué avec un très grand succès ! Toutes nos félicitations. (Il ne peut n'y avoir qu'un seul fichier de sauvegarde. Toute nouvelle sauvegarde écrase la précédente.)",MESSAGE_NORMAL);
+184           }
+185           //S'il s'agit du bouton tourner plateau
+186           else if(position_clic.x>(PANNEAU_MENU_POS_X+90+2*PANNEAU_OBJET_TAILLE) && position_clic.x<(PANNEAU_MENU_POS_X+135+2*PANNEAU_OBJET_TAILLE)
+187           && position_clic.y>PANNEAU_MENU_POS_Y+10 && position_clic.y<(PANNEAU_MENU_POS_Y+55))
+188           {
+189 
+190           }
+191         }
+192         //Si le joueur a cliqué sur le bouton de fin de tour
+193         else if(position_clic.x>PANNEAU_FDT_POS_X && position_clic.x<(PANNEAU_FDT_POS_X+PANNEAU_FDT_LARGEUR)
+194         && position_clic.y>PANNEAU_FDT_POS_Y && position_clic.y<(PANNEAU_FDT_POS_Y+PANNEAU_FDT_HAUTEUR) && int_lancer==1)
+195         {
+196           //On arrete la boucle et on passe au joueur suivant
+197           continuer=1;
+198         }
+199         //Si le joueur a cliqué sur le panneau d'affichage des propriétés
+200         else if(position_clic.x>PANNEAU_POSSESSION_POS_X && position_clic.x<(PANNEAU_POSSESSION_POS_X+PANNEAU_POSSESSION_LARGEUR)
+201         && position_clic.y>PANNEAU_POSSESSION_POS_Y && position_clic.y<(PANNEAU_POSSESSION_POS_Y+(40+((PROPRIETE_HAUTEUR+5)*int_nombre_propriete))))// && int_lancer==1)
+202         {
+203           int_action=action_possible(plateau,(position_clic.y-PANNEAU_POSSESSION_POS_Y-40)/(PROPRIETE_HAUTEUR+5), pj_joueur, CLICK_CASE, 0);
+204           
+205           
+206           
+207           //On affiche la propriété sur laquelle il a cliqué
+208           attente_validation_propriete(surf_ecran, plateau, surf_centre, int_to_cases((position_clic.y-PANNEAU_POSSESSION_POS_Y-40)/(PROPRIETE_HAUTEUR+5), pj_joueur), pj_joueur, int_action);
+209         }
+210         break;
+211       //Pour tout les autres événements
+212       default:
+213         //On ne fait rien...
+214         break;
+215         }
+216     }
+217     
+218     //Renvoit de la dernière action du joueur
+219   return(continuer);
+220 }
+\end{verbatim}\end{Code}
+
+
+\index{interaction.h@{interaction.h}!attente_action_accueil@{attente\_\-action\_\-accueil}}
+\index{attente_action_accueil@{attente\_\-action\_\-accueil}!interaction.h@{interaction.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int attente\_\-action\_\-accueil (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-boutons}[4], SDL\_\-Surface $\ast$ {\em surf\_\-nombre}[6], SDL\_\-Surface $\ast$ {\em surf\_\-fleche\_\-gauche}, SDL\_\-Surface $\ast$ {\em surf\_\-fleche\_\-droite})}\label{interaction_8h_e4dfe0c2c8be2b77870c32442253dcb8}
+
+
+d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur sur la page d'accueil 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-boutons}]tableau des surfaces des boutons de l'accueil \item[{\em surf\_\-nombre}]tableau des surfaces des chiffres \item[{\em surf\_\-fleche\_\-gauche}]surface de la fl\`{e}che de gauche \item[{\em surf\_\-fleche\_\-droite}]surface de la fl\`{e}che de droite\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le nombre de joueur si \c{c}a c'est bien pass\'{e} sinon -1 \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 222 du fichier interaction.c.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-accueil().
+
+\begin{Code}\begin{verbatim}223 {
+224   //Joueur actuel
+225   int i;
+226   i=0;
+227   int continuer;
+228   continuer=1;
+229   //Variable d'état des boutons (0 aucun survolé, 1 un des boutons survolé)
+230   int int_bouton_etat;
+231   int_bouton_etat=0;
+232   
+233   //Etat des fichiers de sauvegarde (existence ou non)
+234   int etat_fichier;
+235   
+236   //Evenement sdl
+237   SDL_Event event;
+238   
+239   //Coordonnées du clic
+240   SDL_Rect position_clic;
+241   //Position temporaire
+242   SDL_Rect position_temp;
+243   //Position actuel du pointeur
+244   SDL_Rect position;
+245   
+246   position_clic.x=0;
+247   position_clic.y=0;
+248   
+249   //Surface de cache
+250   SDL_Surface* surf_cache;
+251   
+252   etat_fichier=0;
+253   if(is_readable("sauvegarde_joueur.txt") && is_readable("sauvegarde_plateau.txt")) etat_fichier=1;
+254   
+255   //Modification de la position du premier champ
+256   position.x=POS_X_FLECHES;
+257   position.y=POS_Y_FLECHES;
+258   //On colle le premier champ sur le fond
+259   SDL_BlitSurface(surf_fleche_gauche, NULL, surf_ecran, &position);
+260   
+261   //Modification la position du second champ
+262   position.x=POS_X_FLECHES+200;
+263   position.y=POS_Y_FLECHES;
+264   //On colle le second champ sur le fond
+265   SDL_BlitSurface(surf_fleche_droite, NULL, surf_ecran, &position);
+266   
+267   //Création de la surface du cache
+268   surf_cache=SDL_CreateRGBSurface(SDL_HWSURFACE, 90, (surf_nombre[5])->h, 32, 0, 0, 0, 0);
+269   //Remplissage de noir du cache
+270   SDL_FillRect(surf_cache, NULL, SDL_MapRGB(surf_ecran->format, 0, 0, 0));
+271   
+272   //Position du cache
+273   position.x=POS_X_FLECHES+100;
+274   position.y=POS_Y_FLECHES-100;
+275   //Collage du cache sur l'écran
+276   SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+277   
+278   //Collage du nombre
+279   SDL_BlitSurface(surf_nombre[i%5+1], NULL, surf_ecran, &position);
+280   
+281   //Mise à jour de l'écran
+282   SDL_Flip(surf_ecran);
+283   
+284   //Tant qu'on a pas quitter ou valider
+285   while (continuer==1)
+286   {
+287     //On attend un événement
+288     SDL_WaitEvent(&event);
+289     //Selon l'événement
+290     switch(event.type)
+291     {
+292       case SDL_KEYDOWN:
+293         switch(event.key.keysym.sym)
+294         {
+295           case SDLK_RETURN:
+296             continuer=0;
+297             break;
+298           case SDLK_RIGHT:
+299             if(i<4)
+300             {
+301               //Calcul du nouveau nombre du joueur
+302               i=(i+1)%5;
+303               //On colle le cache sur l'écran
+304               SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+305               //On colle l'image du joueur sur l'écran
+306               SDL_BlitSurface(surf_nombre[i+1], NULL, surf_ecran, &position);
+307               //Mise à jour de l'écran
+308               SDL_Flip(surf_ecran);
+309             }
+310             break;
+311           case SDLK_LEFT:
+312             if(i>0)
+313             {
+314               //Calcul du nouveau nombre du joueur
+315               i=(i-1)%5;
+316               //On colle le cache sur l'écran
+317               SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+318               //On colle l'image du joueur sur l'écran
+319               SDL_BlitSurface(surf_nombre[i+1], NULL, surf_ecran, &position);
+320               //Mise à jour de l'écran
+321               SDL_Flip(surf_ecran);
+322             }
+323             break;
+324           default:
+325             break;
+326         }
+327       //En cas de déplacement de la souris
+328       case SDL_MOUSEMOTION:
+329         //On récupère les coordonnées du clic
+330         position_clic.x=event.button.x;
+331         position_clic.y=event.button.y;
+332         //S'il s'agit du bouton valider
+333         if(position_clic.x>((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2) && position_clic.x<((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2+BTN_ACCUEIL_LARGEUR)
+334         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+335         {
+336           //On modifie la position du bouton valider
+337           position_temp.x=(ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2;
+338           position_temp.y=BTN_ACCUEIL_POS_Y;
+339           //On colle le bouton valider sur le fond
+340           SDL_BlitSurface(surf_boutons[1], NULL, surf_ecran, &position_temp);
+341           //on met à jour l'écran
+342           SDL_Flip(surf_ecran);
+343           int_bouton_etat=1;
+344         }
+345         //S'il s'agit du bouton quitter
+346         else if(position_clic.x>(ECRAN_LARGEUR-(surf_boutons[2]->w+10)) && position_clic.x<(ECRAN_LARGEUR-10)
+347         && position_clic.y>10 && position_clic.y<(surf_boutons[2]->h+10))
+348         {
+349           //On modifie la position du bouton quitter
+350           position_temp.x=ECRAN_LARGEUR-(surf_boutons[2]->w+10);
+351           position_temp.y=10;
+352           //On colle le bouton quitter sur le fond
+353           SDL_BlitSurface(surf_boutons[3], NULL, surf_ecran, &position_temp);
+354           //On met à jour l'écran
+355           SDL_Flip(surf_ecran);
+356           int_bouton_etat=1;
+357         }
+358         //S'il s'agit du bouton chargement et que les fichiers existent
+359         else if(position_clic.x>((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2) && position_clic.x<((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2+BTN_ACCUEIL_LARGEUR)
+360         && position_clic.y>BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_ESPACE && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR+BTN_ACCUEIL_ESPACE) && etat_fichier!=0)
+361         {
+362           //On modifie la position du bouton chargement
+363           position_temp.x=(ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2;
+364           position_temp.y=BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_ESPACE;
+365           //On colle le bouton charger sur le fond
+366           SDL_BlitSurface(surf_boutons[5], NULL, surf_ecran, &position_temp);
+367           //on met à jour l'écran
+368           SDL_Flip(surf_ecran);
+369           int_bouton_etat=1;
+370         }
+371         //Si un des boutons est en surbrillance
+372         else if (int_bouton_etat==1)
+373         {
+374           //On modifie la position du bouton valider
+375           position_temp.x=(ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2;
+376           position_temp.y=BTN_ACCUEIL_POS_Y;
+377           //On colle le bouton valider sur le fond
+378           SDL_BlitSurface(surf_boutons[0], NULL, surf_ecran, &position_temp);
+379 
+380           //On modifie la position du bouton quitter
+381           position_temp.x=ECRAN_LARGEUR-(surf_boutons[2]->w+10);
+382           position_temp.y=10;
+383           //On colle le bouton quitter sur le fond
+384           SDL_BlitSurface(surf_boutons[2], NULL, surf_ecran, &position_temp);
+385           
+386           //On modifie la position du bouton chargement
+387           position_temp.x=(ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2;
+388           position_temp.y=BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_ESPACE;
+389           //On colle le bouton charger sur le fond
+390           SDL_BlitSurface(surf_boutons[4], NULL, surf_ecran, &position_temp);
+391 
+392           //On met à jour l'écran
+393           SDL_Flip(surf_ecran);
+394           int_bouton_etat=0;
+395         }
+396         
+397         break;
+398       //En cas de clic sur un bouton
+399       case SDL_MOUSEBUTTONUP:
+400         //On sauvegarde les coordonnées du clic
+401         position_clic.x=event.button.x;
+402         position_clic.y=event.button.y;
+403         //Si on a cliquer sur la fleche gauche
+404         if(position_clic.x>POS_X_FLECHES && position_clic.x<(POS_X_FLECHES+surf_fleche_gauche->w)
+405         && position_clic.y>POS_Y_FLECHES && position_clic.y<(POS_Y_FLECHES+surf_fleche_gauche->h) && i>0)
+406         {
+407           //Calcul le nouveau nombre de joueur
+408           i=(i-1)%5;
+409           //On colle le cache sur l'écran
+410           SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+411           //On colle l'image du nombre sur l'écran
+412           SDL_BlitSurface(surf_nombre[i+1], NULL, surf_ecran, &position);
+413           //Mise à jour de l'écran
+414           SDL_Flip(surf_ecran);
+415         }
+416         //S'il s'agit du bouton quitter
+417         else if(position_clic.x>(ECRAN_LARGEUR-(surf_boutons[2]->w+10)) && position_clic.x<(ECRAN_LARGEUR-10)
+418         && position_clic.y>10 && position_clic.y<(surf_boutons[2]->h+10))
+419         {
+420           continuer=-1;
+421         }
+422         //Fleche droite
+423         else if(position_clic.x>(POS_X_FLECHES+200) && position_clic.x<(POS_X_FLECHES+200+surf_fleche_droite->w)
+424         && position_clic.y>POS_Y_FLECHES && position_clic.y<(POS_Y_FLECHES+surf_fleche_droite->h) && i<5)
+425         {
+426           //Calcul du nouveau nombre du joueur
+427           i=(i+1)%5;
+428           //On colle le cache sur l'écran
+429           SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+430           //On colle l'image du joueur sur l'écran
+431           SDL_BlitSurface(surf_nombre[i+1], NULL, surf_ecran, &position);
+432           //Mise à jour de l'écran
+433           SDL_Flip(surf_ecran);
+434         }
+435         //Bouton valider
+436         else if(position_clic.x>((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2) && position_clic.x<((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2+BTN_ACCUEIL_LARGEUR)
+437         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+438         {
+439           continuer=0;
+440         }
+441         //Bouton chargement
+442         else if(position_clic.x>((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2) && position_clic.x<((ECRAN_LARGEUR-BTN_ACCUEIL_LARGEUR)/2+BTN_ACCUEIL_LARGEUR)
+443         && position_clic.y>BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_ESPACE && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR+BTN_ACCUEIL_ESPACE) && etat_fichier!=0)
+444         {
+445           continuer=-2;
+446         }
+447 
+448         break;
+449       //En cas d'autre événement
+450       default:
+451         //On ne fait rien...
+452         break;
+453     }
+454     }
+455     //Si le joueur à voulu quitter, on retourne sa demande
+456     if(continuer==-1) return(continuer);
+457     //Si le joueur à voulu charger une nouvelle partie, on retourne sa demande
+458     if(continuer==-2) return(continuer);
+459     //Sinon on retourne le nombre de joueur
+460   return(i+1);
+461 
+462 }
+\end{verbatim}\end{Code}
+
+
+\index{interaction.h@{interaction.h}!attente_action_config@{attente\_\-action\_\-config}}
+\index{attente_action_config@{attente\_\-action\_\-config}!interaction.h@{interaction.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int attente\_\-action\_\-config (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, char $\ast$$\ast$ {\em str\_\-nom\_\-joueur}, SDL\_\-Surface $\ast$ {\em surf\_\-boutons}[6], SDL\_\-Surface $\ast$ {\em surf\_\-champ}, int {\em nombre\_\-joueur})}\label{interaction_8h_f196ea942cdf7af6071f82225d2d062c}
+
+
+d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur sur la page des noms des joueurs 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em str\_\-nom\_\-joueur}]tableau des noms des joueurs \item[{\em surf\_\-boutons}]surface des 6 boutons \item[{\em surf\_\-champ}]surfaces des champs d'\'{e}criture \item[{\em nombre\_\-joueur}]nombre de joueurs qui jouent\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]action du joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 464 du fichier interaction.c.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-config().
+
+\begin{Code}\begin{verbatim}465 {
+466   int i;
+467   i=0;
+468   //Etat des boutons (surbrillance ou non)
+469   int int_bouton_etat;
+470   int_bouton_etat=0;
+471 
+472   int continuer;
+473   continuer=2;
+474   
+475   //Champ en cours de modification
+476   int int_champ;
+477   int_champ=0;
+478 
+479   //Surface du pion
+480   SDL_Surface* surf_pion;
+481   surf_pion=NULL;
+482   
+483   //Surface du cache du pion;
+484   SDL_Surface* surf_cache;
+485   surf_cache=NULL;
+486 
+487   //Surface du nom
+488   SDL_Surface* surf_nom;
+489   surf_nom=NULL;
+490   
+491   //Evénement sdl
+492   SDL_Event event;
+493   
+494   //Coordonnées du clic
+495   SDL_Rect position_clic;
+496   position_clic.x=0;
+497   position_clic.y=0;
+498   
+499   //Ancienne position
+500   SDL_Rect position;
+501   
+502   //Position du champ
+503   SDL_Rect position_champ;
+504 
+505   //Police d'écriture
+506   TTF_Font* police;
+507   police=NULL;
+508 
+509   //Couleur du texte
+510   SDL_Color couleur_texte = {0, 0, 0};
+511 
+512   //Ouverture de la police d'ecriture
+513   police = TTF_OpenFont("sdl/police/police.ttf", 17);
+514   
+515   //Création du pion
+516   surf_pion=SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+517   //Remplissage de l'image du pion
+518   SDL_FillRect(surf_pion, NULL, SDL_MapRGB(surf_ecran->format, 0, 0, 255));
+519   
+520   //Ecriture du numéro sur la surface
+521   surf_cache=SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+522   //Remplissage du bouton pion
+523   SDL_FillRect(surf_cache, NULL, SDL_MapRGB(surf_ecran->format, 0, 0, 0));
+524   
+525   //Modification de la position du pion
+526   position.x=CHAMP_POS_X-30;
+527   position.y=CHAMP_POS_Y+5;
+528   //Affichage du pion
+529   SDL_BlitSurface(surf_pion, NULL, surf_ecran, &position);
+530   
+531   //Mise à jour de l'écran
+532   SDL_Flip(surf_ecran);
+533   
+534   //tant que le joueur n'a pas fait précédent, quitter ou jouer
+535   while (continuer==2)
+536   {
+537     //On attend un événement sdl
+538     SDL_WaitEvent(&event);
+539     //Selon le type de l'événement
+540     switch(event.type)
+541     {
+542       //Si on appui sur une touche
+543       case SDL_KEYDOWN:
+544         //Selon l'événement
+545         switch(event.key.keysym.sym)
+546         {
+547           //En cas de tabulation
+548           case SDLK_TAB:
+549             //Affichage du cache
+550             SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+551             //Passage au champ suivant
+552             int_champ=(int_champ+1)%nombre_joueur;
+553             //Calcul de la position du champ en fonction du numéro du champ
+554             position.y=int_champ*CHAMP_HAUTEUR*2+CHAMP_POS_Y+5;
+555             //Affichage du pion
+556             SDL_BlitSurface(surf_pion, NULL, surf_ecran, &position);
+557             //Mise à jour de l'écran
+558             SDL_Flip(surf_ecran);
+559             break;
+560           //En cas de validation
+561           case SDLK_RETURN:
+562             continuer=1;                  
+563             for (int i=0;i<nombre_joueur;i++)
+564             {
+565               //on vérifie que le nom n'est pas vide
+566               if (str_nom_joueur[i][0]=='\0')
+567               {
+568                 continuer=2;
+569               }
+570               else
+571               {
+572                 //on verifie que les noms ne soient pas identiques            
+573                 for (int j=i+1;j<nombre_joueur;j++)
+574                 {
+575                   if (strcmp(str_nom_joueur[i],str_nom_joueur[j])==0)
+576                   {
+577                     continuer=2;
+578                   }
+579                 }
+580               }
+581             }
+582             break;
+583           //Pour toutes les autres touches
+584           default:
+585             //On positionne le champ
+586             position_champ.x=CHAMP_POS_X;
+587             position_champ.y=CHAMP_POS_Y+int_champ*2*CHAMP_HAUTEUR;
+588             //On met un cache sur le champ actuel
+589             SDL_BlitSurface(surf_champ, NULL, surf_ecran, &position_champ);
+590             //On positionne le texte
+591             position_champ.x=CHAMP_POS_X+5;
+592             position_champ.y=CHAMP_POS_Y+int_champ*2*CHAMP_HAUTEUR-10;
+593             //Ecriture du titre sur la surface de titre
+594             strcpy(str_nom_joueur[int_champ],ajout_caractere(str_nom_joueur[int_champ],event.key.keysym.sym));
+595             //Ecriture du nom du joueur modifié
+596             surf_nom = TTF_RenderText_Blended(police, str_nom_joueur[int_champ], couleur_texte);
+597             //On colle le nom du joueur sur le champ
+598             SDL_BlitSurface(surf_nom, NULL, surf_ecran, &position_champ);
+599             //Mise à jour de l'écran
+600             SDL_Flip(surf_ecran);
+601             break;
+602         }
+603       //En cas de déplacement de la souris
+604       case SDL_MOUSEMOTION:
+605         //Sauvegarde de la position du clic
+606         position_clic.x=event.button.x;
+607         position_clic.y=event.button.y;
+608         //S'il s'agit du bouton retour
+609         if(position_clic.x>(BTN_ACCUEIL_POS_X) && position_clic.x<(BTN_ACCUEIL_POS_X+BTN_ACCUEIL_LARGEUR)
+610         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+611         {
+612           //On modifie la position du bouton retour
+613           position_champ.x=BTN_ACCUEIL_POS_X;
+614           position_champ.y=BTN_ACCUEIL_POS_Y;
+615           //On colle le bouton retour sur le fond
+616           SDL_BlitSurface(surf_boutons[1], NULL, surf_ecran, &position_champ);
+617           //On met l'écran à jour
+618           SDL_Flip(surf_ecran);
+619           int_bouton_etat=1;
+620         }
+621         //S'il s'agit du bouton valider
+622         else if(position_clic.x>(BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w)
+623         && position_clic.x<((BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w)+BTN_ACCUEIL_LARGEUR)
+624         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+625         {
+626           //On modifie la position du bouton valider
+627           position_champ.x=(BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w);
+628           position_champ.y=BTN_ACCUEIL_POS_Y;
+629           //On colle le bouton valider sur le fond
+630           SDL_BlitSurface(surf_boutons[3], NULL, surf_ecran, &position_champ);
+631           //On met l'écran à jour
+632           SDL_Flip(surf_ecran);
+633           int_bouton_etat=1;
+634         }
+635         //S'il s'agit du bouton quitter
+636         else if(position_clic.x>(ECRAN_LARGEUR-(surf_boutons[4]->w+10)) && position_clic.x<(ECRAN_LARGEUR-10)
+637         && position_clic.y>10 && position_clic.y<(surf_boutons[4]->h+10))
+638         {
+639           //On modifie la position du bouton quitter
+640           position_champ.x=ECRAN_LARGEUR-(surf_boutons[4]->w+10);
+641           position_champ.y=10;
+642           //On colle le bouton quitter sur le fond
+643           SDL_BlitSurface(surf_boutons[5], NULL, surf_ecran, &position_champ);
+644           //On met à jour l'écran
+645           SDL_Flip(surf_ecran);
+646           int_bouton_etat=1;
+647         }
+648         //Si un des boutons est en surbrillance
+649         else if (int_bouton_etat==1)
+650         {
+651           //On modifie la position du bouton valider
+652           position_champ.x=(BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w);
+653           position_champ.y=BTN_ACCUEIL_POS_Y;
+654           //On colle le bouton valider sur le fond
+655           SDL_BlitSurface(surf_boutons[2], NULL, surf_ecran, &position_champ);
+656 
+657           //On modifie la position du bouton retour
+658           position_champ.x=BTN_ACCUEIL_POS_X;
+659           position_champ.y=BTN_ACCUEIL_POS_Y;
+660           //On colle le bouton retour sur le fond
+661           SDL_BlitSurface(surf_boutons[0], NULL, surf_ecran, &position_champ);
+662 
+663           //On modifie la position du bouton quitter
+664           position_champ.x=ECRAN_LARGEUR-(surf_boutons[4]->w+10);
+665           position_champ.y=10;
+666           //On colle le bouton quitter sur le fond
+667           SDL_BlitSurface(surf_boutons[4], NULL, surf_ecran, &position_champ);
+668 
+669           //On met à jour l'écran
+670           SDL_Flip(surf_ecran);
+671           int_bouton_etat=0;
+672         }
+673         
+674         break;
+675       //En cas de clic
+676       case SDL_MOUSEBUTTONUP:
+677         //On sauvegarde les coordonnées du clic
+678         position_clic.x=event.button.x;
+679         position_clic.y=event.button.y;
+680         //S'il s'agit du bouton valider
+681         if(position_clic.x>(BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w) && position_clic.x<((BTN_ACCUEIL_POS_X+20+(surf_boutons[0])->w)+BTN_ACCUEIL_LARGEUR)
+682         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+683         {
+684           continuer=1;
+685                 
+686           for (int i=0;i<nombre_joueur;i++)
+687           {
+688             //on vérifie que le nom n'est pas vide
+689             if (str_nom_joueur[i][0]=='\0')
+690             {
+691               continuer=2;
+692             }
+693             else
+694             {
+695               //on verifie que les noms ne soient pas identiques            
+696               for (int j=i+1;j<nombre_joueur;j++)
+697               {
+698                 if (strcmp(str_nom_joueur[i],str_nom_joueur[j])==0)
+699                 {
+700                   continuer=2;
+701                 }
+702               }
+703             }
+704           }
+705         }
+706         //S'il s'agit du bouton retour
+707         else if(position_clic.x>(BTN_ACCUEIL_POS_X) && position_clic.x<(BTN_ACCUEIL_POS_X+BTN_ACCUEIL_LARGEUR)
+708         && position_clic.y>BTN_ACCUEIL_POS_Y && position_clic.y<(BTN_ACCUEIL_POS_Y+BTN_ACCUEIL_HAUTEUR))
+709         {
+710           continuer=-1;
+711         }
+712         //S'il s'agit du bouton quitter
+713         else if(position_clic.x>(ECRAN_LARGEUR-(surf_boutons[4]->w+10)) && position_clic.x<(ECRAN_LARGEUR-10)
+714         && position_clic.y>10 && position_clic.y<(surf_boutons[4]->h+10))
+715         {
+716           continuer=0;
+717         }
+718         //Si on a cliquer sur un des champs
+719         else if(position_clic.x>(CHAMP_POS_X) && position_clic.x<(CHAMP_POS_X+CHAMP_LARGEUR)
+720         && position_clic.y>CHAMP_POS_Y && position_clic.y<(CHAMP_POS_Y+CHAMP_HAUTEUR*2*nombre_joueur))
+721         {
+722           //Affichage du cache
+723           SDL_BlitSurface(surf_cache, NULL, surf_ecran, &position);
+724           //On calcul sur quel champ le joueur à cliqué
+725           int_champ=((position_clic.y-CHAMP_POS_Y)/(CHAMP_HAUTEUR*2));
+726           //Calcul de la position du champ en fonction du numéro du champ
+727           position.y=int_champ*CHAMP_HAUTEUR*2+CHAMP_POS_Y+5;
+728           //Affichage du pion
+729           SDL_BlitSurface(surf_pion, NULL, surf_ecran, &position);
+730           //Mise à jour de l'écran
+731           SDL_Flip(surf_ecran);
+732         }
+733         break;
+734       //S'il s'agit d'un autre événement
+735       default:
+736         //On ne fait rien.
+737         break;
+738     }
+739   }
+740 
+741   //Fermeture de la police d'ecriture
+742   TTF_CloseFont(police);
+743   //Libération des surfaces
+744   SDL_FreeSurface(surf_pion);
+745   SDL_FreeSurface(surf_cache);
+746   SDL_FreeSurface(surf_nom);
+747   //On retourne la valeur de continuer
+748   return(continuer);
+749 
+750 }
+\end{verbatim}\end{Code}
+
+
+\index{interaction.h@{interaction.h}!attente_validation_propriete@{attente\_\-validation\_\-propriete}}
+\index{attente_validation_propriete@{attente\_\-validation\_\-propriete}!interaction.h@{interaction.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int attente\_\-validation\_\-propriete (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$$\ast$ {\em plateau}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf cases} $\ast$ {\em pcase}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, int {\em int\_\-type\_\-action})}\label{interaction_8h_3bf12a3fb5664e0581318e25e4ec2f58}
+
+
+d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur losqu'il est tomb\'{e} sur une propri\'{e}t\'{e} 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em plateau}]plateau de jeu \item[{\em pcase}]case en cours de traitement \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em int\_\-type\_\-action}]indique le type de l'action \`{a} entreprendre\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]action du joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 752 du fichier interaction.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}753 {
+754   //Surface du fond
+755   SDL_Surface* surf_fond;
+756   surf_fond=NULL;
+757 
+758   //Evénement sdl
+759   SDL_Event event;
+760   
+761   //Coordonnées
+762   SDL_Rect position;
+763   //Coordonnées du clic
+764   SDL_Rect position_clic;
+765   
+766   int int_position;
+767   int int_type;
+768   int_type=pcase->int_type;
+769   int int_etat;
+770   int_etat=0;
+771   int continuer;
+772   continuer=0;
+773   
+774   //Création du fond
+775   surf_fond=SDL_CreateRGBSurface(SDL_HWSURFACE, DETAIL_LARGEUR+DETAIL_MESSAGE_EPAISSEUR*2, DETAIL_HAUTEUR+DETAIL_MESSAGE_EPAISSEUR*2+150, 32, 0, 0, 0, 0);
+776   //Remplissage de l'image de fond
+777   SDL_FillRect(surf_fond, NULL, SDL_MapRGB(surf_ecran->format, 0, 125, 0));
+778   
+779   //Position de la carte sur le message
+780   position.x=DETAIL_MESSAGE_EPAISSEUR;
+781   position.y=DETAIL_MESSAGE_EPAISSEUR;
+782   
+783   //Collage de la carte sur le message 
+784   if(int_type==SALLE) SDL_BlitSurface(pcase->case_salle.surf_detail, NULL, surf_fond, &position);
+785   else if(int_type==BDE || int_type==BDS) SDL_BlitSurface(pcase->case_association.surf_detail, NULL, surf_fond, &position);
+786   else if(int_type>=LC_WC && int_type<=LC_PARKING) SDL_BlitSurface(pcase->case_lieu_commun.surf_detail, NULL, surf_fond, &position);
+787   else cerr << "ERREUR !!" << endl;
+788   
+789   //Affichage de la propriété
+790   action_to_boutons(surf_ecran, surf_fond, int_type_action, 0);
+791   
+792   //Tant que le joueur n'a pas fait d'action
+793   while(!continuer)
+794   {
+795       //On attend un événement
+796         SDL_WaitEvent(&event);
+797         //Selon l'événement
+798         switch(event.type)
+799         {
+800       //S'il s'agit d'un appui sur une touche
+801       case SDL_KEYDOWN:
+802         //Selon la touche
+803         switch(event.key.keysym.sym)
+804         {
+805           //Echap
+806           case SDLK_ESCAPE:
+807             //On quitte le prgm
+808             continuer = 1;
+809             break;
+810           //Pour toutes les autres touches
+811           default:
+812             //On fait rien...
+813             break;
+814         }
+815         break;
+816       //En cas de mouvement de la souris
+817       case SDL_MOUSEMOTION:
+818         //On sauvegarde les nouvelles coordonnées de la souris
+819         position_clic.x=event.button.x;
+820         position_clic.y=event.button.y;
+821         
+822         //S'il s'agit du premier bouton
+823         if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+824         && position_clic.y>DETAIL_BOUTON_POS_Y && position_clic.y<(DETAIL_BOUTON_POS_Y+40))
+825         {
+826           action_to_boutons(surf_ecran, surf_fond, int_type_action, 1);
+827           int_etat=1;
+828         }
+829         //Bouton 2 sauf pour le cas où on finit
+830         else if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+831         && position_clic.y>DETAIL_BOUTON_POS_Y+50 && position_clic.y<(DETAIL_BOUTON_POS_Y+90) && int_type_action != ACTION_FINIR)
+832         {
+833           action_to_boutons(surf_ecran, surf_fond, int_type_action, 2);
+834           int_etat=2;
+835         }
+836         //Bouton 3 dans le cas d'un plus moins
+837         else if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+838         && position_clic.y>DETAIL_BOUTON_POS_Y+100 && position_clic.y<(DETAIL_BOUTON_POS_Y+140) && int_type_action == ACTION_PLUS_MOINS)
+839         {
+840           action_to_boutons(surf_ecran, surf_fond, int_type_action, 3);
+841           int_etat=2;
+842         }
+843         else if(int_etat!=0)
+844         {
+845           action_to_boutons(surf_ecran, surf_fond, int_type_action, 0);
+846           int_etat=0;
+847         }
+848         
+849         break;
+850       case SDL_MOUSEBUTTONUP:
+851         //On sauvegarde les nouvelles coordonnées de la souris
+852         position_clic.x=event.button.x;
+853         position_clic.y=event.button.y;
+854         //Premier bouton
+855         if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+856         && position_clic.y>DETAIL_BOUTON_POS_Y && position_clic.y<(DETAIL_BOUTON_POS_Y+50))
+857         {
+858           //Selon l'action à faire
+859           switch(int_type_action)
+860           {
+861             //Dans le cas d'un achat
+862             case ACTION_ACHAT:
+863               traitement_achat(pcase,pj_joueur);
+864               break;
+865             //Augmentation de niveau
+866             case ACTION_PLUS:
+867               traitement_augmentation_niveau(pcase,pj_joueur);
+868               break;
+869             //Diminution de niveau
+870             case ACTION_MOINS:
+871               traitement_diminution_niveau(pcase,pj_joueur);
+872               break;
+873             //Dans le cas d'une déshypothèque
+874             case ACTION_PLUS_MOINS:
+875               traitement_augmentation_niveau(pcase,pj_joueur);
+876               break;
+877             //Dans tout les autres cas
+878             default:
+879               break;
+880           }
+881           continuer=1;
+882         }
+883         //Bouton 2 sauf pour le cas où on finit
+884         else if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+885         && position_clic.y>DETAIL_BOUTON_POS_Y+50 && position_clic.y<(DETAIL_BOUTON_POS_Y+90) && int_type_action != ACTION_FINIR)
+886         {
+887           switch(int_type_action)
+888           {
+889             case ACTION_PLUS_MOINS:
+890               traitement_diminution_niveau(pcase,pj_joueur);
+891               break;
+892             //Dans tout les autres cas
+893             default:
+894               break;
+895           }
+896           continuer=1;
+897         }
+898         //Bouton 3 dans le cas d'un plus moins
+899         else if(position_clic.x>DETAIL_BOUTON_POS_X && position_clic.x<(DETAIL_BOUTON_POS_X+165)
+900         && position_clic.y>DETAIL_BOUTON_POS_Y+100 && position_clic.y<(DETAIL_BOUTON_POS_Y+140) && int_type_action == ACTION_PLUS_MOINS)
+901         {
+902           continuer=1;
+903         }
+904         break;
+905       default:
+906         break;
+907         }
+908   }
+909   
+910   //on réactualise la case ou se trouve le joueur afin qu'il efface le jeton
+911   affich_case(surf_ecran,pcase);
+912   //on compte le nombre de personne sur la case ou doit être afficher le joueur actuel
+913   int_position=nombre_joueur_case(pj_joueur);
+914   //on affiche le joueur sur la case s'il se trouve dessus
+915   if(plateau[pj_joueur->int_position]==pcase) affich_joueur(surf_ecran, pj_joueur,int_position+1, pcase);
+916   
+917   //Mise à jour de l'écran
+918   SDL_Flip(surf_ecran);
+919   
+920   //Réaffichage du centre
+921   affich_centre(surf_ecran,surf_centre);
+922   //Mise à jour de l'écran
+923   SDL_Flip(surf_ecran);
+924   return(0);
+925   
+926 }
+\end{verbatim}\end{Code}
+
+
+\index{interaction.h@{interaction.h}!attente_validation_message@{attente\_\-validation\_\-message}}
+\index{attente_validation_message@{attente\_\-validation\_\-message}!interaction.h@{interaction.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int attente\_\-validation\_\-message (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, char $\ast$ {\em titre}, char $\ast$ {\em message}, int {\em int\_\-type\_\-message})}\label{interaction_8h_232bfa13a7e55819d63a9cc0d6e475ac}
+
+
+d\'{e}termine l'action \`{a} entreprendre en fonction du clic du joueur lors de l'affichage d'un message 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em titre}]le titre du message \item[{\em message}]le message \`{a} afficher \item[{\em int\_\-type\_\-message}]type du message \`{a} afficher\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]action du joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 928 du fichier interaction.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), jeu(), lancer\_\-des(), traitement\_\-arrive\_\-case(), traitement\_\-bureau(), traitement\_\-bureau\_\-laurence(), traitement\_\-machine\_\-a\_\-cafe(), et traitement\_\-soiree().
+
+\begin{Code}\begin{verbatim}929 {
+930   //Surface du fond
+931   SDL_Surface* surf_fond;
+932   surf_fond=NULL;
+933 
+934   //Evénement sdl
+935   SDL_Event event;
+936   
+937   //Surface du message
+938   SDL_Surface* surf_message;
+939   
+940   //Position du bouton
+941   SDL_Rect position_bouton;
+942   
+943   //Position du message
+944   SDL_Rect position_message;
+945   
+946   //Coordonnées du clic
+947   SDL_Rect position_clic;
+948   
+949   //Nombre de ligne du texte compilé
+950   int int_nombre_ligne;
+951   int_nombre_ligne=0;
+952   
+953   //Texte découpé
+954   char*** texte;
+955   texte=new char**[1];
+956   
+957   //Etat des boutons
+958   int int_etat;
+959   int_etat=0;
+960   
+961   //Variable de boucle
+962   int continuer;
+963   continuer=2;
+964   
+965   int i;
+966   
+967   //Fonction de découpe du texte 
+968   int_nombre_ligne=decoupage_string(texte, message);
+969   //Création du message
+970   surf_message=creation_message(surf_ecran, titre, *texte, int_type_message, int_nombre_ligne);
+971   
+972   //Affichage du message à l'écran
+973   affich_message(surf_ecran,surf_message,int_type_message, 0);
+974   
+975   //Calcul de la position du message
+976   position_message.x=POS_X_PLATEAU+CASE_HAUTEUR+(TAILLE_CENTRE-MESSAGE_LARGEUR)/2;
+977   position_message.y=POS_Y_PLATEAU+CASE_HAUTEUR+(TAILLE_CENTRE-MESSAGE_HAUTEUR)/2;
+978   
+979   //Calcul de la postion du premier pour éviter de le recalculer à chaque test
+980   position_bouton.x=position_message.x+(MESSAGE_LARGEUR-160)/2;
+981   position_bouton.y=position_message.y+MESSAGE_HAUTEUR-60;
+982   
+983   //cas particulier s'il s'agit du message quitter
+984   if(int_type_message==MESSAGE_QUITTER)
+985   {
+986     position_bouton.x=position_message.x+(MESSAGE_LARGEUR-320)/3;
+987     position_bouton.y=position_message.y+MESSAGE_HAUTEUR-60;
+988   }
+989   
+990   //Tant que le joueur n'a pas fait d'action
+991   while(continuer==2)
+992   {
+993       //On attend un événement
+994         SDL_WaitEvent(&event);
+995         //Selon l'événement
+996         switch(event.type)
+997         {
+998       //En cas de mouvement de la souris
+999       case SDL_MOUSEMOTION:
+1000         //On sauvegarde les nouvelles coordonnées de la souris
+1001         position_clic.x=event.button.x;
+1002         position_clic.y=event.button.y;
+1003         //S'il s'agit du premier bouton
+1004         if(position_clic.x>(position_bouton.x) && position_clic.x<(position_bouton.x+160)
+1005         && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+50) && int_type_message!=MESSAGE_PRISON)
+1006         {
+1007           //Bouton n°1 en surbrillance
+1008           affich_message(surf_ecran,surf_message,int_type_message, 1);
+1009           int_etat=1;
+1010         }
+1011         //Dans le cas d'un message quitter, on a un second bouton
+1012         else if(position_clic.x>(position_bouton.x+(MESSAGE_LARGEUR-160)/3) && position_clic.x<(position_bouton.x+(MESSAGE_LARGEUR-160)/3+160)
+1013         && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+50) && int_type_message==MESSAGE_QUITTER)
+1014         {
+1015           //Mise en surbrillance du second bouton
+1016           affich_message(surf_ecran,surf_message,int_type_message, 2);
+1017           int_etat=2;
+1018         }
+1019         //Si jamais c'est un message prison, on a trois boutons
+1020         else if(int_type_message==MESSAGE_PRISON)
+1021         {
+1022           //Bouton 1 : Attendre
+1023           if(position_clic.x>(position_message.x+30) && position_clic.x<(position_message.x+190)
+1024           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1025           {
+1026             //Mise en surbrillance
+1027             affich_message(surf_ecran,surf_message,int_type_message, 1);
+1028             int_etat=1;
+1029           }
+1030           //Bouton 2 : Payer
+1031           else if(position_clic.x>(position_message.x+(MESSAGE_LARGEUR-160)/2) && position_clic.x<(position_message.x+(MESSAGE_LARGEUR-160)/2+160)
+1032           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1033           {
+1034             //Mise en surbrillance
+1035             affich_message(surf_ecran,surf_message,int_type_message, 2);
+1036             int_etat=2;
+1037           }
+1038           //Bouton 3 : Certificat
+1039           else if(position_clic.x>(position_message.x+MESSAGE_LARGEUR-190) && position_clic.x<(position_message.x+MESSAGE_LARGEUR-30)
+1040           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1041           {
+1042             //Mise en surbrillance
+1043             affich_message(surf_ecran,surf_message,int_type_message, 3);
+1044             int_etat=3;
+1045           }
+1046           //Autement, si jamais l'un des boutonsdu message prison est en surbrillance
+1047           else if(int_etat!=0)
+1048           {
+1049             //On réaffiche le message avec les boutons normaux
+1050             affich_message(surf_ecran,surf_message,int_type_message, 0);
+1051             int_etat=0;
+1052           }
+1053         }
+1054         //Autement, si jamais l'un des boutons est en surbrillance
+1055         else if(int_etat!=0)
+1056         {
+1057           //On réaffiche le message avec les boutons normaux
+1058           affich_message(surf_ecran,surf_message,int_type_message, 0);
+1059           int_etat=0;
+1060         }
+1061         
+1062         break;
+1063       case SDL_MOUSEBUTTONUP:
+1064         //On sauvegarde les nouvelles coordonnées de la souris
+1065         position_clic.x=event.button.x;
+1066         position_clic.y=event.button.y;
+1067         //Si on appui sur le premier bouton
+1068         if(position_clic.x>(position_bouton.x) && position_clic.x<(position_bouton.x+160)
+1069         && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+50) && int_type_message!=MESSAGE_PRISON)
+1070         {
+1071           //On sort de la boucle
+1072           continuer=0;
+1073         }
+1074         else if(int_type_message==MESSAGE_PRISON)
+1075         {
+1076           //Bouton 1 : Attendre
+1077           if(position_clic.x>(position_message.x+30) && position_clic.x<(position_message.x+190)
+1078           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1079           {
+1080             continuer=4;
+1081           }
+1082           //Bouton 2 : Payer
+1083           else if(position_clic.x>(position_message.x+(MESSAGE_LARGEUR-160)/2) && position_clic.x<(position_message.x+(MESSAGE_LARGEUR-160)/2+160)
+1084           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1085           {
+1086             continuer=5;
+1087           }
+1088           //Bouton 3 : Certificat
+1089           else if(position_clic.x>(position_message.x+MESSAGE_LARGEUR-190) && position_clic.x<(position_message.x+MESSAGE_LARGEUR-30)
+1090           && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+40))
+1091           {
+1092             continuer=6;
+1093           }
+1094         }
+1095         //S'il s'agit d'un message quitter et que l'on clique sur le bouton sauvegarder
+1096         else if(position_clic.x>(position_bouton.x+(MESSAGE_LARGEUR-160)/3) && position_clic.x<(position_bouton.x+(MESSAGE_LARGEUR-160)/3+160)
+1097         && position_clic.y>(position_bouton.y) && position_clic.y<(position_bouton.y+50) && int_type_message==MESSAGE_QUITTER)
+1098         {
+1099           //Normalement ici il y à la fonction de sauvegarde
+1100           continuer=3;
+1101         }
+1102         break;
+1103       default:
+1104         break;
+1105         }
+1106   }
+1107   
+1108   //Réaffichage du centre
+1109   affich_centre(surf_ecran,surf_centre);
+1110   //Mise à jour de l'écran
+1111   SDL_Flip(surf_ecran);
+1112   
+1113   //Libération du message compilé
+1114   for (i = 0; i <int_nombre_ligne; i++)
+1115   {
+1116     delete texte[0][i];
+1117   }
+1118   
+1119   delete texte;
+1120   
+1121   //On retourne l'action du joueur
+1122   return(continuer);
+1123   
+1124 }
+\end{verbatim}\end{Code}
+
+

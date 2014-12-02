@@ -1,0 +1,1132 @@
+\section{R\'{e}f\'{e}rence du fichier initialisation.h}
+\label{initialisation_8h}\index{initialisation.h@{initialisation.h}}
+en tete des fonctions necessaires \`{a} l'initialisation du monopoly 
+
+\subsection*{Fonctions}
+\begin{CompactItemize}
+\item 
+{\bf rvb\_\-couleur} {\bf init\_\-rvb\_\-couleur} (int rouge, int vert, int bleu)
+\begin{CompactList}\small\item\em initialise une structure joueur en fonction des param\`{e}tre \item\end{CompactList}\item 
+void {\bf init\_\-tab\_\-rvb\_\-couleur} ({\bf rvb\_\-couleur} couleur[8])
+\begin{CompactList}\small\item\em initialise le tableau de couleur \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-salle} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf rvb\_\-couleur} couleurs[8], {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero, int int\_\-prix, char $\ast$str\_\-nom1, char $\ast$str\_\-nom2, int int\_\-groupe, int int\_\-prix\_\-niveau)
+\begin{CompactList}\small\item\em initialise les cases salles \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-association} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero)
+\begin{CompactList}\small\item\em initialise les cases associations \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-lieu\_\-commun} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero)
+\begin{CompactList}\small\item\em initialise les cases lieu commun \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-soiree} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero)
+\begin{CompactList}\small\item\em initialise les cases soir\'{e}e \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-special} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero)
+\begin{CompactList}\small\item\em initialise les cases sp\'{e}ciales \item\end{CompactList}\item 
+void {\bf init\_\-case\_\-administration} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf cases} $\ast$pcase, int int\_\-type, int int\_\-numero)
+\begin{CompactList}\small\item\em initialise les cases adimnistration \item\end{CompactList}\item 
+{\bf possession} $\ast$ {\bf init\_\-anneau\_\-possesions} ()
+\begin{CompactList}\small\item\em initialise l'anneau des possesions du joueur \item\end{CompactList}\item 
+{\bf possession} $\ast$ {\bf creation\_\-possession} ({\bf cases} $\ast$propriete)
+\begin{CompactList}\small\item\em ajoute de fa\c{c}on ordonn\'{e}e une propri\'{e}t\'{e} dans la liste \item\end{CompactList}\item 
+{\bf joueur} $\ast$ {\bf init\_\-joueur} (char $\ast$nom, int numero\_\-joueur)
+\begin{CompactList}\small\item\em initialise le joueur \item\end{CompactList}\item 
+void {\bf init\_\-bureau\_\-krystel} ({\bf information} $\ast$bureau\_\-de\_\-krystel[16])
+\begin{CompactList}\small\item\em initialise les cartes bureau de krystel \item\end{CompactList}\item 
+void {\bf init\_\-bureau\_\-nadege} ({\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em initialise les cartes bureau de nad\`{e}ge \item\end{CompactList}\item 
+void {\bf init\_\-plateau} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf rvb\_\-couleur} couleurs[8], {\bf cases} $\ast$$\ast$plateau)
+\item 
+{\bf joueur} $\ast$ {\bf init\_\-anneau\_\-joueur} (int nombre\_\-joueur, char $\ast$$\ast$str\_\-nom\_\-joueur)
+\begin{CompactList}\small\item\em initialise le ring des joueurs \item\end{CompactList}\item 
+{\bf cases} $\ast$$\ast$ {\bf init\_\-plateau\_\-chargement} (ifstream $\ast$file, {\bf cases} $\ast$$\ast$plateau, {\bf rvb\_\-couleur} couleurs[8], SDL\_\-Surface $\ast$surf\_\-ecran)
+\begin{CompactList}\small\item\em charge les donn\'{e}es du plateau \item\end{CompactList}\item 
+{\bf joueur} $\ast$ {\bf init\_\-anneau\_\-joueur\_\-chargement} (int nombre\_\-joueur, ifstream $\ast$file, {\bf cases} $\ast$$\ast$plateau)
+\begin{CompactList}\small\item\em cr\'{e}er la liste des joueurs \item\end{CompactList}\item 
+{\bf joueur} $\ast$ {\bf init\_\-joueur\_\-chargement} (int numero\_\-joueur, ifstream $\ast$file, {\bf cases} $\ast$$\ast$plateau)
+\begin{CompactList}\small\item\em cr\'{e}er un joueur \`{a} partir de la sauvagarde \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Description d\'{e}taill\'{e}e}
+en tete des fonctions necessaires \`{a} l'initialisation du monopoly 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$ \end{Desc}
+\begin{Desc}
+\item[Date:]09/01/2006 \end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+
+
+D\'{e}finition dans le fichier {\bf initialisation.h}.
+
+\subsection{Documentation des fonctions}
+\index{initialisation.h@{initialisation.h}!init_rvb_couleur@{init\_\-rvb\_\-couleur}}
+\index{init_rvb_couleur@{init\_\-rvb\_\-couleur}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf rvb\_\-couleur} init\_\-rvb\_\-couleur (int {\em rouge}, int {\em vert}, int {\em bleu})}\label{initialisation_8h_eb3ff7682d9d35d19d585ed90af45784}
+
+
+initialise une structure joueur en fonction des param\`{e}tre 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em rouge}]valeur pour la valeur rouge \item[{\em vert}]valeur pour la valeur vert \item[{\em bleu}]valeur pour la valeur bleu\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]la couleur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 11 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-tab\_\-rvb\_\-couleur().
+
+\begin{Code}\begin{verbatim}12 {
+13   rvb_couleur couleur;
+14   couleur.rouge=rouge;
+15   couleur.vert=vert;
+16   couleur.bleu=bleu;
+17   return(couleur);
+18 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_tab_rvb_couleur@{init\_\-tab\_\-rvb\_\-couleur}}
+\index{init_tab_rvb_couleur@{init\_\-tab\_\-rvb\_\-couleur}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-tab\_\-rvb\_\-couleur ({\bf rvb\_\-couleur} {\em couleur}[8])}\label{initialisation_8h_204063826311c6bb5b02e7d8b4c153c8}
+
+
+initialise le tableau de couleur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em couleur}]tableau de couleur\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 20 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}21 {
+22   couleur[VIOLET]=init_rvb_couleur(205,14,207);
+23   couleur[BLEU_CIEL]=init_rvb_couleur(101,232,215);
+24   couleur[ROSE]=init_rvb_couleur(251,138,244);
+25   couleur[ORANGE]=init_rvb_couleur(255,130,8);
+26   couleur[ROUGE]=init_rvb_couleur(255,0,0);
+27   couleur[JAUNE]=init_rvb_couleur(255,255,0);
+28   couleur[VERT]=init_rvb_couleur(0,255,0);
+29   couleur[BLEU]=init_rvb_couleur(0,0,255);
+30 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_salle@{init\_\-case\_\-salle}}
+\index{init_case_salle@{init\_\-case\_\-salle}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-salle (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf rvb\_\-couleur} {\em couleurs}[8], {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero}, int {\em int\_\-prix}, char $\ast$ {\em str\_\-nom1}, char $\ast$ {\em str\_\-nom2}, int {\em int\_\-groupe}, int {\em int\_\-prix\_\-niveau})}\label{initialisation_8h_f3f1830a25895cce08a3704b5dbe4188}
+
+
+initialise les cases salles 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em couleurs}]tableau de couleur \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]le type de case \item[{\em int\_\-numero}]numero de la case \item[{\em int\_\-prix}]prix de la case \item[{\em str\_\-nom1}]nom de la case \item[{\em str\_\-nom2}]nom de la case \item[{\em int\_\-groupe}]groupe de la case \item[{\em int\_\-prix\_\-niveau}]prix pour augmenter d'un niveau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 32 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}33 {
+34   int position;
+35   char* str_nom;
+36   position=int_numero/10;
+37   (*pcase).int_type=int_type; 
+38   (*pcase).surf_image=creation_case(surf_ecran, couleurs[int_groupe], str_nom1, str_nom2, int_prix, position);
+39   (*pcase).int_position=position;
+40   switch(position)
+41   {
+42     case POSITION_BAS:
+43       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+44       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+45       break;
+46     case POSITION_GAUCHE:
+47       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+48       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+49       break;
+50     case POSITION_HAUT:
+51       (*pcase).rect_coordonnees.x=POS_X_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+52       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+53       break;
+54     case POSITION_DROITE:
+55       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+56       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+57       break;
+58     default:
+59       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+60       break;
+61   }
+62   ((*pcase).case_salle).bool_hypotheque=false;
+63   ((*pcase).case_salle).int_valeur_hypotheque=0;
+64   ((*pcase).case_salle).int_prix=int_prix;
+65   ((*pcase).case_salle).int_prix_niveau=int_prix_niveau;
+66   ((*pcase).case_salle).pjoueur_joueur=NULL;
+67   ((*pcase).case_salle).int_niveau=0;
+68   ((*pcase).case_salle).int_groupe=int_groupe;
+69    
+70   str_nom = new char[strlen(str_nom1)+strlen(str_nom2)+2];
+71   sprintf(str_nom, "%s %s",str_nom1, str_nom2);
+72   ((*pcase).case_salle).surf_detail=creation_case_detail(surf_ecran, couleurs[int_groupe], str_nom, int_prix/10, int_prix_niveau);
+73   ((*pcase).case_salle).surf_propriete=creation_case_propriete(surf_ecran, couleurs[int_groupe], str_nom);
+74   delete[] str_nom;
+75   ((*pcase).case_salle).bool_etat=1;
+76 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_association@{init\_\-case\_\-association}}
+\index{init_case_association@{init\_\-case\_\-association}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-association (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero})}\label{initialisation_8h_fd2d7cea599ec9cf2a3e5dba79fa542f}
+
+
+initialise les cases associations 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]type de la case \item[{\em int\_\-numero}]num\'{e}ro de la case\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 78 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}79 {
+80   rvb_couleur couleur;
+81   couleur.rouge=255;
+82   couleur.bleu=100;
+83   couleur.vert=255;
+84   int position;
+85   position=int_numero/10;
+86   (*pcase).int_type=int_type; 
+87   (*pcase).surf_image=creation_case_association(surf_ecran, int_type);
+88   (*pcase).int_position=position;
+89   switch(position)
+90   {
+91     case POSITION_BAS:
+92       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+93       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+94       break;
+95     case POSITION_GAUCHE:
+96       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+97       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+98       break;
+99     case POSITION_HAUT:
+100       (*pcase).rect_coordonnees.x=POS_X_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+101       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+102       break;
+103     case POSITION_DROITE:
+104       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+105       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+106       break;
+107     default:
+108       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+109       break;
+110   }
+111   ((*pcase).case_association).bool_hypotheque=false;
+112   ((*pcase).case_association).int_valeur_hypotheque=750;
+113   ((*pcase).case_association).int_prix=1500;
+114   ((*pcase).case_association).pjoueur_joueur=NULL;
+115   ((*pcase).case_association).int_autre_bureau=0;
+116   ((*pcase).case_association).surf_detail=creation_case_detail_assoc(surf_ecran, int_type);
+117   if(int_type==BDE) ((*pcase).case_association).surf_propriete=creation_case_propriete(surf_ecran, couleur, "B.D.E.");
+118   else ((*pcase).case_association).surf_propriete=creation_case_propriete(surf_ecran, couleur, "B.D.S.");
+119    
+120 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_lieu_commun@{init\_\-case\_\-lieu\_\-commun}}
+\index{init_case_lieu_commun@{init\_\-case\_\-lieu\_\-commun}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-lieu\_\-commun (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero})}\label{initialisation_8h_2a41f60dfa70c873024b0960c9645dea}
+
+
+initialise les cases lieu commun 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]type de la case \item[{\em int\_\-numero}]num\'{e}ro de la case\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 122 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}123 {
+124   rvb_couleur couleur;
+125   couleur.rouge=255;
+126   couleur.bleu=255;
+127   couleur.vert=100;
+128   int position;
+129   position=int_numero/10;
+130   (*pcase).int_type=int_type; 
+131   (*pcase).surf_image=creation_case_lieu_commun(surf_ecran, int_type);
+132   (*pcase).int_position=position;
+133   switch(int_type)
+134   {
+135     case LC_WC:
+136       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-5*CASE_LARGEUR;
+137       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+138       break;
+139     case LC_ASCENSEUR:
+140       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+141       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-5*CASE_LARGEUR;
+142       break;
+143     case LC_RU:
+144       (*pcase).rect_coordonnees.x=POS_X_PLATEAU+CASE_HAUTEUR+(4*CASE_LARGEUR);
+145       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+146       break;
+147     case LC_PARKING:
+148       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+149       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU+CASE_HAUTEUR+(4*CASE_LARGEUR);
+150       break;
+151     default:
+152       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+153       break;
+154   }
+155   ((*pcase).case_lieu_commun).bool_hypotheque=false;
+156   ((*pcase).case_lieu_commun).int_valeur_hypotheque=750;
+157   ((*pcase).case_lieu_commun).int_prix=2000;
+158   ((*pcase).case_lieu_commun).pjoueur_joueur=NULL;
+159   ((*pcase).case_lieu_commun).int_suivant=0;
+160   ((*pcase).case_lieu_commun).surf_detail=creation_case_detail_lc(surf_ecran, int_type);
+161   switch(int_type)
+162   {
+163     case LC_WC:
+164       ((*pcase).case_lieu_commun).surf_propriete=creation_case_propriete(surf_ecran, couleur, "W.C.");
+165       break;
+166     case LC_PARKING:
+167       ((*pcase).case_lieu_commun).surf_propriete=creation_case_propriete(surf_ecran, couleur, "Parking");
+168       break;
+169     case LC_ASCENSEUR:
+170       ((*pcase).case_lieu_commun).surf_propriete=creation_case_propriete(surf_ecran, couleur, "Ascenseur");
+171       break;
+172     case LC_RU:
+173       ((*pcase).case_lieu_commun).surf_propriete=creation_case_propriete(surf_ecran, couleur, "R.U.");
+174       break;
+175     default:
+176       break;
+177   }
+178 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_soiree@{init\_\-case\_\-soiree}}
+\index{init_case_soiree@{init\_\-case\_\-soiree}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-soiree (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero})}\label{initialisation_8h_bf8bcf752a766858a3ad36a1aaa6d6e0}
+
+
+initialise les cases soir\'{e}e 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]type de la case \item[{\em int\_\-numero}]num\'{e}ro de la case\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 212 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}213 {
+214   int position;
+215   position=int_numero/10;
+216   (*pcase).int_type=int_type; 
+217   (*pcase).surf_image=creation_case_soiree(surf_ecran, int_type);
+218   (*pcase).int_position=position;
+219   switch(position)
+220   {
+221     case POSITION_BAS:
+222       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+223       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+224       break;
+225     case POSITION_GAUCHE:
+226       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+227       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+228       break;
+229     case POSITION_HAUT:
+230       (*pcase).rect_coordonnees.x=POS_X_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+231       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+232       break;
+233     case POSITION_DROITE:
+234       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+235       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+236       break;
+237     default:
+238       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+239       break;
+240   }
+241 
+242   ((*pcase).case_soiree).int_prix=0;
+243   ((*pcase).case_soiree).surf_detail=NULL;
+244 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_special@{init\_\-case\_\-special}}
+\index{init_case_special@{init\_\-case\_\-special}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-special (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero})}\label{initialisation_8h_2cfc6089b89ed8c70ed97650c80f98d6}
+
+
+initialise les cases sp\'{e}ciales 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]type de la case \item[{\em int\_\-numero}]num\'{e}ro de la case\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 246 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}247 {
+248   int position;
+249   position=int_numero/10;
+250   (*pcase).int_type=int_type; 
+251   (*pcase).surf_image=creation_case_coin(surf_ecran, int_type);
+252   (*pcase).int_position=position;
+253   switch(int_type)
+254   {
+255     case SP_APPARTEMENT:
+256       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+257       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+258       break;
+259     case SP_BUREAU_LAURENCE:
+260       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+261       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+262       break;
+263     case SP_MACHINE_CAFE:
+264       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+265       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+266       
+267       //il n'y a pas d'argent dans la machine à café pour le début
+268       pcase->machine_a_cafe.int_argent=0;
+269       
+270       break;
+271     case SP_TABLEAU:
+272       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+273       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+274       break;
+275     default:
+276       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+277       break;
+278     }
+279    
+280 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_case_administration@{init\_\-case\_\-administration}}
+\index{init_case_administration@{init\_\-case\_\-administration}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-case\_\-administration (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf cases} $\ast$ {\em pcase}, int {\em int\_\-type}, int {\em int\_\-numero})}\label{initialisation_8h_a74c44713afc24152ed52a98e4fdb5c5}
+
+
+initialise les cases adimnistration 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pcase}]case en cours de cr\'{e}ation \item[{\em int\_\-type}]type de la case \item[{\em int\_\-numero}]num\'{e}ro de la case\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 180 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau().
+
+\begin{Code}\begin{verbatim}181 {
+182   int position;
+183   position=int_numero/10;
+184   (*pcase).int_type=int_type; 
+185   (*pcase).surf_image=creation_case_bureau(surf_ecran, int_type, position);
+186   (*pcase).int_position=position;
+187   switch(position)
+188   {
+189     case POSITION_BAS:
+190       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+191       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+192       break;
+193     case POSITION_GAUCHE:
+194       (*pcase).rect_coordonnees.x=POS_X_PLATEAU;
+195       (*pcase).rect_coordonnees.y=(POS_Y_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR-(int_numero%10*CASE_LARGEUR);
+196       break;
+197     case POSITION_HAUT:
+198       (*pcase).rect_coordonnees.x=POS_X_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+199       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU;
+200       break;
+201     case POSITION_DROITE:
+202       (*pcase).rect_coordonnees.x=(POS_X_PLATEAU+TAILLE_PLATEAU)-CASE_HAUTEUR;
+203       (*pcase).rect_coordonnees.y=POS_Y_PLATEAU+CASE_HAUTEUR+((int_numero%10-1)*CASE_LARGEUR);
+204       break;
+205     default:
+206       cerr << "Erreur de position pour la case numéro" << int_numero << endl;
+207       break;
+208   }
+209   ((*pcase).case_administration).surf_detail=NULL;
+210 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_anneau_possesions@{init\_\-anneau\_\-possesions}}
+\index{init_anneau_possesions@{init\_\-anneau\_\-possesions}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf possession}$\ast$ init\_\-anneau\_\-possesions ()}\label{initialisation_8h_bae63fd138bcf62660ed3f6b10f74804}
+
+
+initialise l'anneau des possesions du joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]NULL \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 532 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-joueur(), et init\_\-joueur\_\-chargement().
+
+\begin{Code}\begin{verbatim}533 {
+534     return(NULL);
+535 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!creation_possession@{creation\_\-possession}}
+\index{creation_possession@{creation\_\-possession}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf possession}$\ast$ creation\_\-possession ({\bf cases} $\ast$ {\em propriete})}\label{initialisation_8h_7890e9d171550eee14e174ea5d8cc13a}
+
+
+ajoute de fa\c{c}on ordonn\'{e}e une propri\'{e}t\'{e} dans la liste 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em propriete}]propri\'{e}t\'{e} a ajouter\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]la t\`{e}te de la chaine \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 538 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par insertion\_\-bonne\_\-place\_\-propriete().
+
+\begin{Code}\begin{verbatim}539 {
+540   possession* nv_possession;
+541   
+542   nv_possession=new possession;
+543   
+544   if (nv_possession==NULL)
+545   {
+546     cerr << "Erreur d'allocation memoire" << endl;
+547     exit(-1);
+548   }
+549   else
+550   {
+551     nv_possession->propriete=propriete;
+552     nv_possession->suivant=NULL;
+553   }
+554   return(nv_possession);
+555   
+556 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_joueur@{init\_\-joueur}}
+\index{init_joueur@{init\_\-joueur}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ init\_\-joueur (char $\ast$ {\em nom}, int {\em numero\_\-joueur})}\label{initialisation_8h_b98a0cd209ea767ba97eb8be1727995c}
+
+
+initialise le joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em nom}]le nom du joueur \item[{\em numero\_\-joueur}]le num\'{e}ro du joueur\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le joueur ainsi cr\'{e}\'{e} \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 327 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-anneau\_\-joueur().
+
+\begin{Code}\begin{verbatim}328 {
+329   joueur* pjoueur;
+330   
+331   pjoueur=new joueur;
+332   
+333   strcpy(pjoueur->str_nom, nom);
+334   pjoueur->int_laurence=0;
+335   pjoueur->bool_laurence=false;
+336   pjoueur->int_position=0;
+337   pjoueur->int_argent=15000;
+338   pjoueur->int_certificat=0;
+339   pjoueur->int_double_tire=0;
+340   pjoueur->bool_debut=false;
+341   pjoueur->pjoueur_suivant=NULL;
+342   pjoueur->surf_image=creation_joueur(numero_joueur+1);
+343   pjoueur->propriete=init_anneau_possesions();
+344   
+345   return(pjoueur);
+346 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_bureau_krystel@{init\_\-bureau\_\-krystel}}
+\index{init_bureau_krystel@{init\_\-bureau\_\-krystel}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-bureau\_\-krystel ({\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16])}\label{initialisation_8h_66b2c4e7d7f6497b9387edba09714fc1}
+
+
+initialise les cartes bureau de krystel 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 350 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}351 {
+352   //pour chaque case du tableau
+353   for(int i=0;i<16;i++)
+354   {
+355     //on allou en mémoire un espace pour une information
+356     bureau_de_krystel[i]=new information;
+357     //on test si l'allocation c'est bien déroulée
+358     if (bureau_de_krystel[i]==NULL)
+359     {
+360       //cerr << "Erreur d'allocation" << endl;
+361       exit(-1);
+362     }
+363   }
+364   //on initialise le tableau d'information
+365   strcpy(bureau_de_krystel[0]->texte,"Vous étes convoqué au bureau de Nesim. Allez-y sans plus tarder.Si vous devez passer par chez vous, touchez votre argent de poche.");
+366   bureau_de_krystel[0]->type=POSITION;
+367   //bureau_de_krystel[0]->traitement=;
+368   bureau_de_krystel[0]->valeur=39;
+369   
+370   strcpy(bureau_de_krystel[1]->texte,"Vous avez été convoqué au bureau de Laurence. Ne passez pas par chez vous, ne touchez pas votre argent de poche!");
+371   bureau_de_krystel[1]->type=CARTE_LAURENCE;
+372   //bureau_de_krystel[1->->traitement=;
+373   bureau_de_krystel[1]->valeur=10;
+374   
+375   strcpy(bureau_de_krystel[2]->texte,"Vous avez raté votre DS d'info.Allez voir Florent! Si vous devez passer par chez vous, touchez votre argent de poche.");
+376   bureau_de_krystel[2]->type=POSITION;
+377   //bureau_de_krystel[2]->traitement=;
+378   bureau_de_krystel[2]->valeur=34;
+379   
+380   strcpy(bureau_de_krystel[3]->texte,"3 en colle de physique! Allez voir Pierre dans son bureau! Si vous devez passer par chez vous, touchez votre argent de poche.");
+381   bureau_de_krystel[3]->type=POSITION;
+382   //bureau_de_krystel[3]->traitement=;
+383   bureau_de_krystel[3]->valeur=37;
+384   
+385   strcpy(bureau_de_krystel[4]->texte,"Vous devez payer vos frais de scolarité : 1500 Fintz.");
+386   bureau_de_krystel[4]->type=ARGENT;
+387   //bureau_de_krystel[4]->traitement=;
+388   bureau_de_krystel[4]->valeur=-1500;
+389   
+390   strcpy(bureau_de_krystel[5]->texte,"Vous avez laissé votre session ouverte : reculez de 3 cases.");
+391   bureau_de_krystel[5]->type=POSITION;
+392   //bureau_de_krystel[5]->traitement=;
+393   bureau_de_krystel[5]->valeur=-3;
+394   
+395   strcpy(bureau_de_krystel[6]->texte,"Il est 12 heures 14 minutes et 45 secondes, il vous reste 15 seconde pour plier vos affaires et allez manger au R.U.. Si vous devez passer par chez vous, touchez votre argent de poche.");
+396   bureau_de_krystel[6]->type=POSITION;
+397   //bureau_de_krystel[6]->traitement=;
+398   bureau_de_krystel[6]->valeur=5;
+399   
+400   strcpy(bureau_de_krystel[7]->texte,"Krystel a fait une erreur dans ses comptes : elle vous reverse 50 Fintz.");
+401   bureau_de_krystel[7]->type=ARGENT;
+402   //bureau_de_krystel[7]->traitement=;
+403   bureau_de_krystel[7]->valeur=50;
+404   
+405   strcpy(bureau_de_krystel[8]->texte,"Inspection de la CTI : versez 400 Fintz par niveeau pour chacune de vos salles");
+406   bureau_de_krystel[8]->type=ARGENT;
+407   //bureau_de_krystel[8]->traitement=;
+408   bureau_de_krystel[8]->valeur=-400;
+409   
+410   strcpy(bureau_de_krystel[9]->texte,"Allez en salle 309. DS d'analyse ! Si vous devez passer par chez vous, touchez votre argent de poche.");
+411   bureau_de_krystel[9]->type=POSITION;
+412   //bureau_de_krystel[9]->traitement=;
+413   bureau_de_krystel[9]->valeur=24;
+414   
+415   
+416   //==============================================================================================================
+417   strcpy(bureau_de_krystel[10]->texte,"Dure journée de cours. Rentrez chez vous geeker un petit peu. N'oubliez pas votre argent de poche");
+418   bureau_de_krystel[10]->type=POSITION;
+419   //bureau_de_krystel[10]->traitement=;
+420   bureau_de_krystel[10]->valeur=0;
+421   
+422   strcpy(bureau_de_krystel[11]->texte,"Certificat médical : ce certificat vous permet de sortir du bureau de Laurence.");
+423   bureau_de_krystel[11]->type=CERTIFICAT;
+424   //bureau_de_krystel[11]->traitement=;
+425   bureau_de_krystel[11]->valeur=1;
+426   
+427   strcpy(bureau_de_krystel[12]->texte,"Vous avez reussi votre DS de Math! Vos parents vous donnent une petite récompense : vous toucher 200 Fintz.");
+428   bureau_de_krystel[12]->type=ARGENT;
+429   //bureau_de_krystel[12]->traitement=;
+430   bureau_de_krystel[12]->valeur=200;
+431   
+432   strcpy(bureau_de_krystel[13]->texte,"Vous avez loupez 2H de math! Saleté de réveil ! Vous versez 100 Fintz");
+433   bureau_de_krystel[13]->type=ARGENT;
+434   //bureau_de_krystel[13]->traitement=;
+435   bureau_de_krystel[13]->valeur=-100;
+436   
+437   strcpy(bureau_de_krystel[14]->texte,"Felicitation votre prospection a Totoville vous rapporte 50 Fintz");
+438   bureau_de_krystel[14]->type=ARGENT;
+439   //bureau_de_krystel[14]->traitement=;
+440   bureau_de_krystel[14]->valeur=50;
+441   
+442   strcpy(bureau_de_krystel[15]->texte,"Aprés avoir pris une déroutée monumentale au ping-pong vous avez brisé la raquette en deux. Versez 50 Fintz de cotisation");
+443   bureau_de_krystel[15]->type=ARGENT;
+444   //bureau_de_krystel[15]->traitement=;
+445   bureau_de_krystel[15]->valeur=-50;
+446   
+447   melanger_cartes(bureau_de_krystel);
+448 }        
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_bureau_nadege@{init\_\-bureau\_\-nadege}}
+\index{init_bureau_nadege@{init\_\-bureau\_\-nadege}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-bureau\_\-nadege ({\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{initialisation_8h_9653e9e1b67aa65f18bfe211c08273ce}
+
+
+initialise les cartes bureau de nad\`{e}ge 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nadege\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 450 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}451 {
+452   //pour chaque case du tableau
+453   for(int i=0;i<16;i++)
+454   {
+455     //on allou en mémoire un espace pour une information
+456     bureau_de_nadege[i]=new information;
+457     //on test si l'allocation c'est bien déroulée
+458     if (bureau_de_nadege[i]==NULL)
+459     {
+460       //cerr << "Erreur d'allocation" << endl;
+461       exit(-1);
+462     }
+463   }
+464   //on initialise le tableau d'information
+465   strcpy(bureau_de_nadege[0]->texte,"Vous venez de planter le serveur de l'école. Allez voir alex! Si vous devez passer par chez vous, touchez votre argent de poche.");
+466   bureau_de_nadege[0]->type=POSITION;
+467   bureau_de_nadege[0]->valeur=14;
+468   
+469   strcpy(bureau_de_nadege[1]->texte,"Fait avez fait sauté les plombs de l'école. Payez le montant des réparation : 100 Fintz");
+470   bureau_de_nadege[1]->type=ARGENT;
+471   bureau_de_nadege[1]->valeur=-100;
+472   
+473   strcpy(bureau_de_nadege[2]->texte,"Votre assiduité en cours vous oblige é racheter des cahier pour prendre en note. La facture s'éléve é 50 Fintz.");
+474   bureau_de_nadege[2]->type=ARGENT;
+475   bureau_de_nadege[2]->valeur=-50;
+476   
+477   strcpy(bureau_de_nadege[3]->texte,"Vous venez de prendre -0.5 au dernier DS d'analyse. Astrid vous laisse le choix : allez voir Krystel ou payer 50 Fintz");
+478   bureau_de_nadege[3]->type=ASTRID;
+479   bureau_de_nadege[3]->valeur=-50;
+480   
+481   strcpy(bureau_de_nadege[4]->texte,"Votre taux d'absentéisme est inconcevable. Vous étes convoqué dans le bureau de Laurence immédiatement. Ne passez pas par chez vous, ne touchez pas votre argent de poche.");
+482   bureau_de_nadege[4]->type=CARTE_LAURENCE;
+483   bureau_de_nadege[4]->valeur=10;
+484   
+485   strcpy(bureau_de_nadege[5]->texte,"Certificat médical : ce certificat vous permet de sortir du bureau de Laurence.");
+486   bureau_de_nadege[5]->type=CERTIFICAT;
+487   bureau_de_nadege[5]->valeur=3;
+488   
+489   strcpy(bureau_de_nadege[6]->texte,"Le dernier cours de la journée est annulé.Vous rentrez tranquilement chez vous");
+490   bureau_de_nadege[6]->type=POSITION;
+491   bureau_de_nadege[6]->valeur=0;
+492   
+493   strcpy(bureau_de_nadege[7]->texte,"Inspection du comité des grandes écoles. Payez 500 Fintz par niveau pour nettoyer vos salles");
+494   bureau_de_nadege[7]->type=CTI;
+495   bureau_de_nadege[7]->valeur=50;
+496   
+497   strcpy(bureau_de_nadege[8]->texte,"Inspection de la CTI : versez 400 Fintz par niveeau pour chacune de vos salles");
+498   bureau_de_nadege[8]->type=CTI;
+499   bureau_de_nadege[8]->valeur=-400;
+500   
+501   strcpy(bureau_de_nadege[9]->texte,"La machine a café a encore eu des ratées. Vous gagnez 50 Fintz");
+502   bureau_de_nadege[9]->type=ARGENT;
+503   bureau_de_nadege[9]->valeur=50;
+504   
+505   strcpy(bureau_de_nadege[10]->texte,"Un p*t*in de poteau de m*** a encore traversé la route en dehors des clous. Payez 300 Fintz de réparation.");
+506   bureau_de_nadege[10]->type=ARGENT;
+507   bureau_de_nadege[10]->valeur=300;
+508   
+509   strcpy(bureau_de_nadege[11]->texte,"C'est votre anniversaire! Chacun de vos adversaires vous donnes 100 Fintz");
+510   bureau_de_nadege[11]->type=ANNIVERSAIRE;
+511   bureau_de_nadege[11]->valeur=100;
+512   
+513   strcpy(bureau_de_nadege[12]->texte,"Contrôle d'alcoolémie! Vous avez été contrôlé positif avec 3.5 g/L après avoir pris un rond-point à 80 km/h en contre-sens tout phares éteints en plein milieu de la nuit. Félicitation de la police, vous gagnez 1000 Fintz.");
+514   bureau_de_nadege[12]->type=ARGENT;
+515   bureau_de_nadege[12]->valeur=1000;
+516   
+517   strcpy(bureau_de_nadege[13]->texte,"Vous organisé une visite guidée de la maison de Forky. Chacun des élèves doit payer 150 Fintz pour se poiler");
+518   bureau_de_nadege[13]->type=ANNIVERSAIRE;
+519   bureau_de_nadege[13]->valeur=-150;
+520   
+521   strcpy(bureau_de_nadege[14]->texte,"Felicitation votre prospection a Totoland vous rapporte 150 Fintz");
+522   bureau_de_nadege[14]->type=ARGENT;
+523   bureau_de_nadege[14]->valeur=150;
+524   
+525   strcpy(bureau_de_nadege[15]->texte,"Vous participez a une LAN et après 20h de jeu consécutives, dans un élan de courage vous vous levez entrainant avec vous votre casque qui fait tomber votre ordinateur. Le montant des réparations s'élève à 200 Fintz.");
+526   bureau_de_nadege[15]->type=ARGENT;
+527   bureau_de_nadege[15]->valeur=-200;
+528   
+529   melanger_cartes(bureau_de_nadege);
+530 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_plateau@{init\_\-plateau}}
+\index{init_plateau@{init\_\-plateau}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void init\_\-plateau (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf rvb\_\-couleur} {\em couleurs}[8], {\bf cases} $\ast$$\ast$ {\em plateau})}\label{initialisation_8h_747195b12cac623e1d7b0c8f192eb073}
+
+
+
+
+D\'{e}finition \`{a} la ligne 282 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-plateau\_\-chargement(), et main().
+
+\begin{Code}\begin{verbatim}283 {
+284   init_case_special(surf_ecran, plateau[0], SP_APPARTEMENT, 0);
+285   init_case_salle(surf_ecran, couleurs, plateau[1], SALLE, 1, 600, "Salle", "107", VIOLET, PRIX_NIVEAU_MIN);
+286   init_case_administration(surf_ecran, plateau[2], BUREAU_NADEGE, 2);
+287   init_case_salle(surf_ecran, couleurs, plateau[3], SALLE, 3, 600, "Salle", "109", VIOLET, PRIX_NIVEAU_MIN);
+288   init_case_soiree(surf_ecran, plateau[4], SOIREE_AREA, 4);
+289   init_case_lieu_commun(surf_ecran, plateau[5], LC_WC, 5);
+290   init_case_salle(surf_ecran, couleurs, plateau[6], SALLE, 6, 1000, "Bureau de", "Arianne", BLEU_CIEL, PRIX_NIVEAU_MIN);
+291   init_case_administration(surf_ecran, plateau[7], BUREAU_KRYSTEL, 7);
+292   init_case_salle(surf_ecran, couleurs, plateau[8], SALLE, 8, 1000, "Bureau de", "Muriel E.", BLEU_CIEL, PRIX_NIVEAU_MIN);
+293   init_case_salle(surf_ecran, couleurs, plateau[9], SALLE, 9, 1200, "Bureau de", "Anne-Marie", BLEU_CIEL, PRIX_NIVEAU_MIN);
+294   init_case_special(surf_ecran, plateau[10], SP_BUREAU_LAURENCE, 10);
+295   init_case_salle(surf_ecran, couleurs, plateau[11], SALLE, 11, 1400, "Bureau de", "Mathias", ROSE, PRIX_NIVEAU_MIN*2);
+296   init_case_association(surf_ecran, plateau[12], BDS, 12);
+297   init_case_salle(surf_ecran, couleurs, plateau[13], SALLE, 13, 1400, "Bureau de", "Muriel D.", ROSE, PRIX_NIVEAU_MIN*2);
+298   init_case_salle(surf_ecran, couleurs, plateau[14], SALLE, 14, 1600, "Bureau de", "Alex", ROSE, PRIX_NIVEAU_MIN*2);
+299   init_case_lieu_commun(surf_ecran, plateau[15], LC_ASCENSEUR, 15);
+300   init_case_salle(surf_ecran, couleurs, plateau[16], SALLE, 16, 1800, "Salle", "304", ORANGE, PRIX_NIVEAU_MIN*2);
+301   init_case_administration(surf_ecran, plateau[17], BUREAU_NADEGE, 17);
+302   init_case_salle(surf_ecran, couleurs, plateau[18], SALLE, 18, 1800, "Salle", "305", ORANGE, PRIX_NIVEAU_MIN*2);
+303   init_case_salle(surf_ecran, couleurs, plateau[19], SALLE, 19, 2000, "Salle", "308", ORANGE, PRIX_NIVEAU_MIN*2);
+304   init_case_special(surf_ecran, plateau[20], SP_MACHINE_CAFE, 20);
+305   init_case_salle(surf_ecran, couleurs, plateau[21], SALLE, 21, 2200, "Salle", "306", ROUGE, PRIX_NIVEAU_MIN*3);
+306   init_case_administration(surf_ecran, plateau[22], BUREAU_KRYSTEL, 22);
+307   init_case_salle(surf_ecran, couleurs, plateau[23], SALLE, 23, 2200, "Salle", "307", ROUGE, PRIX_NIVEAU_MIN*3);
+308   init_case_salle(surf_ecran, couleurs, plateau[24], SALLE, 24, 2400, "Salle", "309", ROUGE, PRIX_NIVEAU_MIN*3);
+309   init_case_lieu_commun(surf_ecran, plateau[25], LC_RU, 25);
+310   init_case_salle(surf_ecran, couleurs, plateau[26], SALLE, 26, 2600, "Bureau de", "Yannick", JAUNE, PRIX_NIVEAU_MIN*3);
+311   init_case_salle(surf_ecran, couleurs, plateau[27], SALLE, 27, 2600, "Bureau de", "Nisrine", JAUNE, PRIX_NIVEAU_MIN*3);
+312   init_case_association(surf_ecran, plateau[28], BDE, 28);
+313   init_case_salle(surf_ecran, couleurs, plateau[29], SALLE, 29, 2800, "Bureau de", "Astrid", JAUNE, PRIX_NIVEAU_MIN*3);
+314   init_case_special(surf_ecran, plateau[30], SP_TABLEAU, 30);
+315   init_case_salle(surf_ecran, couleurs, plateau[31], SALLE, 31, 3000, "Cafeteria", " ", VERT, PRIX_NIVEAU_MIN*4);
+316   init_case_salle(surf_ecran, couleurs, plateau[32], SALLE, 32, 3000, "Amphi", " ", VERT, PRIX_NIVEAU_MIN*4);
+317   init_case_administration(surf_ecran, plateau[33], BUREAU_NADEGE, 33);
+318   init_case_salle(surf_ecran, couleurs, plateau[34], SALLE, 34, 3200, "Bureau de", "Florent", VERT, PRIX_NIVEAU_MIN*4);
+319   init_case_lieu_commun(surf_ecran, plateau[35], LC_PARKING, 35);
+320   init_case_administration(surf_ecran, plateau[36], BUREAU_KRYSTEL, 36);
+321   init_case_salle(surf_ecran, couleurs, plateau[37], SALLE, 37, 3500, "Bureau de", "Pierre", BLEU, PRIX_NIVEAU_MIN*4);
+322   init_case_soiree(surf_ecran, plateau[38], SOIREE_GALA, 38);
+323   init_case_salle(surf_ecran, couleurs, plateau[39], SALLE, 39, 4000, "Bureau de", "Nesim", BLEU, PRIX_NIVEAU_MIN*4);
+324 
+325 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_anneau_joueur@{init\_\-anneau\_\-joueur}}
+\index{init_anneau_joueur@{init\_\-anneau\_\-joueur}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ init\_\-anneau\_\-joueur (int {\em nombre\_\-joueur}, char $\ast$$\ast$ {\em str\_\-nom\_\-joueur})}\label{initialisation_8h_c63520740681b004b0e764941de7550d}
+
+
+initialise le ring des joueurs 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em nombre\_\-joueur}]nombre de joueurs \item[{\em str\_\-nom\_\-joueur}]tableau du nom des joueurs\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]un des joueurs de l'anneau \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 558 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}559 {
+560   joueur* p_joueur_premier;
+561   
+562   joueur* p_joueur_precedent;
+563   joueur* p_joueur_encours;
+564   
+565   //on crée le premier joueur
+566   p_joueur_premier=init_joueur(str_nom_joueur[0],0);
+567   p_joueur_precedent=p_joueur_premier;
+568   
+569   for(int i=1;i<nombre_joueur;i++)
+570   {
+571     p_joueur_encours=init_joueur(str_nom_joueur[i], i);
+572     p_joueur_precedent->pjoueur_suivant=p_joueur_encours;
+573     p_joueur_precedent=p_joueur_encours;
+574   }
+575   p_joueur_precedent->pjoueur_suivant=p_joueur_premier;
+576   return(p_joueur_premier);
+577 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_plateau_chargement@{init\_\-plateau\_\-chargement}}
+\index{init_plateau_chargement@{init\_\-plateau\_\-chargement}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf cases}$\ast$$\ast$ init\_\-plateau\_\-chargement (ifstream $\ast$ {\em file}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf rvb\_\-couleur} {\em couleurs}[8], SDL\_\-Surface $\ast$ {\em surf\_\-ecran})}\label{initialisation_8h_54ad36bf2c7883be8967c0dd2397b31e}
+
+
+charge les donn\'{e}es du plateau 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em file}]fichier de sauvegarde \item[{\em plateau}]plateau de jeu \item[{\em couleurs}]tableau de couleurs \item[{\em surf\_\-ecran}]surface de l'\'{e}cran\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le plateau \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 631 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par chargement().
+
+\begin{Code}\begin{verbatim}632 {
+633   int tmp;
+634   int i;
+635   
+636   i=0;
+637   
+638   //on allou d'abord le prix du parc gratuit
+639   *file >> plateau[20]->machine_a_cafe.int_argent;
+640   
+641   init_plateau(surf_ecran, couleurs, plateau);
+642   for (i = 0; i < 40; i++)
+643   {
+644     *file >> tmp;
+645     if (tmp!=-1)
+646     {
+647       plateau[i]->case_salle.int_niveau=tmp;
+648     }
+649   }
+650   
+651   return(plateau);
+652   
+653 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_anneau_joueur_chargement@{init\_\-anneau\_\-joueur\_\-chargement}}
+\index{init_anneau_joueur_chargement@{init\_\-anneau\_\-joueur\_\-chargement}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ init\_\-anneau\_\-joueur\_\-chargement (int {\em nombre\_\-joueur}, ifstream $\ast$ {\em file}, {\bf cases} $\ast$$\ast$ {\em plateau})}\label{initialisation_8h_47cbc51084a056aeb4ac1e52937a2a87}
+
+
+cr\'{e}er la liste des joueurs 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em file}]fichier de sauvegarde \item[{\em plateau}]plateau de jeu \item[{\em nombre\_\-joueur}]nombre de joueur\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le premier joueur \`{a} jou\'{e} \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 579 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par chargement().
+
+\begin{Code}\begin{verbatim}580 {
+581   joueur* p_joueur_premier;
+582   
+583   joueur* p_joueur_precedent;
+584   joueur* p_joueur_encours;
+585   
+586   //on crée le premier joueur
+587   p_joueur_premier=init_joueur_chargement(0, file,plateau);
+588   p_joueur_precedent=p_joueur_premier;
+589   
+590   for(int i=1;i<nombre_joueur;i++)
+591   {
+592     p_joueur_encours=init_joueur_chargement(i,file,plateau);
+593     p_joueur_precedent->pjoueur_suivant=p_joueur_encours;
+594     p_joueur_precedent=p_joueur_encours;
+595   }
+596   p_joueur_precedent->pjoueur_suivant=p_joueur_premier;
+597   
+598   return(p_joueur_premier);
+599 }
+\end{verbatim}\end{Code}
+
+
+\index{initialisation.h@{initialisation.h}!init_joueur_chargement@{init\_\-joueur\_\-chargement}}
+\index{init_joueur_chargement@{init\_\-joueur\_\-chargement}!initialisation.h@{initialisation.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ init\_\-joueur\_\-chargement (int {\em numero\_\-joueur}, ifstream $\ast$ {\em file}, {\bf cases} $\ast$$\ast$ {\em plateau})}\label{initialisation_8h_09625d3fc915b81e9380b3d8303d3fca}
+
+
+cr\'{e}er un joueur \`{a} partir de la sauvagarde 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em file}]fichier de sauvegarde \item[{\em plateau}]plateau de jeu \item[{\em numero\_\-joueur}]num\'{e}ro du joueur\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]0.0.1 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le premier joueur \`{a} jou\'{e} \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 601 du fichier initialisation.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-anneau\_\-joueur\_\-chargement().
+
+\begin{Code}\begin{verbatim}602 {
+603   joueur* pjoueur;
+604   int int_propriete_tmp;
+605   
+606   pjoueur=new joueur;
+607   
+608   *file >> pjoueur->str_nom; 
+609   *file >> pjoueur->int_position;
+610   *file >> pjoueur->int_argent;
+611   *file >> pjoueur->int_certificat;
+612   *file >> pjoueur->bool_debut;
+613   *file >> pjoueur->int_double_tire;
+614   *file >> pjoueur->bool_laurence;
+615   *file >> pjoueur->int_laurence;
+616   
+617   pjoueur->pjoueur_suivant=NULL;
+618   pjoueur->surf_image=creation_joueur(numero_joueur+1);
+619   pjoueur->propriete=init_anneau_possesions();
+620 
+621   *file >> int_propriete_tmp;
+622   
+623   while (int_propriete_tmp != -1)
+624   {
+625     pjoueur->propriete=insertion_bonne_place_propriete(pjoueur->propriete,plateau[int_propriete_tmp]);
+626     *file >> int_propriete_tmp;
+627   }
+628   return(pjoueur);
+629 }
+\end{verbatim}\end{Code}
+
+

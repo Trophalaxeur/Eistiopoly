@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="structpossession" kind="struct" prot="public">
+    <compoundname>possession</compoundname>
+    <includes refid="structure_8h" local="no">structure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpossession_1d2cf0b1aadb1a869c82c6720dfbc9e36" prot="public" static="no" mutable="no">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>struct possession* suivant</definition>
+        <argsstring></argsstring>
+        <name>suivant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/structure.h" line="36" bodyfile="/root/workspace/monopoly/structure.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="sdl_8h_183fed3d7a65d02378d31795cab19b73d" compoundref="sdl_8c" startline="1983" endline="2111">affich_panneau_possessions</referencedby>
+        <referencedby refid="initialisation_8h_17890e9d171550eee14e174ea5d8cc13a" compoundref="initialisation_8c" startline="538" endline="556">creation_possession</referencedby>
+        <referencedby refid="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" compoundref="outils_8c" startline="104" endline="228">insertion_bonne_place_propriete</referencedby>
+        <referencedby refid="outils_8h_1564f1b7b3845867298d667c4811cbff3" compoundref="outils_8c" startline="521" endline="536">int_to_cases</referencedby>
+        <referencedby refid="outils_8h_172f8d3fa346a685e363d2aa16537c971" compoundref="outils_8c" startline="504" endline="519">nombre_propriete</referencedby>
+        <referencedby refid="outils_8h_1113ece66046fa3db3fed49a3ada1b36e" compoundref="outils_8c" startline="606" endline="702">sauvegarde</referencedby>
+        <referencedby refid="traitement_8h_1be19ec4331bcef51ef67b4a083f5f1db" compoundref="traitement_8c" startline="888" endline="992">traitement_bureau</referencedby>
+        <referencedby refid="traitement_8h_112c087ef5d94868443731b4c92032e14" compoundref="traitement_8c" startline="994" endline="1061">traitement_elimination_joueur</referencedby>
+        <referencedby refid="traitement_8h_1bdfc1ebd2d8ecfcd5d3b01937f529839" compoundref="traitement_8c" startline="534" endline="562">traitement_loyer_association</referencedby>
+        <referencedby refid="traitement_8h_175826dfc26c45fb35071e334a0d1a6a6" compoundref="traitement_8c" startline="564" endline="580">traitement_loyer_lieu_commun</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpossession_15e54d7b40815342bfd51737d5a96d620" prot="public" static="no" mutable="no">
+        <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+        <definition>cases* propriete</definition>
+        <argsstring></argsstring>
+        <name>propriete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/structure.h" line="37" bodyfile="/root/workspace/monopoly/structure.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="sdl_8h_183fed3d7a65d02378d31795cab19b73d" compoundref="sdl_8c" startline="1983" endline="2111">affich_panneau_possessions</referencedby>
+        <referencedby refid="initialisation_8h_17890e9d171550eee14e174ea5d8cc13a" compoundref="initialisation_8c" startline="538" endline="556">creation_possession</referencedby>
+        <referencedby refid="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" compoundref="outils_8c" startline="104" endline="228">insertion_bonne_place_propriete</referencedby>
+        <referencedby refid="outils_8h_1564f1b7b3845867298d667c4811cbff3" compoundref="outils_8c" startline="521" endline="536">int_to_cases</referencedby>
+        <referencedby refid="outils_8h_1113ece66046fa3db3fed49a3ada1b36e" compoundref="outils_8c" startline="606" endline="702">sauvegarde</referencedby>
+        <referencedby refid="traitement_8h_1be19ec4331bcef51ef67b4a083f5f1db" compoundref="traitement_8c" startline="888" endline="992">traitement_bureau</referencedby>
+        <referencedby refid="traitement_8h_112c087ef5d94868443731b4c92032e14" compoundref="traitement_8c" startline="994" endline="1061">traitement_elimination_joueur</referencedby>
+        <referencedby refid="traitement_8h_1bdfc1ebd2d8ecfcd5d3b01937f529839" compoundref="traitement_8c" startline="534" endline="562">traitement_loyer_association</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>possession</label>
+        <link refid="structpossession"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>suivant</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>propriete</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>joueur</label>
+        <link refid="structjoueur"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>pjoueur_suivant</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>propriete</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cases</label>
+        <link refid="structcases"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>pjoueur_joueur</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/root/workspace/monopoly/structure.h" line="35" bodyfile="/root/workspace/monopoly/structure.h" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structpossession_15e54d7b40815342bfd51737d5a96d620" prot="public" virt="non-virtual"><scope>possession</scope><name>propriete</name></member>
+      <member refid="structpossession_1d2cf0b1aadb1a869c82c6720dfbc9e36" prot="public" virt="non-virtual"><scope>possession</scope><name>suivant</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

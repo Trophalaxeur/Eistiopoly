@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="dir_29932c9e61c1edccbd0d816e8877d227" kind="dir">
+    <compoundname>traitement/</compoundname>
+    <innerfile refid="traitement_8c">traitement.c</innerfile>
+    <innerfile refid="traitement_8h">traitement.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/root/workspace/monopoly/traitement/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1156 @@
+\section{R\'{e}f\'{e}rence du fichier outils.c}
+\label{outils_8c}\index{outils.c@{outils.c}}
+code source des outils 
+
+\subsection*{Fonctions}
+\begin{CompactItemize}
+\item 
+char $\ast$ {\bf ajout\_\-caractere} (char $\ast$texte, int int\_\-caractere)
+\begin{CompactList}\small\item\em ajoute un caractere (en code UTF-8) en fin de chaine \item\end{CompactList}\item 
+int {\bf nombre\_\-joueur\_\-case} ({\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em calcule le nombre de joueur sur une case \item\end{CompactList}\item 
+void {\bf melanger\_\-cartes} ({\bf information} $\ast$cartes\_\-a\_\-melanger[16])
+\begin{CompactList}\small\item\em m\'{e}lange les cartes du bureau en effectuant une suite al\'{e}atoire d'\'{e}changes \item\end{CompactList}\item 
+void {\bf swap\_\-carte} ({\bf information} $\ast$cartes\_\-a\_\-melanger[16], int position\_\-case1, int position\_\-case2)
+\begin{CompactList}\small\item\em \'{e}change de cartes dans un tableau d'un bureau \item\end{CompactList}\item 
+void {\bf joueur\_\-possede\_\-tout} ({\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$joueur\_\-encours)
+\item 
+{\bf possession} $\ast$ {\bf insertion\_\-bonne\_\-place\_\-propriete} ({\bf possession} $\ast$premier\_\-maillon, {\bf cases} $\ast$case\_\-achetee)
+\item 
+bool {\bf possession\_\-autres\_\-cartes} ({\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em verifie si le joueur poss\`{e}de les autres cartes de la m\^{e}me couleur que celle ou il se trouve \item\end{CompactList}\item 
+int {\bf decoupage\_\-string} (char $\ast$$\ast$$\ast$str\_\-tab, char $\ast$str\_\-a\_\-diviser)
+\begin{CompactList}\small\item\em divise une chaine en caract\`{e}re en tableau de cha\^{\i}ne caract\`{e}re \item\end{CompactList}\item 
+int {\bf action\_\-possible} ({\bf cases} $\ast$$\ast$plateau, int int\_\-position\_\-cases\_\-etudiee, {\bf joueur} $\ast$pj\_\-joueur, int int\_\-etat, int int\_\-nb\_\-tire)
+\begin{CompactList}\small\item\em analyse toutes les actions possibles pour un joueur pour une case donn\'{e}e \item\end{CompactList}\item 
+int {\bf nombre\_\-propriete} ({\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em compte le nombre de propri\'{e}t\'{e}s du joueur \item\end{CompactList}\item 
+{\bf cases} $\ast$ {\bf int\_\-to\_\-cases} (int int\_\-indice\_\-case, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em \`{a} partir de l'indice de chaine des propri\'{e}t\'{e} elle trouve la case correspondante \item\end{CompactList}\item 
+bool {\bf verification\_\-victoire} ({\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em compte le nombre de propri\'{e}t\'{e}s du joueur \item\end{CompactList}\item 
+void {\bf action\_\-to\_\-boutons} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-fond, int int\_\-action, int int\_\-etat)
+\begin{CompactList}\small\item\em d\'{e}finit les boutons \`{a} afficher en fonction des actions possibles sur une propri\'{e}t\'{e} \item\end{CompactList}\item 
+void {\bf sauvegarde} ({\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur\_\-tete)
+\begin{CompactList}\small\item\em sauvegarde de la partie \item\end{CompactList}\item 
+{\bf joueur} $\ast$ {\bf chargement} ({\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau, {\bf rvb\_\-couleur} couleurs[8], SDL\_\-Surface $\ast$surf\_\-ecran)
+\begin{CompactList}\small\item\em chargement de la partie \item\end{CompactList}\item 
+bool {\bf is\_\-readable} (const std::string \&file)
+\begin{CompactList}\small\item\em test si un fichier existe \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Description d\'{e}taill\'{e}e}
+code source des outils 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$ \end{Desc}
+\begin{Desc}
+\item[Date:]09/01/2006 \end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+
+
+D\'{e}finition dans le fichier {\bf outils.c}.
+
+\subsection{Documentation des fonctions}
+\index{outils.c@{outils.c}!ajout_caractere@{ajout\_\-caractere}}
+\index{ajout_caractere@{ajout\_\-caractere}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ ajout\_\-caractere (char $\ast$ {\em texte}, int {\em int\_\-caractere})}\label{outils_8c_1020af4a7a407165a0f3b4e75307a3fc}
+
+
+ajoute un caractere (en code UTF-8) en fin de chaine 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em texte}]texte initial \item[{\em int\_\-caractere}]entier correspondant \`{a} une lettre\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]la chaine initiale avec le caract\`{e}re \`{a} la fin \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 11 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-action\_\-config().
+
+\begin{Code}\begin{verbatim}12 {
+13   char c_caractere[2];
+14   char texte_temp[16];
+15   c_caractere[0]=(char)int_caractere;
+16   c_caractere[1]='\0';
+17 
+18   strcpy(texte_temp,texte);
+19   
+20   
+21   //on vérifie si la chaine est non vide
+22   if ((texte_temp!=NULL)) //&& (texte_temp[0]!='\0'))
+23   {
+24     //si le caractère rentré est le backspace
+25     if(int_caractere==8)
+26     {
+27       //la dernière case pleine de la chaine prend la valeur \0
+28       texte_temp[strlen(texte_temp)-1]='\0';
+29     }
+30     //s'il ne s'agit pas du backspace
+31     else
+32     {
+33       //la dernier case de la chaine de caractère prend pour valeur le caractère de la table ascii coorespondant
+34       //si la chaine n'est pas pleine et si le caractère est admissible
+35       if ((strlen(texte_temp)<14) 
+36         && ( 
+37         ((int_caractere>=97) && (int_caractere<=122)) //lettres minuscules
+38         || ((int_caractere>=30) && (int_caractere<=39)) //chiffres
+39         || (int_caractere==95) //underscore
+40         || (int_caractere==45) //tiré
+41         || (int_caractere==32) // espace
+42         || (int_caractere==46))) //point
+43       {
+44       strcpy(texte_temp,strcat(texte_temp,c_caractere));
+45       }
+46     }
+47   }
+48   strcpy(texte,texte_temp);
+49   return(texte);
+50 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!nombre_joueur_case@{nombre\_\-joueur\_\-case}}
+\index{nombre_joueur_case@{nombre\_\-joueur\_\-case}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int nombre\_\-joueur\_\-case ({\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{outils_8c_628b8ba74e55cbdc77d8c2e5e594bc8e}
+
+
+calcule le nombre de joueur sur une case 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]le joueur actuellement en train de jouer son tour\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le nombre de joueur sur la case \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 52 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par aller\_\-a\_\-jeton(), aller\_\-en\_\-prison\_\-jeton(), attente\_\-validation\_\-propriete(), avancer\_\-jeton(), et reculer\_\-jeton().
+
+\begin{Code}\begin{verbatim}53 {
+54   int int_mm_case;
+55   
+56   int_mm_case=0;
+57   
+58   joueur* pj_joueur_encours;
+59   
+60   pj_joueur_encours=pj_joueur->pjoueur_suivant;
+61   
+62   while (pj_joueur_encours != pj_joueur)
+63   {
+64     if (pj_joueur_encours->int_position==pj_joueur->int_position)
+65     {
+66       int_mm_case++;
+67     }
+68     pj_joueur_encours=pj_joueur_encours->pjoueur_suivant;
+69   }
+70   return(int_mm_case);
+71 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!melanger_cartes@{melanger\_\-cartes}}
+\index{melanger_cartes@{melanger\_\-cartes}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void melanger\_\-cartes ({\bf information} $\ast$ {\em cartes\_\-a\_\-melanger}[16])}\label{outils_8c_034d05be61f25003576b3ac8c5a2edb7}
+
+
+m\'{e}lange les cartes du bureau en effectuant une suite al\'{e}atoire d'\'{e}changes 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em cartes\_\-a\_\-melanger}]tableau des cartes \`{a} m\'{e}langer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 73 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-bureau\_\-krystel(), et init\_\-bureau\_\-nadege().
+
+\begin{Code}\begin{verbatim}74 {
+75   for (int i=0;i<1000;i++)
+76   {
+77     swap_carte(cartes_a_melanger, rand()%16, rand()%16);
+78   }
+79 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!swap_carte@{swap\_\-carte}}
+\index{swap_carte@{swap\_\-carte}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void swap\_\-carte ({\bf information} $\ast$ {\em cartes\_\-a\_\-melanger}[16], int {\em position\_\-case1}, int {\em position\_\-case2})}\label{outils_8c_449869c420d1199183139e03451f2adf}
+
+
+\'{e}change de cartes dans un tableau d'un bureau 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em cartes\_\-a\_\-melanger}]tableau des cartes \`{a} m\'{e}langer \item[{\em position\_\-case1}]position de la premi\`{e}re carte \`{a} \'{e}changer dans le tableau \item[{\em position\_\-case2}]position de la seconde carte \`{a} \'{e}changer dans le tableau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 81 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par melanger\_\-cartes().
+
+\begin{Code}\begin{verbatim}82 {
+83   information* pi_tmp;
+84   
+85   pi_tmp=cartes_a_melanger[position_case1];
+86   cartes_a_melanger[position_case1]=cartes_a_melanger[position_case2];
+87   cartes_a_melanger[position_case2]=pi_tmp;
+88 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!joueur_possede_tout@{joueur\_\-possede\_\-tout}}
+\index{joueur_possede_tout@{joueur\_\-possede\_\-tout}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void joueur\_\-possede\_\-tout ({\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em joueur\_\-encours})}\label{outils_8c_39dfce9b2a45da995ceaab0aade1bdf8}
+
+
+
+
+D\'{e}finition \`{a} la ligne 90 du fichier outils.c.
+
+\begin{Code}\begin{verbatim}91 {
+92   int i;
+93   bool retour;
+94   
+95   joueur_encours->int_argent=9999999;
+96     
+97   for(i=1;i<30;i++)
+98   {
+99     //tente d'acheter toutes les cases (la fonction traitement_achat se charge de verifier si elle sont achetable ou pas)
+100     retour=traitement_achat(plateau[i],joueur_encours); 
+101   }
+102 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!insertion_bonne_place_propriete@{insertion\_\-bonne\_\-place\_\-propriete}}
+\index{insertion_bonne_place_propriete@{insertion\_\-bonne\_\-place\_\-propriete}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf possession}$\ast$ insertion\_\-bonne\_\-place\_\-propriete ({\bf possession} $\ast$ {\em premier\_\-maillon}, {\bf cases} $\ast$ {\em case\_\-achetee})}\label{outils_8c_d53767c5dbc0daa1a8de086094690eaa}
+
+
+
+
+D\'{e}finition \`{a} la ligne 104 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-joueur\_\-chargement(), et traitement\_\-achat().
+
+\begin{Code}\begin{verbatim}105 {
+106   possession* nv_maillon;
+107   possession* maillon_encours;
+108   possession* maillon_precedent;
+109   
+110   nv_maillon=creation_possession(case_achetee);
+111   
+112   //si le premier maillon n'existe pas on retourne le nouveau maillon qui est alors la tete
+113   if (premier_maillon==NULL)
+114   {
+115     return(nv_maillon);
+116   }
+117   else
+118   {
+119     //sinon on va chercher à bien le positionner
+120     //si c'est une case de propriete
+121     if (nv_maillon->propriete->int_type==SALLE)
+122     {
+123         //le premier maillon a comparer est le premier
+124                       
+125         maillon_encours=premier_maillon;
+126 
+127         //on avance dans la chaine jusqu'a trouver une case de la meme couleur ou à arriver au bout
+128         while ((maillon_encours->suivant != NULL) &&  (nv_maillon->propriete->case_salle.int_groupe != maillon_encours->propriete->case_salle.int_groupe))
+129         {
+130             maillon_precedent=maillon_encours;
+131             maillon_encours=maillon_encours->suivant;
+132         }
+133         //on récupère ainsi le premier maillon ayant la meme couleur que celui qu'on veut insérer
+134         //on insère alors le nv_maillon juste après celui ainsi trouvé
+135         nv_maillon->suivant=maillon_encours->suivant;
+136         maillon_encours->suivant=nv_maillon;
+137         return(premier_maillon);
+138     }
+139     else
+140     {
+141       //sinon il peut s'agir soit d'un lieu commun soit du bds/bde
+142       //on cherche alors de la meme manière que pour les groupe pour les cases normales les cartes de même type
+143       
+144       //si c'est le bde ou le bds
+145       if (nv_maillon->propriete->int_type==BDE)
+146       {     
+147           //le maillon a comparer est le premier
+148           maillon_encours=premier_maillon;
+149         
+150           while ((maillon_encours->suivant != NULL) &&  (maillon_encours->propriete->int_type!=BDS))
+151           {
+152               maillon_precedent=maillon_encours;
+153               maillon_encours=maillon_encours->suivant;
+154           }
+155           //on récupère ainsi le bds ou la fin de chaine
+156           //si on est en bout de chaine on l'insère au début
+157           if(maillon_encours->suivant==NULL)
+158           {
+159             nv_maillon->suivant=premier_maillon;
+160             return(nv_maillon);
+161           }
+162           //sinon on l'insere après le bds
+163           else
+164           {
+165           nv_maillon->suivant=maillon_encours->suivant;
+166           maillon_encours->suivant=nv_maillon;
+167           return(premier_maillon);
+168           }
+169       }
+170       else if (nv_maillon->propriete->int_type==BDS)
+171       {   
+172       
+173           //le premier maillon a comparer est le premier
+174           maillon_encours=premier_maillon;
+175         
+176           while ((maillon_encours->suivant != NULL) &&  (maillon_encours->propriete->int_type!=BDS))
+177           {
+178             maillon_precedent=maillon_encours;
+179             maillon_encours=maillon_encours->suivant;
+180           }
+181           //on récupère ainsi le bds ou la fin de chaine
+182           //si on est en bout de chaine on l'insère au début
+183           if(maillon_encours->suivant==NULL)
+184           {
+185             nv_maillon->suivant=premier_maillon;
+186             return(nv_maillon);
+187           }
+188           //sinon on l'insere après le bds
+189           else
+190           {
+191           nv_maillon->suivant=maillon_encours->suivant;
+192           maillon_encours->suivant=nv_maillon;
+193           return(premier_maillon);
+194           }
+195       }
+196             
+197       //sinon ce sont les lieux communs
+198       else if ((nv_maillon->propriete->int_type >= LC_WC) && (nv_maillon->propriete->int_type<=LC_PARKING))
+199       {       
+200           //le premier maillon a comparer est le second
+201           maillon_encours=premier_maillon;
+202 
+203           while ((maillon_encours->suivant != NULL) &&  ((maillon_encours->propriete->int_type < LC_WC) || (maillon_encours->propriete->int_type > LC_PARKING)))
+204           {
+205             maillon_precedent=maillon_encours;
+206             maillon_encours=maillon_encours->suivant;
+207           }
+208           //on récupère ainsi le premier lieu commun ou la fin de chaine
+209           //si on est en bout de chaine on l'insère au début
+210           
+211 
+212           if(maillon_encours->suivant==NULL)
+213           {
+214             nv_maillon->suivant=premier_maillon;
+215             return(nv_maillon);
+216           }
+217           //sinon on l'insere après le premier lieu commun trouvé
+218           else
+219           {
+220             nv_maillon->suivant=maillon_encours->suivant;
+221             maillon_encours->suivant=nv_maillon;
+222             return(premier_maillon);
+223           }
+224       }       
+225     }
+226   }
+227   return(false);
+228 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!possession_autres_cartes@{possession\_\-autres\_\-cartes}}
+\index{possession_autres_cartes@{possession\_\-autres\_\-cartes}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool possession\_\-autres\_\-cartes ({\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{outils_8c_914637efff042e343c9bb0befab2f609}
+
+
+verifie si le joueur poss\`{e}de les autres cartes de la m\^{e}me couleur que celle ou il se trouve 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em plateau}]tableau contenant les cases du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]vrai s'il les poss\`{e}de sinon faux \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 230 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible().
+
+\begin{Code}\begin{verbatim}231 {
+232   int i;
+233   int k;
+234   
+235   //on définit le groupe de la case où se trouve le joueur
+236   if (plateau[pj_joueur->int_position]->int_type == SALLE)
+237   {
+238     //on définit le groupe de la case où se trouve le joueur
+239     //pour les groupe vert ou bleu ils faut trouver une seule autre carte du groupe
+240     if ((plateau[pj_joueur->int_position]->case_salle.int_groupe ==VIOLET) || (plateau[pj_joueur->int_position]->case_salle.int_groupe == BLEU))
+241     {
+242       //on cherche deux cases avant et deux cases après (les cases de ces couleurs ne sont jamais éloignés de plus de deux cases)
+243       if (   (plateau[((pj_joueur->int_position - 2)+40)%40]->int_type == SALLE)
+244         && (plateau[((pj_joueur->int_position - 2)+40)%40]->case_salle.int_groupe == plateau[pj_joueur->int_position]->case_salle.int_groupe)
+245         && (plateau[((pj_joueur->int_position - 2)+40)%40]->case_salle.pjoueur_joueur == pj_joueur))
+246       {
+247         return (true);
+248       }
+249       else if (  (plateau[(pj_joueur->int_position + 2)%40]->int_type == SALLE)
+250           && (plateau[(pj_joueur->int_position + 2)%40]->case_salle.int_groupe == plateau[pj_joueur->int_position]->case_salle.int_groupe)
+251           && (plateau[(pj_joueur->int_position + 2)%40]->case_salle.pjoueur_joueur == pj_joueur))
+252       {
+253         return(true);
+254       }
+255     }
+256     //pour les autres il faut trouver forcement trouver deux autres carte du mm groupe
+257     else 
+258     {
+259       k=0;
+260       //on cherche trois cases avant et trois cases après (les cases de ces couleurs ne sont jamais éloignés de plus de trois cases)
+261       for (i =((pj_joueur->int_position - 3)+40)%40; i < (pj_joueur->int_position + 3)%40 ; i++)
+262       {
+263         //on ne recompte la case ou est actuellement le joueur
+264         if (i != pj_joueur->int_position)
+265         {
+266           if (   (plateau[i]->int_type == SALLE)
+267             && (plateau[i]->case_salle.int_groupe == plateau[pj_joueur->int_position]->case_salle.int_groupe)
+268             && (plateau[i]->case_salle.pjoueur_joueur == pj_joueur))
+269           {
+270             k++;
+271           }
+272           
+273         }
+274         
+275       }
+276       //on verifie si on a trouver deux cases
+277       if (k==2)
+278       {
+279         return(true);
+280       }     
+281     }
+282   }
+283   return(false);
+284 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!decoupage_string@{decoupage\_\-string}}
+\index{decoupage_string@{decoupage\_\-string}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int decoupage\_\-string (char $\ast$$\ast$$\ast$ {\em str\_\-tab}, char $\ast$ {\em str\_\-a\_\-diviser})}\label{outils_8c_6f12b97af4dd149267a5a423e3e5e7a7}
+
+
+divise une chaine en caract\`{e}re en tableau de cha\^{\i}ne caract\`{e}re 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em str\_\-tab}]tableau de chaine de caract\`{e}re pour le retour de la chaine une fois divis\'{e} \item[{\em str\_\-a\_\-diviser}]la chaine de caract\`{e}re \`{a} diviser\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le nombre de lignes \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 286 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-validation\_\-message().
+
+\begin{Code}\begin{verbatim}287 {
+288   int int_ligne_max;
+289   
+290   int i;
+291   int k; //curseur indiquant la ligne en cours de création
+292   int j; //curseur de déplacement dans str_a_diviser
+293 
+294   i=0;
+295   k=0;
+296   j=0;
+297 
+298 
+299   int_ligne_max=((int)(strlen(str_a_diviser)/MESSAGE_MAX_CARACTERE)+1)*2;
+300   
+301   //on alloue en mémoire un tableau de chaine de caractère de int_ligne_max lignes contenant chacune des chaine de 64 caractères
+302   str_tab[0]=new char*[int_ligne_max];
+303   
+304   for (i = 0 ; i < int_ligne_max ; i++)
+305   {
+306     str_tab[0][i]=new char[MESSAGE_MAX_CARACTERE];
+307   }
+308   
+309   //tant qu'on est pas au bout de la chaine principale
+310   while (strlen(str_a_diviser) >= MESSAGE_MAX_CARACTERE)
+311   {
+312     //on met le curseur à 63
+313     j=MESSAGE_MAX_CARACTERE - 1;
+314     
+315     //puis on cherche avant, le premier espace
+316     while (str_a_diviser[j] != ' ')
+317     {
+318       j--;
+319     }
+320     
+321     //on copie les j premiers caractères
+322     strncpy(str_tab[0][k],str_a_diviser,j);
+323     //on marque la fin de chaine
+324     str_tab[0][k][j]='\0';
+325     
+326     //on deplace le pointeur
+327     str_a_diviser=str_a_diviser+j;
+328     //on passe a la ligne à créer suivante
+329     k++;
+330   }
+331   //après il ne nous reste plus que le morceau de chaine d'une taille inférieur à MESSAGE_MAX_CARACTERE
+332   strcpy(str_tab[0][k],str_a_diviser);
+333   
+334   return(k+1);
+335 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!action_possible@{action\_\-possible}}
+\index{action_possible@{action\_\-possible}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int action\_\-possible ({\bf cases} $\ast$$\ast$ {\em plateau}, int {\em int\_\-position\_\-cases\_\-etudiee}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, int {\em int\_\-etat}, int {\em int\_\-nb\_\-tire})}\label{outils_8c_d1c532cdedd8b070691946cc83436c96}
+
+
+analyse toutes les actions possibles pour un joueur pour une case donn\'{e}e 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em plateau}]tableau contenant les cases du plateau \item[{\em int\_\-position\_\-cases\_\-etudiee}]cases \`{a} partir de laquelle on doit faire le traitement \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em int\_\-etat}]indique si le joueur demande a modifier le niveau d'une salle ou s'il demande une hypoth\`{e}que ou s'il est seulement arriver sur une salle \item[{\em int\_\-nb\_\-tire}]nombre indiqu\'{e} par les d\'{e}s\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]ACTION\_\-ACHAT s'il peut acheter, ACTION\_\-HUNHYPOTHEQUE s'il peut d\'{e}shypot\'{e}quer, ACTION\_\-PLUS s'il peut augmenter le niveau de la salle, ACTION\_\-MOINS s'il peut diminuer le niveau de la salle, ACTION\_\-PLUS\_\-MOINS s'il peut augmenter ou diminuer le niveau de la salle, ACTION\_\-FINIR s'il ne peut que finir le tour, ACTION\_\-PAYER s'il doit payer le loyer \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 337 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}338 {
+339   int i;
+340   //on vérifie s'il s'agit l'arrivé sur une case
+341   if (int_etat == ARRIVE_CASE)
+342   { 
+343   //on détermine le type de la case ou il se trouve
+344   
+345     //s'il se trouve sur une salle
+346     if (plateau[pj_joueur->int_position]->int_type==SALLE)
+347     {
+348       //on vérifie si elle n'appartient à personne et que le joueur à l'argent et qu'elle n'est pas au premier tour
+349       if (!(pj_joueur->bool_debut) && (plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur==NULL) && (pj_joueur->int_argent >= plateau[pj_joueur->int_position]->case_salle.int_prix))
+350       {
+351         //il peut alors l'acheter ou finir ce tour ou abandonner
+352         return(ACTION_ACHAT);
+353       }
+354       //sinon si elle appartient à un adversaire
+355       else if (plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur != pj_joueur)
+356       {
+357         //si il a assez d'argent
+358         if (pj_joueur->int_argent >= (plateau[pj_joueur->int_position]->case_salle.int_prix/100)*plateau[pj_joueur->int_position]->case_salle.int_niveau)
+359         {
+360           //il peut alors payer
+361           return(ACTION_PAYER);
+362         }
+363         else
+364         {
+365           return(ACTION_PERDRE);
+366         }
+367       }
+368       //sinon si la case lui appartient
+369       else if (plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur == pj_joueur)
+370       {
+371         //s'il possède toutes les autres cartes de même couleur
+372         if (possession_autres_cartes(plateau,pj_joueur))
+373         {
+374           //si son niveau est au maximum il ne peut que diminuer
+375           if (plateau[pj_joueur->int_position]->case_salle.int_niveau == 5)
+376           {
+377             return(ACTION_MOINS);
+378           }
+379           
+380           //si son niveau est nul il ne peut qu'augmenter s'il a de l'argent
+381           else if ((plateau[pj_joueur->int_position]->case_salle.int_niveau == 0) && (pj_joueur->int_argent >= plateau[pj_joueur->int_position]->case_salle.int_prix_niveau))
+382           {
+383             return(ACTION_PLUS);
+384           }
+385           
+386           //dans aucun des deux cas précedent s'il a assez d'argent il peut faire les deux
+387           else if (pj_joueur->int_argent >= plateau[pj_joueur->int_position]->case_salle.int_prix_niveau)
+388           {
+389             return(ACTION_PLUS_MOINS);
+390           }
+391           else 
+392           {
+393             return(ACTION_FINIR);
+394           }
+395           
+396         }
+397         else
+398         {
+399           //il ne peut rien faire si ce n'est finir le tour
+400           return(ACTION_FINIR);
+401         }
+402       }
+403     }
+404     //s'il se trouve sur une case association ou sur un lieu commun
+405     else if (  (plateau[pj_joueur->int_position]->int_type == LC_PARKING)
+406         || (plateau[pj_joueur->int_position]->int_type == LC_RU)
+407         || (plateau[pj_joueur->int_position]->int_type == LC_ASCENSEUR)
+408         || (plateau[pj_joueur->int_position]->int_type == LC_WC))
+409     {
+410       //on vérifie si elle n'appartient à personne et qu'il à assez d'argent
+411       if (!(pj_joueur->bool_debut) && (plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur==NULL) && (pj_joueur->int_argent >= plateau[pj_joueur->int_position]->case_lieu_commun.int_prix))
+412       {
+413         //il peut alors l'acheter ou finir ce tour
+414         return(ACTION_ACHAT);
+415       }
+416       //sinon si elle appartient à un adversaire
+417       else if ((plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur != pj_joueur) && (plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur != NULL))
+418       {
+419         //si il a assez d'argent
+420         if (pj_joueur->int_argent >= traitement_loyer_lieu_commun(plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur))
+421         {
+422           //il peut alors payer
+423           return(ACTION_PAYER);
+424         }
+425         else
+426         {
+427           //sinon il perd
+428           return(ACTION_PERDRE);
+429         }
+430       }
+431       //sinon si la case lui appartient
+432       else if (plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur == pj_joueur)
+433       {
+434         //il le peut que finir ce tour
+435         return(ACTION_FINIR);
+436       }
+437     }
+438     else if (  (plateau[pj_joueur->int_position]->int_type == BDE)
+439         || (plateau[pj_joueur->int_position]->int_type == BDS))
+440     {
+441       //on vérifie si elle n'appartient à personne et qu'il à assez d'argent
+442       if (!(pj_joueur->bool_debut) && (plateau[pj_joueur->int_position]->case_association.pjoueur_joueur==NULL) && (pj_joueur->int_argent >= plateau[pj_joueur->int_position]->case_association.int_prix))
+443       {
+444         //il peut alors l'acheter ou finir ce tour
+445         return(ACTION_ACHAT);
+446       }
+447       else if ((plateau[pj_joueur->int_position]->case_association.pjoueur_joueur != pj_joueur) && (plateau[pj_joueur->int_position]->case_association.pjoueur_joueur != NULL))
+448       {
+449         //si il a assez d'argent
+450         if (pj_joueur->int_argent >= traitement_loyer_association(plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur, int_nb_tire))
+451         {
+452           //il peut alors payer
+453           return(ACTION_PAYER);
+454         }
+455         else
+456         {
+457           //sinon il perd
+458           return(ACTION_PERDRE);
+459         }
+460       }
+461       //sinon si la case lui appartient
+462       else if (plateau[pj_joueur->int_position]->case_association.pjoueur_joueur == pj_joueur)
+463       {
+464         //il le peut que finir ce tour
+465         return(ACTION_FINIR);
+466       }
+467     }
+468   }
+469   else if (int_etat == CLICK_CASE)
+470   {
+471     i=0;
+472     while (plateau[i]!=int_to_cases(int_position_cases_etudiee,pj_joueur)) i++;
+473     if (plateau[i]->int_type == SALLE)
+474     {
+475       //si le joueur est sur une case du même groupe
+476       if (plateau[pj_joueur->int_position]->case_salle.int_groupe == plateau[i]->case_salle.int_groupe)
+477       {
+478         //si sont niveau est nul il ne peut qu'augmenter
+479         if (plateau[i]->case_salle.int_niveau == 0)
+480         {
+481           return(ACTION_PLUS);
+482         }
+483         //si son niveau est au maximum il ne peut que diminuer
+484         else if (plateau[i]->case_salle.int_niveau == 5)
+485         {
+486           return(ACTION_MOINS);
+487         }
+488         else
+489         {
+490           return(ACTION_PLUS_MOINS);
+491         }
+492       }
+493     }
+494     else 
+495     {
+496       //il ne peut que suivre les indications spécifique à chaque case ou chaque carte
+497       return(ACTION_FINIR);
+498     }
+499   }
+500   
+501   return(ERREUR);
+502 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!nombre_propriete@{nombre\_\-propriete}}
+\index{nombre_propriete@{nombre\_\-propriete}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int nombre\_\-propriete ({\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{outils_8c_72f8d3fa346a685e363d2aa16537c971}
+
+
+compte le nombre de propri\'{e}t\'{e}s du joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur qui joue actuellement\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le nombre de propri\'{e}t\'{e} du joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 504 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-panneau\_\-possessions(), et attente\_\-clic().
+
+\begin{Code}\begin{verbatim}505 {
+506   possession* propriete_temp;
+507   int i;
+508 
+509   i=0;
+510   propriete_temp=pj_joueur->propriete;
+511   while(propriete_temp!=NULL)
+512   {
+513     i++;
+514     propriete_temp=propriete_temp->suivant;
+515   }
+516   
+517   return(i);
+518   
+519 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!int_to_cases@{int\_\-to\_\-cases}}
+\index{int_to_cases@{int\_\-to\_\-cases}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf cases} $\ast$ int\_\-to\_\-cases (int {\em int\_\-indice\_\-case}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{outils_8c_b0d8a34b21e6a9200451fdb0e46db386}
+
+
+\`{a} partir de l'indice de chaine des propri\'{e}t\'{e} elle trouve la case correspondante 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em int\_\-indice\_\-case}]indice de la case recherch\'{e} fourni a partir de la liste de propri\'{e}t\'{e} du panneau gauche\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]la case voulue \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 521 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), et attente\_\-clic().
+
+\begin{Code}\begin{verbatim}522 {
+523   possession* propriete_en_cours;
+524   int i;
+525   
+526   //on assigne la propriété encours avec la première propriété du joueur pour pouvoir parcourir la chaîne
+527   propriete_en_cours=pj_joueur->propriete;
+528   
+529   //on se déplace dans la chaîne jusqu'à l'indice voulue
+530   for (i = 0; i < int_indice_case; i++)
+531   {
+532     propriete_en_cours=propriete_en_cours->suivant;
+533   }
+534   //on retourne ainsi la propriete trouvée
+535   return(propriete_en_cours->propriete);
+536 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!verification_victoire@{verification\_\-victoire}}
+\index{verification_victoire@{verification\_\-victoire}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool verification\_\-victoire ({\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{outils_8c_f24e5d6a3c8482c890219439e48dfe74}
+
+
+compte le nombre de propri\'{e}t\'{e}s du joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur qui joue actuellement\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]true si le joueur \`{a} gagnersinon false \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 538 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par jeu().
+
+\begin{Code}\begin{verbatim}539 {
+540   joueur* joueur_encours;
+541   int i;
+542   
+543   i=0;
+544   
+545   //le joueur gagne s'il est seul
+546   joueur_encours=pj_joueur->pjoueur_suivant;
+547   
+548   while (joueur_encours != pj_joueur)
+549   {
+550     i++;
+551     joueur_encours=joueur_encours->pjoueur_suivant;
+552   }
+553   
+554   if (i > 0)
+555   {
+556     return(false);
+557   }
+558   else 
+559   {
+560     return(true);
+561   }
+562 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!action_to_boutons@{action\_\-to\_\-boutons}}
+\index{action_to_boutons@{action\_\-to\_\-boutons}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void action\_\-to\_\-boutons (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-fond}, int {\em int\_\-action}, int {\em int\_\-etat})}\label{outils_8c_a5265e7645b52f6efcbfd18323082a1c}
+
+
+d\'{e}finit les boutons \`{a} afficher en fonction des actions possibles sur une propri\'{e}t\'{e} 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-fond}]surface de la propri\'{e}t\'{e} \item[{\em int\_\-action}]actions possibles \item[{\em int\_\-etat}]\'{e}tat des boutons\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]nothing \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 564 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-validation\_\-propriete().
+
+\begin{Code}\begin{verbatim}565 {
+566   
+567   //Selon l'action à faire
+568   switch(int_action)
+569   {
+570     //Dans la cas d'un achat
+571     case ACTION_ACHAT:
+572       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 2, BTN_ACHAT, BTN_FINIR);
+573       break;
+574     //Dans le cas d'une deshypothèque
+575     case  ACTION_UNHYPOTHEQUE:
+576       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 2, BTN_UNHYPOTHEQUE, BTN_FINIR);
+577       break;
+578     //Dans le cas d'une hypothèque
+579     case  ACTION_HYPOTHEQUE:
+580       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 2, BTN_HYPOTHEQUE, BTN_FINIR);
+581       break;
+582     //Pour augmenter le niveau d'une salle
+583     case  ACTION_PLUS:
+584       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 2, BTN_PLUS, BTN_FINIR);
+585       break;
+586     //Pour diminuer le niveau d'une salle
+587     case  ACTION_MOINS:
+588       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 2, BTN_MOINS, BTN_FINIR);
+589       break;
+590     //Pour augmenter ou diminuer le niveau d'une salle
+591     case  ACTION_PLUS_MOINS:
+592       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 3, BTN_PLUS, BTN_MOINS, BTN_FINIR);
+593       break;
+594     //Pour finir l'action
+595     case  ACTION_FINIR:
+596       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 1, BTN_FINIR);
+597       break;
+598     //Dans tout les autres cas
+599     default:
+600       affich_validation_propriete(surf_ecran, surf_fond, int_etat, 1, BTN_FINIR);
+601       break;
+602   }
+603   
+604 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!sauvegarde@{sauvegarde}}
+\index{sauvegarde@{sauvegarde}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void sauvegarde ({\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur\_\-tete})}\label{outils_8c_113ece66046fa3db3fed49a3ada1b36e}
+
+
+sauvegarde de la partie 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em plateau}]plateau du jeu \item[{\em pj\_\-joueur\_\-tete}]joueur en cours\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]nothing \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 606 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et jeu().
+
+\begin{Code}\begin{verbatim}607 {
+608   //Joueur temporaire
+609   joueur* pj_joueur;
+610   
+611   //Propriété temporaire
+612   possession* possession_temp;
+613   
+614   //Nombre de joueur
+615   int int_nombre_joueur;
+616   int_nombre_joueur=1;
+617   
+618   //Nominateur de fin de joueur
+619   int int_fin;
+620   int_fin=-1;
+621   
+622   //Compteur de propriété
+623   int i;
+624 
+625   //On commence au premier joueur
+626   pj_joueur=pj_joueur_tete;
+627   
+628   //On compte le nombre de joueur
+629   while((pj_joueur=pj_joueur->pjoueur_suivant)!=pj_joueur_tete) int_nombre_joueur++;
+630 
+631   //On commence au premier joueur
+632   pj_joueur=pj_joueur_tete;
+633   
+634   ofstream file("sauvegarde_joueur.txt");
+635   
+636   file << int_nombre_joueur<<endl;
+637   
+638   //Tant qu'on est pas revenu au joueur de tete
+639   while(pj_joueur->pjoueur_suivant!=pj_joueur_tete)
+640   {
+641     file << pj_joueur->str_nom << endl;
+642     file << pj_joueur->int_position << endl;
+643     file << pj_joueur->int_argent << endl;
+644     file << pj_joueur->int_certificat << endl;
+645     file << pj_joueur->bool_debut << endl;
+646     file << pj_joueur->int_double_tire << endl;
+647     file << pj_joueur->bool_laurence << endl;
+648     file << pj_joueur->int_laurence << endl;
+649     
+650     possession_temp=pj_joueur->propriete;
+651     while(possession_temp!=NULL)
+652     {
+653       i=0;
+654       while (plateau[i]!=possession_temp->propriete) i++;
+655       file << i << endl;
+656       possession_temp=possession_temp->suivant;
+657     }
+658     
+659     file << int_fin << endl << endl;
+660     //On passe au joueur suivant
+661     pj_joueur=pj_joueur->pjoueur_suivant;
+662   }
+663   
+664     //Sauvegarde du dernier joueur
+665     file << pj_joueur->str_nom << endl;
+666     file << pj_joueur->int_position << endl;
+667     file << pj_joueur->int_argent << endl;
+668     file << pj_joueur->int_certificat << endl;
+669     file << pj_joueur->bool_debut << endl;
+670     file << pj_joueur->int_double_tire << endl;
+671     file << pj_joueur->bool_laurence << endl;
+672     file << pj_joueur->int_laurence << endl;
+673     
+674     possession_temp=pj_joueur->propriete;
+675     while(possession_temp!=NULL)
+676     {
+677       i=0;
+678       while (plateau[i]!=possession_temp->propriete) i++;
+679       file << i << endl;
+680       possession_temp=possession_temp->suivant;
+681     }
+682     
+683     file << int_fin << endl << endl;
+684     //On passe au joueur suivant
+685     pj_joueur=pj_joueur->pjoueur_suivant;
+686     
+687   //Sauvegarde du plateau
+688   ofstream file2("sauvegarde_plateau.txt");
+689   
+690   //On écrit le total de la cagnotte
+691   file2 << plateau[20]->machine_a_cafe.int_argent << endl;
+692   //Pour chacune des cases
+693   for(i=0;i<40;i++)
+694   {
+695     //S'il sagit d'une salle, on écrit son niveau
+696     if(plateau[i]->int_type==SALLE) file2 << plateau[i]->case_salle.int_niveau << endl;
+697     //Sinon on met -1
+698     else file2 << int_fin << endl;
+699   }
+700   
+701   
+702 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!chargement@{chargement}}
+\index{chargement@{chargement}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur} $\ast$ chargement ({\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf rvb\_\-couleur} {\em couleurs}[8], SDL\_\-Surface $\ast$ {\em surf\_\-ecran})}\label{outils_8c_ae4beb88d7abebc4264362e2f1054e90}
+
+
+chargement de la partie 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em plateau}]plateau du jeu \item[{\em pj\_\-joueur}]joueur en cours \item[{\em couleurs}]tableau de couleur \item[{\em surf\_\-ecran}]surface de l'\'{e}cran\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]un joueur de la liste de joueur \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 704 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}705 {
+706   
+707   ifstream file1("sauvegarde_joueur.txt", ios::in);
+708   if (!file1)
+709   {
+710     cerr << "Allocation inaboutie de sauvegarde_joueur.txt" << endl;
+711   }
+712   
+713   ifstream file2("sauvegarde_plateau.txt",ios::in);
+714   if (!file2)
+715   {
+716     cerr << "Allocation inaboutie de sauvegarde_plateau.txt" << endl;
+717   }
+718   
+719   
+720   int nb_joueurs;
+721   
+722   file1 >> nb_joueurs;
+723   
+724   pj_joueur=init_anneau_joueur_chargement(nb_joueurs, &file1,plateau);
+725   plateau=init_plateau_chargement(&file2, plateau, couleurs,surf_ecran);
+726   
+727   file1.close();
+728   file2.close();
+729   
+730   return(pj_joueur);
+731 
+732 }
+\end{verbatim}\end{Code}
+
+
+\index{outils.c@{outils.c}!is_readable@{is\_\-readable}}
+\index{is_readable@{is\_\-readable}!outils.c@{outils.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur} $\ast$bool is\_\-readable (const std::string \& {\em file})}\label{outils_8c_2f8e7ba560d7f4e48910a60e6414ad6e}
+
+
+test si un fichier existe 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em file}]le fichier \`{a} tester\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]si le fichier existe ou non \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 734 du fichier outils.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-action\_\-accueil().
+
+\begin{Code}\begin{verbatim}735 { 
+736     std::ifstream fichier( file.c_str() ); 
+737     return !fichier.fail(); 
+738 } 
+\end{verbatim}\end{Code}
+
+

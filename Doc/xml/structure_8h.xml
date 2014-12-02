@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="structure_8h" kind="file">
+    <compoundname>structure.h</compoundname>
+    <includedby refid="header_8h" local="yes">header.h</includedby>
+    <invincdepgraph>
+      <node id="300">
+        <label>outils.c</label>
+        <link refid="outils_8c"/>
+      </node>
+      <node id="299">
+        <label>outils.h</label>
+        <link refid="outils_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>initialisation.c</label>
+        <link refid="initialisation_8c"/>
+      </node>
+      <node id="303">
+        <label>initialisation.h</label>
+        <link refid="initialisation_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>traitement.c</label>
+        <link refid="traitement_8c"/>
+      </node>
+      <node id="301">
+        <label>traitement.h</label>
+        <link refid="traitement_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>sdl.c</label>
+        <link refid="sdl_8c"/>
+      </node>
+      <node id="295">
+        <label>sdl.h</label>
+        <link refid="sdl_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>structure.h</label>
+        <link refid="structure.h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>interaction.c</label>
+        <link refid="interaction_8c"/>
+      </node>
+      <node id="297">
+        <label>interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>monopoly.c</label>
+        <link refid="monopoly_8c"/>
+      </node>
+      <node id="305">
+        <label>monopoly.h</label>
+        <link refid="monopoly_8h"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structrvb__couleur" prot="public">rvb_couleur</innerclass>
+    <innerclass refid="structinformation" prot="public">information</innerclass>
+    <innerclass refid="structpossession" prot="public">possession</innerclass>
+    <innerclass refid="structjoueur" prot="public">joueur</innerclass>
+    <innerclass refid="structcases" prot="public">cases</innerclass>
+    <briefdescription>
+<para>toutes les structures necessaires pour le monopoly </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Franck.trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>03/12/2007 </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>\file<sp/>structure.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>\author<sp/>Franck.trey<sp/>&lt;franck.trey@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>\brief<sp/>toutes<sp/>les<sp/>structures<sp/>necessaires<sp/>pour<sp/>le<sp/>monopoly</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>\date<sp/>03/12/2007</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__MONOPOLY_STRUCTURE_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__MONOPOLY_STRUCTURE_H_</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcases" kindref="compound">cases</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="structrvb__couleur" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="structrvb__couleur_11bd9ee8c34a5177744bb7b2856c33610" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rouge;</highlight></codeline>
+<codeline lineno="22" refid="structrvb__couleur_1816a7bb71de16d574a2aac953f57f918" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vert;</highlight></codeline>
+<codeline lineno="23" refid="structrvb__couleur_1ffc4de061aea007870237c665d22177c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bleu;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}<ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structinformation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="structinformation_19c06d8d2b073bee34e1f7d22a2aeade4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>texte[512];<sp/></highlight><highlight class="comment">///&gt;<sp/>contient<sp/>le<sp/>texte<sp/>d&apos;information</highlight></codeline>
+<codeline lineno="29" refid="structinformation_1c765329451135abec74c45e1897abf26" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>le<sp/>type<sp/>d&apos;information<sp/>dont<sp/>il<sp/>s&apos;agit</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///&gt;<sp/>correspondant<sp/>à<sp/>l&apos;information</highlight></codeline>
+<codeline lineno="31" refid="structinformation_18e030c012e3b74a6d076739c4c7ecb69" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>valeur;<sp/></highlight><highlight class="comment">///&gt;<sp/>valeur<sp/>utilisée<sp/>pour<sp/>le<sp/>traitement<sp/>(prix,<sp/>position<sp/>ou<sp/>certificat)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"></highlight><highlight class="normal">}<ref refid="structinformation" kindref="compound">information</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structpossession" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpossession" kindref="compound">possession</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="structpossession_1d2cf0b1aadb1a869c82c6720dfbc9e36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpossession" kindref="compound">possession</ref>*<sp/><ref refid="structpossession_1d2cf0b1aadb1a869c82c6720dfbc9e36" kindref="member">suivant</ref>;</highlight></codeline>
+<codeline lineno="37" refid="structpossession_15e54d7b40815342bfd51737d5a96d620" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/><ref refid="structpossession_15e54d7b40815342bfd51737d5a96d620" kindref="member">propriete</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structjoueur" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>{</highlight></codeline>
+<codeline lineno="42" refid="structjoueur_1b82f4fde3382a41ee393fc1c64f9beb8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_1b82f4fde3382a41ee393fc1c64f9beb8" kindref="member">int_argent</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>argent<sp/>total<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="43" refid="structjoueur_1ecbece39087923f999df36d5107d3dee" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_1ecbece39087923f999df36d5107d3dee" kindref="member">int_certificat</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>nb<sp/>de<sp/>certificats<sp/>médicaux<sp/>du<sp/>joueurs</highlight></codeline>
+<codeline lineno="44" refid="structjoueur_147d7b57cd189c4324a0bc8b338aec618" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_147d7b57cd189c4324a0bc8b338aec618" kindref="member">int_position</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>numéro<sp/>de<sp/>la<sp/>case<sp/>actuelle<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="45" refid="structjoueur_13007bbdde3256a72f4c1980d73f400e1" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_13007bbdde3256a72f4c1980d73f400e1" kindref="member">bool_debut</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>si<sp/>le<sp/>joueur<sp/>est<sp/>à<sp/>son<sp/>premier<sp/>tour</highlight></codeline>
+<codeline lineno="46" refid="structjoueur_1844787380e505616b9f1ba539febe9e0" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structjoueur_1844787380e505616b9f1ba539febe9e0" kindref="member">str_nom</ref>[64];<sp/></highlight><highlight class="comment">///&gt;<sp/>le<sp/>nom<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="47" refid="structjoueur_1c1e6e55655821e532f1c4e6d67fc8d64" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="structjoueur_1c1e6e55655821e532f1c4e6d67fc8d64" kindref="member">pjoueur_suivant</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>pointe<sp/>vers<sp/>le<sp/>joueur<sp/>suivant</highlight></codeline>
+<codeline lineno="48" refid="structjoueur_1f3f87b368012a35e80ab79e151e25cfd" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/>SDL_Surface*<sp/><ref refid="structjoueur_1f3f87b368012a35e80ab79e151e25cfd" kindref="member">surf_image</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>image<sp/>du<sp/>jeton<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="49" refid="structjoueur_1383352e8bd61fe737ca01b2ad37da4a4" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_1383352e8bd61fe737ca01b2ad37da4a4" kindref="member">int_double_tire</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>nombre<sp/>de<sp/>doubles<sp/>effectués<sp/>par<sp/>le<sp/>joueur</highlight></codeline>
+<codeline lineno="50" refid="structjoueur_19674676a40014e7c313f37a481b70bb4" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structjoueur_19674676a40014e7c313f37a481b70bb4" kindref="member">bool_laurence</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>permet<sp/>de<sp/>savoir<sp/>si<sp/>le<sp/>joueur<sp/>est<sp/>en<sp/>prison<sp/>ou<sp/>pas</highlight></codeline>
+<codeline lineno="51" refid="structjoueur_1a9f44bfa8a4fd3de8b1de51a1c3c2f8e" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structjoueur_1a9f44bfa8a4fd3de8b1de51a1c3c2f8e" kindref="member">int_laurence</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>nombre<sp/>de<sp/>tours<sp/>passés<sp/>dans<sp/>le<sp/>bureau<sp/>de<sp/>laurence</highlight></codeline>
+<codeline lineno="52" refid="structjoueur_190b8cedf328ed1f09cfafc9627146043" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><ref refid="structpossession" kindref="compound">possession</ref>*<sp/><ref refid="structjoueur_190b8cedf328ed1f09cfafc9627146043" kindref="member">propriete</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>liste<sp/>chainée<sp/>des<sp/>propriete<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"></highlight><highlight class="normal">}<ref refid="structjoueur" kindref="compound">joueur</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structcases" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcases" kindref="compound">cases</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58" refid="structcases_19e5cc6f5098bf7a5daebf7fff66ae4ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_19e5cc6f5098bf7a5daebf7fff66ae4ff" kindref="member">int_type</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>le<sp/>type<sp/>de<sp/>la<sp/>structure</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union</highlight></codeline>
+<codeline lineno="61"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight></codeline>
+<codeline lineno="64"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65" refid="structcases_17aff4a82bb491977caaf0233892417b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="66" refid="structcases_1c9db1f873250edd2a571697a37d83ce2" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1c9db1f873250edd2a571697a37d83ce2" kindref="member">int_prix</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>prix<sp/>de<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="67" refid="structcases_18c5dd17254064c8c96fde34e69b60ab3" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_18c5dd17254064c8c96fde34e69b60ab3" kindref="member">int_prix_niveau</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>prix<sp/>pour<sp/>augnmenter<sp/>d&apos;un<sp/>niveau</highlight></codeline>
+<codeline lineno="68" refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" kindref="member">pjoueur_joueur</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>joueur<sp/>possedant<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="69" refid="structcases_116070accdfd6cd2fc42f85eb700834ed" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_116070accdfd6cd2fc42f85eb700834ed" kindref="member">int_niveau</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>le<sp/>niveau<sp/>de<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="70" refid="structcases_18e556ce8ee0b11e8651f9b92e5a9ff73" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_18e556ce8ee0b11e8651f9b92e5a9ff73" kindref="member">int_groupe</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>à<sp/>quel<sp/>groupe<sp/>appartient<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="71" refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" kindref="member">surf_detail</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case<sp/>détaillée</highlight></codeline>
+<codeline lineno="72" refid="structcases_153156a5bfb684b6baa312d215af30777" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_153156a5bfb684b6baa312d215af30777" kindref="member">surf_propriete</ref>;</highlight></codeline>
+<codeline lineno="73" refid="structcases_1ebadd5993ff30f33d4cae99786e2ad1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1ebadd5993ff30f33d4cae99786e2ad1e" kindref="member">bool_etat</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>si<sp/>la<sp/>case<sp/>est<sp/>hypothéquée<sp/>ou<sp/>non</highlight></codeline>
+<codeline lineno="74" refid="structcases_1bdfbf58429b27fae7763920373212fdb" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structcases_1bdfbf58429b27fae7763920373212fdb" kindref="member">bool_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;indique<sp/>si<sp/>la<sp/>case<sp/>est<sp/>hypothequee</highlight></codeline>
+<codeline lineno="75" refid="structcases_1890f6132b78dc7168614c28d4514f03f" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1890f6132b78dc7168614c28d4514f03f" kindref="member">int_valeur_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;valeur<sp/>de<sp/>l&apos;hypothèque</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_17eee361afdf3c3cde3a6c8368ef4fba5" kindref="member">case_salle</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight></codeline>
+<codeline lineno="79"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="81" refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" kindref="member">surf_detail</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case<sp/>détaillée</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_19572e505f34cf0c1e09436e7beef7e14" kindref="member">case_administration</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>du<sp/>lieu<sp/>commun</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1c9db1f873250edd2a571697a37d83ce2" kindref="member">int_prix</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>prix<sp/>de<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="88" refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" kindref="member">pjoueur_joueur</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>joueur<sp/>possedant<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="89" refid="structcases_12f2703ed773d0828dbf321a39949b948" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_12f2703ed773d0828dbf321a39949b948" kindref="member">int_suivant</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>entier<sp/>du<sp/>lieu<sp/>commun<sp/>suivant<sp/>sur<sp/>le<sp/>plateau</highlight></codeline>
+<codeline lineno="90" refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" kindref="member">surf_detail</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case<sp/>détaillée</highlight></codeline>
+<codeline lineno="91" refid="structcases_153156a5bfb684b6baa312d215af30777" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_153156a5bfb684b6baa312d215af30777" kindref="member">surf_propriete</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structcases_1bdfbf58429b27fae7763920373212fdb" kindref="member">bool_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;indique<sp/>si<sp/>la<sp/>case<sp/>est<sp/>hypothequee</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1890f6132b78dc7168614c28d4514f03f" kindref="member">int_valeur_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;valeur<sp/>de<sp/>l&apos;hypothèque</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_1f1240a8ba861b5871a50cdb7e5039a1e" kindref="member">case_lieu_commun</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>l&apos;association</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1c9db1f873250edd2a571697a37d83ce2" kindref="member">int_prix</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>prix<sp/>de<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="100" refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="structcases_1ba5ddcb460f45baa1ac6d5b25436dd73" kindref="member">pjoueur_joueur</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>joueur<sp/>possedant<sp/>la<sp/>salle</highlight></codeline>
+<codeline lineno="101" refid="structcases_133bb070b7cbf8c9a7cb8fdc9c7eea5b1" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_133bb070b7cbf8c9a7cb8fdc9c7eea5b1" kindref="member">int_autre_bureau</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>position<sp/>de<sp/>l&apos;aurtre<sp/>association<sp/>sur<sp/>le<sp/>plateau</highlight></codeline>
+<codeline lineno="102" refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" kindref="member">surf_detail</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case<sp/>détaillée</highlight></codeline>
+<codeline lineno="103" refid="structcases_153156a5bfb684b6baa312d215af30777" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_153156a5bfb684b6baa312d215af30777" kindref="member">surf_propriete</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structcases_1bdfbf58429b27fae7763920373212fdb" kindref="member">bool_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;indique<sp/>si<sp/>la<sp/>case<sp/>est<sp/>hypothequee</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1890f6132b78dc7168614c28d4514f03f" kindref="member">int_valeur_hypotheque</ref>;<sp/></highlight><highlight class="comment">///&gt;valeur<sp/>de<sp/>l&apos;hypothèque<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_185a20ebff9fbdbf9edb6beffa041ca23" kindref="member">case_association</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>l&apos;association</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1c9db1f873250edd2a571697a37d83ce2" kindref="member">int_prix</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>prix<sp/>de<sp/>la<sp/>salle<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1fe23bd51c8293f90f42d24e9cbd01578" kindref="member">surf_detail</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case<sp/>détaillée</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_1aea3fd404e9de12a19bafac99f8f8eb3" kindref="member">case_soiree</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>la<sp/>case<sp/>spéciale</highlight></codeline>
+<codeline lineno="118" refid="structcases_1b82f4fde3382a41ee393fc1c64f9beb8" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_1b82f4fde3382a41ee393fc1c64f9beb8" kindref="member">int_argent</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>argent<sp/>de<sp/>la<sp/>machine<sp/>a<sp/>café</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_174e60b0eaf92bd26ea10e0f65429f776" kindref="member">machine_a_cafe</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcases_17aff4a82bb491977caaf0233892417b9" kindref="member">str_nom</ref>[16];<sp/></highlight><highlight class="comment">///&gt;<sp/>nom<sp/>de<sp/>la<sp/>case<sp/>spéciale</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<ref refid="structcases_177ae6afbc6faca1fb5d8ad58c590c7d5" kindref="member">case_special</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="128" refid="structcases_1f3f87b368012a35e80ab79e151e25cfd" refkind="member"><highlight class="normal"><sp/><sp/>SDL_Surface*<sp/><ref refid="structcases_1f3f87b368012a35e80ab79e151e25cfd" kindref="member">surf_image</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>surface<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="129" refid="structcases_147d7b57cd189c4324a0bc8b338aec618" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcases_147d7b57cd189c4324a0bc8b338aec618" kindref="member">int_position</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>indique<sp/>la<sp/>position<sp/>de<sp/>la<sp/>case<sp/>sur<sp/>le<sp/>plateau</highlight></codeline>
+<codeline lineno="130" refid="structcases_1aae7f85c847e6712371285b803ae10e3" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/>SDL_Rect<sp/><ref refid="structcases_1aae7f85c847e6712371285b803ae10e3" kindref="member">rect_coordonnees</ref>;<sp/></highlight><highlight class="comment">///&gt;<sp/>coordonnées<sp/>en<sp/>pixel<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"></highlight><highlight class="normal">}<ref refid="structcases" kindref="compound">cases</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/root/workspace/monopoly/structure.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,775 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Correction des TPs:  Fichier source de outils.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- G�n�r� par Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+    <li><a href="namespaces.html"><span>Espaces de nommage</span></a></li>
+    <li><a href="classes.html"><span>Structures&nbsp;de&nbsp;donn�es</span></a></li>
+    <li id="current"><a href="files.html"><span>Fichiers</span></a></li>
+    <li><a href="dirs.html"><span>R�pertoires</span></a></li>
+    <li>
+      <form action="search.php" method="get">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td><label>&nbsp;Rechercher&nbsp;</label></td>
+            <td><input type="text" name="query" value="" size="20" accesskey="s"/></td>
+          </tr>
+        </table>
+      </form>
+    </li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+    <li><a href="globals.html"><span>Port�e&nbsp;globale</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="dir_333af98aea4920d93cb02e65ac96577a.html">outils</a></div>
+<h1>outils.c</h1><a href="outils_8c.html">Aller � la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*!</span>
+<a name="l00002"></a>00002 <span class="comment">  \file outils.c</span>
+<a name="l00003"></a>00003 <span class="comment">  \author Franck Trey &lt;franck.trey@eisti.fr&gt;, Florian Lefevre &lt;florian.lefevre@eisti.fr&gt;</span>
+<a name="l00004"></a>00004 <span class="comment">  \brief code source des outils </span>
+<a name="l00005"></a>00005 <span class="comment">  \date 09/01/2006</span>
+<a name="l00006"></a>00006 <span class="comment">  \version 1.0</span>
+<a name="l00007"></a>00007 <span class="comment">*/</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="outils_8h.html">outils.h</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="outils_8h.html#c6601c0d36e455a4c5c53e21dba99163">00011</a> <span class="keywordtype">char</span>* <a class="code" href="outils_8c.html#1020af4a7a407165a0f3b4e75307a3fc">ajout_caractere</a>(<span class="keywordtype">char</span>* texte, <span class="keywordtype">int</span> int_caractere)
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013   <span class="keywordtype">char</span> c_caractere[2];
+<a name="l00014"></a>00014   <span class="keywordtype">char</span> texte_temp[16];
+<a name="l00015"></a>00015   c_caractere[0]=(char)int_caractere;
+<a name="l00016"></a>00016   c_caractere[1]=<span class="charliteral">'\0'</span>;
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018   strcpy(texte_temp,texte);
+<a name="l00019"></a>00019   
+<a name="l00020"></a>00020   
+<a name="l00021"></a>00021   <span class="comment">//on vérifie si la chaine est non vide</span>
+<a name="l00022"></a>00022   <span class="keywordflow">if</span> ((texte_temp!=NULL)) <span class="comment">//&amp;&amp; (texte_temp[0]!='\0'))</span>
+<a name="l00023"></a>00023   {
+<a name="l00024"></a>00024     <span class="comment">//si le caractère rentré est le backspace</span>
+<a name="l00025"></a>00025     <span class="keywordflow">if</span>(int_caractere==8)
+<a name="l00026"></a>00026     {
+<a name="l00027"></a>00027       <span class="comment">//la dernière case pleine de la chaine prend la valeur \0</span>
+<a name="l00028"></a>00028       texte_temp[strlen(texte_temp)-1]=<span class="charliteral">'\0'</span>;
+<a name="l00029"></a>00029     }
+<a name="l00030"></a>00030     <span class="comment">//s'il ne s'agit pas du backspace</span>
+<a name="l00031"></a>00031     <span class="keywordflow">else</span>
+<a name="l00032"></a>00032     {
+<a name="l00033"></a>00033       <span class="comment">//la dernier case de la chaine de caractère prend pour valeur le caractère de la table ascii coorespondant</span>
+<a name="l00034"></a>00034       <span class="comment">//si la chaine n'est pas pleine et si le caractère est admissible</span>
+<a name="l00035"></a>00035       <span class="keywordflow">if</span> ((strlen(texte_temp)&lt;14) 
+<a name="l00036"></a>00036         &amp;&amp; ( 
+<a name="l00037"></a>00037         ((int_caractere&gt;=97) &amp;&amp; (int_caractere&lt;=122)) <span class="comment">//lettres minuscules</span>
+<a name="l00038"></a>00038         || ((int_caractere&gt;=30) &amp;&amp; (int_caractere&lt;=39)) <span class="comment">//chiffres</span>
+<a name="l00039"></a>00039         || (int_caractere==95) <span class="comment">//underscore</span>
+<a name="l00040"></a>00040         || (int_caractere==45) <span class="comment">//tiré</span>
+<a name="l00041"></a>00041         || (int_caractere==32) <span class="comment">// espace</span>
+<a name="l00042"></a>00042         || (int_caractere==46))) <span class="comment">//point</span>
+<a name="l00043"></a>00043       {
+<a name="l00044"></a>00044       strcpy(texte_temp,strcat(texte_temp,c_caractere));
+<a name="l00045"></a>00045       }
+<a name="l00046"></a>00046     }
+<a name="l00047"></a>00047   }
+<a name="l00048"></a>00048   strcpy(texte,texte_temp);
+<a name="l00049"></a>00049   <span class="keywordflow">return</span>(texte);
+<a name="l00050"></a>00050 }
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="outils_8h.html#628b8ba74e55cbdc77d8c2e5e594bc8e">00052</a> <span class="keywordtype">int</span> <a class="code" href="outils_8c.html#628b8ba74e55cbdc77d8c2e5e594bc8e">nombre_joueur_case</a>(<a class="code" href="structjoueur.html">joueur</a>* pj_joueur)
+<a name="l00053"></a>00053 {
+<a name="l00054"></a>00054   <span class="keywordtype">int</span> int_mm_case;
+<a name="l00055"></a>00055   
+<a name="l00056"></a>00056   int_mm_case=0;
+<a name="l00057"></a>00057   
+<a name="l00058"></a>00058   <a class="code" href="structjoueur.html">joueur</a>* pj_joueur_encours;
+<a name="l00059"></a>00059   
+<a name="l00060"></a>00060   pj_joueur_encours=pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00061"></a>00061   
+<a name="l00062"></a>00062   <span class="keywordflow">while</span> (pj_joueur_encours != pj_joueur)
+<a name="l00063"></a>00063   {
+<a name="l00064"></a>00064     <span class="keywordflow">if</span> (pj_joueur_encours-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>==pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>)
+<a name="l00065"></a>00065     {
+<a name="l00066"></a>00066       int_mm_case++;
+<a name="l00067"></a>00067     }
+<a name="l00068"></a>00068     pj_joueur_encours=pj_joueur_encours-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00069"></a>00069   }
+<a name="l00070"></a>00070   <span class="keywordflow">return</span>(int_mm_case);
+<a name="l00071"></a>00071 }
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="outils_8h.html#034d05be61f25003576b3ac8c5a2edb7">00073</a> <span class="keywordtype">void</span> <a class="code" href="outils_8c.html#034d05be61f25003576b3ac8c5a2edb7">melanger_cartes</a>(<a class="code" href="structinformation.html">information</a>* cartes_a_melanger[16])
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0;i&lt;1000;i++)
+<a name="l00076"></a>00076   {
+<a name="l00077"></a>00077     <a class="code" href="outils_8c.html#449869c420d1199183139e03451f2adf">swap_carte</a>(cartes_a_melanger, rand()%16, rand()%16);
+<a name="l00078"></a>00078   }
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 
+<a name="l00081"></a><a class="code" href="outils_8h.html#449869c420d1199183139e03451f2adf">00081</a> <span class="keywordtype">void</span> <a class="code" href="outils_8c.html#449869c420d1199183139e03451f2adf">swap_carte</a>(<a class="code" href="structinformation.html">information</a>* cartes_a_melanger[16], <span class="keywordtype">int</span> position_case1, <span class="keywordtype">int</span> position_case2)
+<a name="l00082"></a>00082 {
+<a name="l00083"></a>00083   <a class="code" href="structinformation.html">information</a>* pi_tmp;
+<a name="l00084"></a>00084   
+<a name="l00085"></a>00085   pi_tmp=cartes_a_melanger[position_case1];
+<a name="l00086"></a>00086   cartes_a_melanger[position_case1]=cartes_a_melanger[position_case2];
+<a name="l00087"></a>00087   cartes_a_melanger[position_case2]=pi_tmp;
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="outils_8h.html#39dfce9b2a45da995ceaab0aade1bdf8">00090</a> <span class="keywordtype">void</span> <a class="code" href="outils_8c.html#39dfce9b2a45da995ceaab0aade1bdf8">joueur_possede_tout</a>(<a class="code" href="structcases.html">cases</a>** plateau, <a class="code" href="structjoueur.html">joueur</a>* joueur_encours)
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092   <span class="keywordtype">int</span> i;
+<a name="l00093"></a>00093   <span class="keywordtype">bool</span> retour;
+<a name="l00094"></a>00094   
+<a name="l00095"></a>00095   joueur_encours-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a>=9999999;
+<a name="l00096"></a>00096     
+<a name="l00097"></a>00097   <span class="keywordflow">for</span>(i=1;i&lt;30;i++)
+<a name="l00098"></a>00098   {
+<a name="l00099"></a>00099     <span class="comment">//tente d'acheter toutes les cases (la fonction traitement_achat se charge de verifier si elle sont achetable ou pas)</span>
+<a name="l00100"></a>00100     retour=<a class="code" href="traitement_8c.html#dd1dfecf4b64b55e60fe041d2616ac95">traitement_achat</a>(plateau[i],joueur_encours); 
+<a name="l00101"></a>00101   }
+<a name="l00102"></a>00102 }
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="outils_8h.html#d53767c5dbc0daa1a8de086094690eaa">00104</a> <a class="code" href="structpossession.html">possession</a>* <a class="code" href="outils_8c.html#d53767c5dbc0daa1a8de086094690eaa">insertion_bonne_place_propriete</a>(<a class="code" href="structpossession.html">possession</a>* premier_maillon, <a class="code" href="structcases.html">cases</a>* case_achetee)
+<a name="l00105"></a>00105 {
+<a name="l00106"></a>00106   <a class="code" href="structpossession.html">possession</a>* nv_maillon;
+<a name="l00107"></a>00107   <a class="code" href="structpossession.html">possession</a>* maillon_encours;
+<a name="l00108"></a>00108   <a class="code" href="structpossession.html">possession</a>* maillon_precedent;
+<a name="l00109"></a>00109   
+<a name="l00110"></a>00110   nv_maillon=<a class="code" href="initialisation_8c.html#834387e0d2a523eed4330495ea2de593">creation_possession</a>(case_achetee);
+<a name="l00111"></a>00111   
+<a name="l00112"></a>00112   <span class="comment">//si le premier maillon n'existe pas on retourne le nouveau maillon qui est alors la tete</span>
+<a name="l00113"></a>00113   <span class="keywordflow">if</span> (premier_maillon==NULL)
+<a name="l00114"></a>00114   {
+<a name="l00115"></a>00115     <span class="keywordflow">return</span>(nv_maillon);
+<a name="l00116"></a>00116   }
+<a name="l00117"></a>00117   <span class="keywordflow">else</span>
+<a name="l00118"></a>00118   {
+<a name="l00119"></a>00119     <span class="comment">//sinon on va chercher à bien le positionner</span>
+<a name="l00120"></a>00120     <span class="comment">//si c'est une case de propriete</span>
+<a name="l00121"></a>00121     <span class="keywordflow">if</span> (nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>==<a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00122"></a>00122     {
+<a name="l00123"></a>00123         <span class="comment">//le premier maillon a comparer est le premier</span>
+<a name="l00124"></a>00124                       
+<a name="l00125"></a>00125         maillon_encours=premier_maillon;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127         <span class="comment">//on avance dans la chaine jusqu'a trouver une case de la meme couleur ou à arriver au bout</span>
+<a name="l00128"></a>00128         <span class="keywordflow">while</span> ((maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a> != NULL) &amp;&amp;  (nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe != maillon_encours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe))
+<a name="l00129"></a>00129         {
+<a name="l00130"></a>00130             maillon_precedent=maillon_encours;
+<a name="l00131"></a>00131             maillon_encours=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00132"></a>00132         }
+<a name="l00133"></a>00133         <span class="comment">//on récupère ainsi le premier maillon ayant la meme couleur que celui qu'on veut insérer</span>
+<a name="l00134"></a>00134         <span class="comment">//on insère alors le nv_maillon juste après celui ainsi trouvé</span>
+<a name="l00135"></a>00135         nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00136"></a>00136         maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=nv_maillon;
+<a name="l00137"></a>00137         <span class="keywordflow">return</span>(premier_maillon);
+<a name="l00138"></a>00138     }
+<a name="l00139"></a>00139     <span class="keywordflow">else</span>
+<a name="l00140"></a>00140     {
+<a name="l00141"></a>00141       <span class="comment">//sinon il peut s'agir soit d'un lieu commun soit du bds/bde</span>
+<a name="l00142"></a>00142       <span class="comment">//on cherche alors de la meme manière que pour les groupe pour les cases normales les cartes de même type</span>
+<a name="l00143"></a>00143       
+<a name="l00144"></a>00144       <span class="comment">//si c'est le bde ou le bds</span>
+<a name="l00145"></a>00145       <span class="keywordflow">if</span> (nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>==<a class="code" href="constante_8h.html#0ad5592728506d2c7a17844fa23df7d8">BDE</a>)
+<a name="l00146"></a>00146       {     
+<a name="l00147"></a>00147           <span class="comment">//le maillon a comparer est le premier</span>
+<a name="l00148"></a>00148           maillon_encours=premier_maillon;
+<a name="l00149"></a>00149         
+<a name="l00150"></a>00150           <span class="keywordflow">while</span> ((maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a> != NULL) &amp;&amp;  (maillon_encours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>!=<a class="code" href="constante_8h.html#c4176015f152fb7416bc61129a3825f7">BDS</a>))
+<a name="l00151"></a>00151           {
+<a name="l00152"></a>00152               maillon_precedent=maillon_encours;
+<a name="l00153"></a>00153               maillon_encours=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00154"></a>00154           }
+<a name="l00155"></a>00155           <span class="comment">//on récupère ainsi le bds ou la fin de chaine</span>
+<a name="l00156"></a>00156           <span class="comment">//si on est en bout de chaine on l'insère au début</span>
+<a name="l00157"></a>00157           <span class="keywordflow">if</span>(maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>==NULL)
+<a name="l00158"></a>00158           {
+<a name="l00159"></a>00159             nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=premier_maillon;
+<a name="l00160"></a>00160             <span class="keywordflow">return</span>(nv_maillon);
+<a name="l00161"></a>00161           }
+<a name="l00162"></a>00162           <span class="comment">//sinon on l'insere après le bds</span>
+<a name="l00163"></a>00163           <span class="keywordflow">else</span>
+<a name="l00164"></a>00164           {
+<a name="l00165"></a>00165           nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00166"></a>00166           maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=nv_maillon;
+<a name="l00167"></a>00167           <span class="keywordflow">return</span>(premier_maillon);
+<a name="l00168"></a>00168           }
+<a name="l00169"></a>00169       }
+<a name="l00170"></a>00170       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>==<a class="code" href="constante_8h.html#c4176015f152fb7416bc61129a3825f7">BDS</a>)
+<a name="l00171"></a>00171       {   
+<a name="l00172"></a>00172       
+<a name="l00173"></a>00173           <span class="comment">//le premier maillon a comparer est le premier</span>
+<a name="l00174"></a>00174           maillon_encours=premier_maillon;
+<a name="l00175"></a>00175         
+<a name="l00176"></a>00176           <span class="keywordflow">while</span> ((maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a> != NULL) &amp;&amp;  (maillon_encours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>!=<a class="code" href="constante_8h.html#c4176015f152fb7416bc61129a3825f7">BDS</a>))
+<a name="l00177"></a>00177           {
+<a name="l00178"></a>00178             maillon_precedent=maillon_encours;
+<a name="l00179"></a>00179             maillon_encours=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00180"></a>00180           }
+<a name="l00181"></a>00181           <span class="comment">//on récupère ainsi le bds ou la fin de chaine</span>
+<a name="l00182"></a>00182           <span class="comment">//si on est en bout de chaine on l'insère au début</span>
+<a name="l00183"></a>00183           <span class="keywordflow">if</span>(maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>==NULL)
+<a name="l00184"></a>00184           {
+<a name="l00185"></a>00185             nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=premier_maillon;
+<a name="l00186"></a>00186             <span class="keywordflow">return</span>(nv_maillon);
+<a name="l00187"></a>00187           }
+<a name="l00188"></a>00188           <span class="comment">//sinon on l'insere après le bds</span>
+<a name="l00189"></a>00189           <span class="keywordflow">else</span>
+<a name="l00190"></a>00190           {
+<a name="l00191"></a>00191           nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00192"></a>00192           maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=nv_maillon;
+<a name="l00193"></a>00193           <span class="keywordflow">return</span>(premier_maillon);
+<a name="l00194"></a>00194           }
+<a name="l00195"></a>00195       }
+<a name="l00196"></a>00196             
+<a name="l00197"></a>00197       <span class="comment">//sinon ce sont les lieux communs</span>
+<a name="l00198"></a>00198       <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> &gt;= <a class="code" href="constante_8h.html#d6374d072f3b90625b387149b6059452">LC_WC</a>) &amp;&amp; (nv_maillon-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>&lt;=<a class="code" href="constante_8h.html#a55f3cedf3fd4b2510c1bb0b805facbf">LC_PARKING</a>))
+<a name="l00199"></a>00199       {       
+<a name="l00200"></a>00200           <span class="comment">//le premier maillon a comparer est le second</span>
+<a name="l00201"></a>00201           maillon_encours=premier_maillon;
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203           <span class="keywordflow">while</span> ((maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a> != NULL) &amp;&amp;  ((maillon_encours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> &lt; <a class="code" href="constante_8h.html#d6374d072f3b90625b387149b6059452">LC_WC</a>) || (maillon_encours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> &gt; <a class="code" href="constante_8h.html#a55f3cedf3fd4b2510c1bb0b805facbf">LC_PARKING</a>)))
+<a name="l00204"></a>00204           {
+<a name="l00205"></a>00205             maillon_precedent=maillon_encours;
+<a name="l00206"></a>00206             maillon_encours=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00207"></a>00207           }
+<a name="l00208"></a>00208           <span class="comment">//on récupère ainsi le premier lieu commun ou la fin de chaine</span>
+<a name="l00209"></a>00209           <span class="comment">//si on est en bout de chaine on l'insère au début</span>
+<a name="l00210"></a>00210           
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212           <span class="keywordflow">if</span>(maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>==NULL)
+<a name="l00213"></a>00213           {
+<a name="l00214"></a>00214             nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=premier_maillon;
+<a name="l00215"></a>00215             <span class="keywordflow">return</span>(nv_maillon);
+<a name="l00216"></a>00216           }
+<a name="l00217"></a>00217           <span class="comment">//sinon on l'insere après le premier lieu commun trouvé</span>
+<a name="l00218"></a>00218           <span class="keywordflow">else</span>
+<a name="l00219"></a>00219           {
+<a name="l00220"></a>00220             nv_maillon-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00221"></a>00221             maillon_encours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>=nv_maillon;
+<a name="l00222"></a>00222             <span class="keywordflow">return</span>(premier_maillon);
+<a name="l00223"></a>00223           }
+<a name="l00224"></a>00224       }       
+<a name="l00225"></a>00225     }
+<a name="l00226"></a>00226   }
+<a name="l00227"></a>00227   <span class="keywordflow">return</span>(<span class="keyword">false</span>);
+<a name="l00228"></a>00228 }
+<a name="l00229"></a>00229 
+<a name="l00230"></a><a class="code" href="outils_8h.html#914637efff042e343c9bb0befab2f609">00230</a> <span class="keywordtype">bool</span> <a class="code" href="outils_8c.html#914637efff042e343c9bb0befab2f609">possession_autres_cartes</a>(<a class="code" href="structcases.html">cases</a>** plateau,<a class="code" href="structjoueur.html">joueur</a>* pj_joueur)
+<a name="l00231"></a>00231 {
+<a name="l00232"></a>00232   <span class="keywordtype">int</span> i;
+<a name="l00233"></a>00233   <span class="keywordtype">int</span> k;
+<a name="l00234"></a>00234   
+<a name="l00235"></a>00235   <span class="comment">//on définit le groupe de la case où se trouve le joueur</span>
+<a name="l00236"></a>00236   <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00237"></a>00237   {
+<a name="l00238"></a>00238     <span class="comment">//on définit le groupe de la case où se trouve le joueur</span>
+<a name="l00239"></a>00239     <span class="comment">//pour les groupe vert ou bleu ils faut trouver une seule autre carte du groupe</span>
+<a name="l00240"></a>00240     <span class="keywordflow">if</span> ((plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe ==<a class="code" href="constante_8h.html#928ad872921809adddfdd7f5d260fac0">VIOLET</a>) || (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe == <a class="code" href="constante_8h.html#e22837728df88da892b4bb16bb98296d">BLEU</a>))
+<a name="l00241"></a>00241     {
+<a name="l00242"></a>00242       <span class="comment">//on cherche deux cases avant et deux cases après (les cases de ces couleurs ne sont jamais éloignés de plus de deux cases)</span>
+<a name="l00243"></a>00243       <span class="keywordflow">if</span> (   (plateau[((pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> - 2)+40)%40]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00244"></a>00244         &amp;&amp; (plateau[((pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> - 2)+40)%40]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe == plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe)
+<a name="l00245"></a>00245         &amp;&amp; (plateau[((pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> - 2)+40)%40]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur == pj_joueur))
+<a name="l00246"></a>00246       {
+<a name="l00247"></a>00247         <span class="keywordflow">return</span> (<span class="keyword">true</span>);
+<a name="l00248"></a>00248       }
+<a name="l00249"></a>00249       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (  (plateau[(pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> + 2)%40]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00250"></a>00250           &amp;&amp; (plateau[(pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> + 2)%40]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe == plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe)
+<a name="l00251"></a>00251           &amp;&amp; (plateau[(pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> + 2)%40]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur == pj_joueur))
+<a name="l00252"></a>00252       {
+<a name="l00253"></a>00253         <span class="keywordflow">return</span>(<span class="keyword">true</span>);
+<a name="l00254"></a>00254       }
+<a name="l00255"></a>00255     }
+<a name="l00256"></a>00256     <span class="comment">//pour les autres il faut trouver forcement trouver deux autres carte du mm groupe</span>
+<a name="l00257"></a>00257     <span class="keywordflow">else</span> 
+<a name="l00258"></a>00258     {
+<a name="l00259"></a>00259       k=0;
+<a name="l00260"></a>00260       <span class="comment">//on cherche trois cases avant et trois cases après (les cases de ces couleurs ne sont jamais éloignés de plus de trois cases)</span>
+<a name="l00261"></a>00261       <span class="keywordflow">for</span> (i =((pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> - 3)+40)%40; i &lt; (pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> + 3)%40 ; i++)
+<a name="l00262"></a>00262       {
+<a name="l00263"></a>00263         <span class="comment">//on ne recompte la case ou est actuellement le joueur</span>
+<a name="l00264"></a>00264         <span class="keywordflow">if</span> (i != pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>)
+<a name="l00265"></a>00265         {
+<a name="l00266"></a>00266           <span class="keywordflow">if</span> (   (plateau[i]-&gt;int_type == <a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00267"></a>00267             &amp;&amp; (plateau[i]-&gt;case_salle.<a class="code" href="structcases.html#8e556ce8ee0b11e8651f9b92e5a9ff73">int_groupe</a> == plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe)
+<a name="l00268"></a>00268             &amp;&amp; (plateau[i]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur == pj_joueur))
+<a name="l00269"></a>00269           {
+<a name="l00270"></a>00270             k++;
+<a name="l00271"></a>00271           }
+<a name="l00272"></a>00272           
+<a name="l00273"></a>00273         }
+<a name="l00274"></a>00274         
+<a name="l00275"></a>00275       }
+<a name="l00276"></a>00276       <span class="comment">//on verifie si on a trouver deux cases</span>
+<a name="l00277"></a>00277       <span class="keywordflow">if</span> (k==2)
+<a name="l00278"></a>00278       {
+<a name="l00279"></a>00279         <span class="keywordflow">return</span>(<span class="keyword">true</span>);
+<a name="l00280"></a>00280       }     
+<a name="l00281"></a>00281     }
+<a name="l00282"></a>00282   }
+<a name="l00283"></a>00283   <span class="keywordflow">return</span>(<span class="keyword">false</span>);
+<a name="l00284"></a>00284 }
+<a name="l00285"></a>00285 
+<a name="l00286"></a><a class="code" href="outils_8h.html#6f12b97af4dd149267a5a423e3e5e7a7">00286</a> <span class="keywordtype">int</span> <a class="code" href="outils_8c.html#6f12b97af4dd149267a5a423e3e5e7a7">decoupage_string</a> (<span class="keywordtype">char</span>*** str_tab, <span class="keywordtype">char</span>* str_a_diviser)
+<a name="l00287"></a>00287 {
+<a name="l00288"></a>00288   <span class="keywordtype">int</span> int_ligne_max;
+<a name="l00289"></a>00289   
+<a name="l00290"></a>00290   <span class="keywordtype">int</span> i;
+<a name="l00291"></a>00291   <span class="keywordtype">int</span> k; <span class="comment">//curseur indiquant la ligne en cours de création</span>
+<a name="l00292"></a>00292   <span class="keywordtype">int</span> j; <span class="comment">//curseur de déplacement dans str_a_diviser</span>
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294   i=0;
+<a name="l00295"></a>00295   k=0;
+<a name="l00296"></a>00296   j=0;
+<a name="l00297"></a>00297 
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299   int_ligne_max=((int)(strlen(str_a_diviser)/<a class="code" href="constante_8h.html#d31aae55a87f454cd6e752af9706d481">MESSAGE_MAX_CARACTERE</a>)+1)*2;
+<a name="l00300"></a>00300   
+<a name="l00301"></a>00301   <span class="comment">//on alloue en mémoire un tableau de chaine de caractère de int_ligne_max lignes contenant chacune des chaine de 64 caractères</span>
+<a name="l00302"></a>00302   str_tab[0]=<span class="keyword">new</span> <span class="keywordtype">char</span>*[int_ligne_max];
+<a name="l00303"></a>00303   
+<a name="l00304"></a>00304   <span class="keywordflow">for</span> (i = 0 ; i &lt; int_ligne_max ; i++)
+<a name="l00305"></a>00305   {
+<a name="l00306"></a>00306     str_tab[0][i]=<span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code" href="constante_8h.html#d31aae55a87f454cd6e752af9706d481">MESSAGE_MAX_CARACTERE</a>];
+<a name="l00307"></a>00307   }
+<a name="l00308"></a>00308   
+<a name="l00309"></a>00309   <span class="comment">//tant qu'on est pas au bout de la chaine principale</span>
+<a name="l00310"></a>00310   <span class="keywordflow">while</span> (strlen(str_a_diviser) &gt;= <a class="code" href="constante_8h.html#d31aae55a87f454cd6e752af9706d481">MESSAGE_MAX_CARACTERE</a>)
+<a name="l00311"></a>00311   {
+<a name="l00312"></a>00312     <span class="comment">//on met le curseur à 63</span>
+<a name="l00313"></a>00313     j=<a class="code" href="constante_8h.html#d31aae55a87f454cd6e752af9706d481">MESSAGE_MAX_CARACTERE</a> - 1;
+<a name="l00314"></a>00314     
+<a name="l00315"></a>00315     <span class="comment">//puis on cherche avant, le premier espace</span>
+<a name="l00316"></a>00316     <span class="keywordflow">while</span> (str_a_diviser[j] != <span class="charliteral">' '</span>)
+<a name="l00317"></a>00317     {
+<a name="l00318"></a>00318       j--;
+<a name="l00319"></a>00319     }
+<a name="l00320"></a>00320     
+<a name="l00321"></a>00321     <span class="comment">//on copie les j premiers caractères</span>
+<a name="l00322"></a>00322     strncpy(str_tab[0][k],str_a_diviser,j);
+<a name="l00323"></a>00323     <span class="comment">//on marque la fin de chaine</span>
+<a name="l00324"></a>00324     str_tab[0][k][j]=<span class="charliteral">'\0'</span>;
+<a name="l00325"></a>00325     
+<a name="l00326"></a>00326     <span class="comment">//on deplace le pointeur</span>
+<a name="l00327"></a>00327     str_a_diviser=str_a_diviser+j;
+<a name="l00328"></a>00328     <span class="comment">//on passe a la ligne à créer suivante</span>
+<a name="l00329"></a>00329     k++;
+<a name="l00330"></a>00330   }
+<a name="l00331"></a>00331   <span class="comment">//après il ne nous reste plus que le morceau de chaine d'une taille inférieur à MESSAGE_MAX_CARACTERE</span>
+<a name="l00332"></a>00332   strcpy(str_tab[0][k],str_a_diviser);
+<a name="l00333"></a>00333   
+<a name="l00334"></a>00334   <span class="keywordflow">return</span>(k+1);
+<a name="l00335"></a>00335 }
+<a name="l00336"></a>00336 
+<a name="l00337"></a><a class="code" href="outils_8h.html#d1c532cdedd8b070691946cc83436c96">00337</a> <span class="keywordtype">int</span> <a class="code" href="outils_8c.html#d1c532cdedd8b070691946cc83436c96">action_possible</a> (<a class="code" href="structcases.html">cases</a>** plateau,<span class="keywordtype">int</span> int_position_cases_etudiee, <a class="code" href="structjoueur.html">joueur</a>* pj_joueur, <span class="keywordtype">int</span> int_etat, <span class="keywordtype">int</span> int_nb_tire)
+<a name="l00338"></a>00338 {
+<a name="l00339"></a>00339   <span class="keywordtype">int</span> i;
+<a name="l00340"></a>00340   <span class="comment">//on vérifie s'il s'agit l'arrivé sur une case</span>
+<a name="l00341"></a>00341   <span class="keywordflow">if</span> (int_etat == <a class="code" href="constante_8h.html#385bdcf434c8769e73b1733a2972f23c">ARRIVE_CASE</a>)
+<a name="l00342"></a>00342   { 
+<a name="l00343"></a>00343   <span class="comment">//on détermine le type de la case ou il se trouve</span>
+<a name="l00344"></a>00344   
+<a name="l00345"></a>00345     <span class="comment">//s'il se trouve sur une salle</span>
+<a name="l00346"></a>00346     <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a>==<a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00347"></a>00347     {
+<a name="l00348"></a>00348       <span class="comment">//on vérifie si elle n'appartient à personne et que le joueur à l'argent et qu'elle n'est pas au premier tour</span>
+<a name="l00349"></a>00349       <span class="keywordflow">if</span> (!(pj_joueur-&gt;<a class="code" href="structjoueur.html#3007bbdde3256a72f4c1980d73f400e1">bool_debut</a>) &amp;&amp; (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur==NULL) &amp;&amp; (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_prix))
+<a name="l00350"></a>00350       {
+<a name="l00351"></a>00351         <span class="comment">//il peut alors l'acheter ou finir ce tour ou abandonner</span>
+<a name="l00352"></a>00352         <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#89f8379249353c504598f1d150cffb33">ACTION_ACHAT</a>);
+<a name="l00353"></a>00353       }
+<a name="l00354"></a>00354       <span class="comment">//sinon si elle appartient à un adversaire</span>
+<a name="l00355"></a>00355       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur != pj_joueur)
+<a name="l00356"></a>00356       {
+<a name="l00357"></a>00357         <span class="comment">//si il a assez d'argent</span>
+<a name="l00358"></a>00358         <span class="keywordflow">if</span> (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_prix/100)*plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_niveau)
+<a name="l00359"></a>00359         {
+<a name="l00360"></a>00360           <span class="comment">//il peut alors payer</span>
+<a name="l00361"></a>00361           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#a5b61153ee23ef8595687f124eccd712">ACTION_PAYER</a>);
+<a name="l00362"></a>00362         }
+<a name="l00363"></a>00363         <span class="keywordflow">else</span>
+<a name="l00364"></a>00364         {
+<a name="l00365"></a>00365           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#bfde18d0ae0bfe533fdb0b3dfcc7a865">ACTION_PERDRE</a>);
+<a name="l00366"></a>00366         }
+<a name="l00367"></a>00367       }
+<a name="l00368"></a>00368       <span class="comment">//sinon si la case lui appartient</span>
+<a name="l00369"></a>00369       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.pjoueur_joueur == pj_joueur)
+<a name="l00370"></a>00370       {
+<a name="l00371"></a>00371         <span class="comment">//s'il possède toutes les autres cartes de même couleur</span>
+<a name="l00372"></a>00372         <span class="keywordflow">if</span> (<a class="code" href="outils_8c.html#914637efff042e343c9bb0befab2f609">possession_autres_cartes</a>(plateau,pj_joueur))
+<a name="l00373"></a>00373         {
+<a name="l00374"></a>00374           <span class="comment">//si son niveau est au maximum il ne peut que diminuer</span>
+<a name="l00375"></a>00375           <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;case_salle.int_niveau == 5)
+<a name="l00376"></a>00376           {
+<a name="l00377"></a>00377             <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#fc684f09ea2d95fff6d9dd12ac01c5cf">ACTION_MOINS</a>);
+<a name="l00378"></a>00378           }
+<a name="l00379"></a>00379           
+<a name="l00380"></a>00380           <span class="comment">//si son niveau est nul il ne peut qu'augmenter s'il a de l'argent</span>
+<a name="l00381"></a>00381           <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;case_salle.int_niveau == 0) &amp;&amp; (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;case_salle.int_prix_niveau))
+<a name="l00382"></a>00382           {
+<a name="l00383"></a>00383             <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#65f36e3e7153adbceabf84d48fef802b">ACTION_PLUS</a>);
+<a name="l00384"></a>00384           }
+<a name="l00385"></a>00385           
+<a name="l00386"></a>00386           <span class="comment">//dans aucun des deux cas précedent s'il a assez d'argent il peut faire les deux</span>
+<a name="l00387"></a>00387           <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;case_salle.int_prix_niveau)
+<a name="l00388"></a>00388           {
+<a name="l00389"></a>00389             <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#bba8f560c39a4ef2d822a0c317133d61">ACTION_PLUS_MOINS</a>);
+<a name="l00390"></a>00390           }
+<a name="l00391"></a>00391           <span class="keywordflow">else</span> 
+<a name="l00392"></a>00392           {
+<a name="l00393"></a>00393             <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>);
+<a name="l00394"></a>00394           }
+<a name="l00395"></a>00395           
+<a name="l00396"></a>00396         }
+<a name="l00397"></a>00397         <span class="keywordflow">else</span>
+<a name="l00398"></a>00398         {
+<a name="l00399"></a>00399           <span class="comment">//il ne peut rien faire si ce n'est finir le tour</span>
+<a name="l00400"></a>00400           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>);
+<a name="l00401"></a>00401         }
+<a name="l00402"></a>00402       }
+<a name="l00403"></a>00403     }
+<a name="l00404"></a>00404     <span class="comment">//s'il se trouve sur une case association ou sur un lieu commun</span>
+<a name="l00405"></a>00405     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (  (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#a55f3cedf3fd4b2510c1bb0b805facbf">LC_PARKING</a>)
+<a name="l00406"></a>00406         || (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#9b30d8e1e34829a936da477e94b5e376">LC_RU</a>)
+<a name="l00407"></a>00407         || (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#fffd46a61b11e88ee78aadff949e1f4d">LC_ASCENSEUR</a>)
+<a name="l00408"></a>00408         || (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#d6374d072f3b90625b387149b6059452">LC_WC</a>))
+<a name="l00409"></a>00409     {
+<a name="l00410"></a>00410       <span class="comment">//on vérifie si elle n'appartient à personne et qu'il à assez d'argent</span>
+<a name="l00411"></a>00411       <span class="keywordflow">if</span> (!(pj_joueur-&gt;<a class="code" href="structjoueur.html#3007bbdde3256a72f4c1980d73f400e1">bool_debut</a>) &amp;&amp; (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur==NULL) &amp;&amp; (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.int_prix))
+<a name="l00412"></a>00412       {
+<a name="l00413"></a>00413         <span class="comment">//il peut alors l'acheter ou finir ce tour</span>
+<a name="l00414"></a>00414         <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#89f8379249353c504598f1d150cffb33">ACTION_ACHAT</a>);
+<a name="l00415"></a>00415       }
+<a name="l00416"></a>00416       <span class="comment">//sinon si elle appartient à un adversaire</span>
+<a name="l00417"></a>00417       <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur != pj_joueur) &amp;&amp; (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur != NULL))
+<a name="l00418"></a>00418       {
+<a name="l00419"></a>00419         <span class="comment">//si il a assez d'argent</span>
+<a name="l00420"></a>00420         <span class="keywordflow">if</span> (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= <a class="code" href="traitement_8c.html#75826dfc26c45fb35071e334a0d1a6a6">traitement_loyer_lieu_commun</a>(plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur))
+<a name="l00421"></a>00421         {
+<a name="l00422"></a>00422           <span class="comment">//il peut alors payer</span>
+<a name="l00423"></a>00423           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#a5b61153ee23ef8595687f124eccd712">ACTION_PAYER</a>);
+<a name="l00424"></a>00424         }
+<a name="l00425"></a>00425         <span class="keywordflow">else</span>
+<a name="l00426"></a>00426         {
+<a name="l00427"></a>00427           <span class="comment">//sinon il perd</span>
+<a name="l00428"></a>00428           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#bfde18d0ae0bfe533fdb0b3dfcc7a865">ACTION_PERDRE</a>);
+<a name="l00429"></a>00429         }
+<a name="l00430"></a>00430       }
+<a name="l00431"></a>00431       <span class="comment">//sinon si la case lui appartient</span>
+<a name="l00432"></a>00432       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur == pj_joueur)
+<a name="l00433"></a>00433       {
+<a name="l00434"></a>00434         <span class="comment">//il le peut que finir ce tour</span>
+<a name="l00435"></a>00435         <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>);
+<a name="l00436"></a>00436       }
+<a name="l00437"></a>00437     }
+<a name="l00438"></a>00438     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (  (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#0ad5592728506d2c7a17844fa23df7d8">BDE</a>)
+<a name="l00439"></a>00439         || (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#9e5cc6f5098bf7a5daebf7fff66ae4ff">int_type</a> == <a class="code" href="constante_8h.html#c4176015f152fb7416bc61129a3825f7">BDS</a>))
+<a name="l00440"></a>00440     {
+<a name="l00441"></a>00441       <span class="comment">//on vérifie si elle n'appartient à personne et qu'il à assez d'argent</span>
+<a name="l00442"></a>00442       <span class="keywordflow">if</span> (!(pj_joueur-&gt;<a class="code" href="structjoueur.html#3007bbdde3256a72f4c1980d73f400e1">bool_debut</a>) &amp;&amp; (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#85a20ebff9fbdbf9edb6beffa041ca23">case_association</a>.pjoueur_joueur==NULL) &amp;&amp; (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#85a20ebff9fbdbf9edb6beffa041ca23">case_association</a>.int_prix))
+<a name="l00443"></a>00443       {
+<a name="l00444"></a>00444         <span class="comment">//il peut alors l'acheter ou finir ce tour</span>
+<a name="l00445"></a>00445         <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#89f8379249353c504598f1d150cffb33">ACTION_ACHAT</a>);
+<a name="l00446"></a>00446       }
+<a name="l00447"></a>00447       <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#85a20ebff9fbdbf9edb6beffa041ca23">case_association</a>.pjoueur_joueur != pj_joueur) &amp;&amp; (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#85a20ebff9fbdbf9edb6beffa041ca23">case_association</a>.pjoueur_joueur != NULL))
+<a name="l00448"></a>00448       {
+<a name="l00449"></a>00449         <span class="comment">//si il a assez d'argent</span>
+<a name="l00450"></a>00450         <span class="keywordflow">if</span> (pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &gt;= <a class="code" href="traitement_8c.html#bdfc1ebd2d8ecfcd5d3b01937f529839">traitement_loyer_association</a>(plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#f1240a8ba861b5871a50cdb7e5039a1e">case_lieu_commun</a>.pjoueur_joueur, int_nb_tire))
+<a name="l00451"></a>00451         {
+<a name="l00452"></a>00452           <span class="comment">//il peut alors payer</span>
+<a name="l00453"></a>00453           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#a5b61153ee23ef8595687f124eccd712">ACTION_PAYER</a>);
+<a name="l00454"></a>00454         }
+<a name="l00455"></a>00455         <span class="keywordflow">else</span>
+<a name="l00456"></a>00456         {
+<a name="l00457"></a>00457           <span class="comment">//sinon il perd</span>
+<a name="l00458"></a>00458           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#bfde18d0ae0bfe533fdb0b3dfcc7a865">ACTION_PERDRE</a>);
+<a name="l00459"></a>00459         }
+<a name="l00460"></a>00460       }
+<a name="l00461"></a>00461       <span class="comment">//sinon si la case lui appartient</span>
+<a name="l00462"></a>00462       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#85a20ebff9fbdbf9edb6beffa041ca23">case_association</a>.pjoueur_joueur == pj_joueur)
+<a name="l00463"></a>00463       {
+<a name="l00464"></a>00464         <span class="comment">//il le peut que finir ce tour</span>
+<a name="l00465"></a>00465         <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>);
+<a name="l00466"></a>00466       }
+<a name="l00467"></a>00467     }
+<a name="l00468"></a>00468   }
+<a name="l00469"></a>00469   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (int_etat == <a class="code" href="constante_8h.html#d37434a395a7384cb1afce9919ce1e25">CLICK_CASE</a>)
+<a name="l00470"></a>00470   {
+<a name="l00471"></a>00471     i=0;
+<a name="l00472"></a>00472     <span class="keywordflow">while</span> (plateau[i]!=<a class="code" href="outils_8c.html#b0d8a34b21e6a9200451fdb0e46db386">int_to_cases</a>(int_position_cases_etudiee,pj_joueur)) i++;
+<a name="l00473"></a>00473     <span class="keywordflow">if</span> (plateau[i]-&gt;int_type == <a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>)
+<a name="l00474"></a>00474     {
+<a name="l00475"></a>00475       <span class="comment">//si le joueur est sur une case du même groupe</span>
+<a name="l00476"></a>00476       <span class="keywordflow">if</span> (plateau[pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a>]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe == plateau[i]-&gt;<a class="code" href="structcases.html#7eee361afdf3c3cde3a6c8368ef4fba5">case_salle</a>.int_groupe)
+<a name="l00477"></a>00477       {
+<a name="l00478"></a>00478         <span class="comment">//si sont niveau est nul il ne peut qu'augmenter</span>
+<a name="l00479"></a>00479         <span class="keywordflow">if</span> (plateau[i]-&gt;case_salle.<a class="code" href="structcases.html#16070accdfd6cd2fc42f85eb700834ed">int_niveau</a> == 0)
+<a name="l00480"></a>00480         {
+<a name="l00481"></a>00481           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#65f36e3e7153adbceabf84d48fef802b">ACTION_PLUS</a>);
+<a name="l00482"></a>00482         }
+<a name="l00483"></a>00483         <span class="comment">//si son niveau est au maximum il ne peut que diminuer</span>
+<a name="l00484"></a>00484         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (plateau[i]-&gt;case_salle.<a class="code" href="structcases.html#16070accdfd6cd2fc42f85eb700834ed">int_niveau</a> == 5)
+<a name="l00485"></a>00485         {
+<a name="l00486"></a>00486           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#fc684f09ea2d95fff6d9dd12ac01c5cf">ACTION_MOINS</a>);
+<a name="l00487"></a>00487         }
+<a name="l00488"></a>00488         <span class="keywordflow">else</span>
+<a name="l00489"></a>00489         {
+<a name="l00490"></a>00490           <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#bba8f560c39a4ef2d822a0c317133d61">ACTION_PLUS_MOINS</a>);
+<a name="l00491"></a>00491         }
+<a name="l00492"></a>00492       }
+<a name="l00493"></a>00493     }
+<a name="l00494"></a>00494     <span class="keywordflow">else</span> 
+<a name="l00495"></a>00495     {
+<a name="l00496"></a>00496       <span class="comment">//il ne peut que suivre les indications spécifique à chaque case ou chaque carte</span>
+<a name="l00497"></a>00497       <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>);
+<a name="l00498"></a>00498     }
+<a name="l00499"></a>00499   }
+<a name="l00500"></a>00500   
+<a name="l00501"></a>00501   <span class="keywordflow">return</span>(<a class="code" href="constante_8h.html#8a9dac7f648d09d16b17ff585c9f2efe">ERREUR</a>);
+<a name="l00502"></a>00502 }
+<a name="l00503"></a>00503 
+<a name="l00504"></a><a class="code" href="outils_8h.html#72f8d3fa346a685e363d2aa16537c971">00504</a> <span class="keywordtype">int</span> <a class="code" href="outils_8c.html#72f8d3fa346a685e363d2aa16537c971">nombre_propriete</a>(<a class="code" href="structjoueur.html">joueur</a>* pj_joueur)
+<a name="l00505"></a>00505 {
+<a name="l00506"></a>00506   <a class="code" href="structpossession.html">possession</a>* propriete_temp;
+<a name="l00507"></a>00507   <span class="keywordtype">int</span> i;
+<a name="l00508"></a>00508 
+<a name="l00509"></a>00509   i=0;
+<a name="l00510"></a>00510   propriete_temp=pj_joueur-&gt;<a class="code" href="structjoueur.html#90b8cedf328ed1f09cfafc9627146043">propriete</a>;
+<a name="l00511"></a>00511   <span class="keywordflow">while</span>(propriete_temp!=NULL)
+<a name="l00512"></a>00512   {
+<a name="l00513"></a>00513     i++;
+<a name="l00514"></a>00514     propriete_temp=propriete_temp-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00515"></a>00515   }
+<a name="l00516"></a>00516   
+<a name="l00517"></a>00517   <span class="keywordflow">return</span>(i);
+<a name="l00518"></a>00518   
+<a name="l00519"></a>00519 }
+<a name="l00520"></a>00520 
+<a name="l00521"></a><a class="code" href="outils_8h.html#564f1b7b3845867298d667c4811cbff3">00521</a> <a class="code" href="structcases.html">cases</a>* <a class="code" href="outils_8c.html#b0d8a34b21e6a9200451fdb0e46db386">int_to_cases</a> (<span class="keywordtype">int</span> int_indice_case, <a class="code" href="structjoueur.html">joueur</a>* pj_joueur)
+<a name="l00522"></a>00522 {
+<a name="l00523"></a>00523   <a class="code" href="structpossession.html">possession</a>* propriete_en_cours;
+<a name="l00524"></a>00524   <span class="keywordtype">int</span> i;
+<a name="l00525"></a>00525   
+<a name="l00526"></a>00526   <span class="comment">//on assigne la propriété encours avec la première propriété du joueur pour pouvoir parcourir la chaîne</span>
+<a name="l00527"></a>00527   propriete_en_cours=pj_joueur-&gt;<a class="code" href="structjoueur.html#90b8cedf328ed1f09cfafc9627146043">propriete</a>;
+<a name="l00528"></a>00528   
+<a name="l00529"></a>00529   <span class="comment">//on se déplace dans la chaîne jusqu'à l'indice voulue</span>
+<a name="l00530"></a>00530   <span class="keywordflow">for</span> (i = 0; i &lt; int_indice_case; i++)
+<a name="l00531"></a>00531   {
+<a name="l00532"></a>00532     propriete_en_cours=propriete_en_cours-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00533"></a>00533   }
+<a name="l00534"></a>00534   <span class="comment">//on retourne ainsi la propriete trouvée</span>
+<a name="l00535"></a>00535   <span class="keywordflow">return</span>(propriete_en_cours-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>);
+<a name="l00536"></a>00536 }
+<a name="l00537"></a>00537 
+<a name="l00538"></a><a class="code" href="outils_8h.html#f24e5d6a3c8482c890219439e48dfe74">00538</a> <span class="keywordtype">bool</span> <a class="code" href="outils_8c.html#f24e5d6a3c8482c890219439e48dfe74">verification_victoire</a> (<a class="code" href="structjoueur.html">joueur</a>* pj_joueur)
+<a name="l00539"></a>00539 {
+<a name="l00540"></a>00540   <a class="code" href="structjoueur.html">joueur</a>* joueur_encours;
+<a name="l00541"></a>00541   <span class="keywordtype">int</span> i;
+<a name="l00542"></a>00542   
+<a name="l00543"></a>00543   i=0;
+<a name="l00544"></a>00544   
+<a name="l00545"></a>00545   <span class="comment">//le joueur gagne s'il est seul</span>
+<a name="l00546"></a>00546   joueur_encours=pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00547"></a>00547   
+<a name="l00548"></a>00548   <span class="keywordflow">while</span> (joueur_encours != pj_joueur)
+<a name="l00549"></a>00549   {
+<a name="l00550"></a>00550     i++;
+<a name="l00551"></a>00551     joueur_encours=joueur_encours-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00552"></a>00552   }
+<a name="l00553"></a>00553   
+<a name="l00554"></a>00554   <span class="keywordflow">if</span> (i &gt; 0)
+<a name="l00555"></a>00555   {
+<a name="l00556"></a>00556     <span class="keywordflow">return</span>(<span class="keyword">false</span>);
+<a name="l00557"></a>00557   }
+<a name="l00558"></a>00558   <span class="keywordflow">else</span> 
+<a name="l00559"></a>00559   {
+<a name="l00560"></a>00560     <span class="keywordflow">return</span>(<span class="keyword">true</span>);
+<a name="l00561"></a>00561   }
+<a name="l00562"></a>00562 }
+<a name="l00563"></a>00563 
+<a name="l00564"></a><a class="code" href="outils_8h.html#a5265e7645b52f6efcbfd18323082a1c">00564</a> <span class="keywordtype">void</span> <a class="code" href="outils_8c.html#a5265e7645b52f6efcbfd18323082a1c">action_to_boutons</a>(SDL_Surface* surf_ecran, SDL_Surface* surf_fond, <span class="keywordtype">int</span> int_action,<span class="keywordtype">int</span> int_etat)
+<a name="l00565"></a>00565 {
+<a name="l00566"></a>00566   
+<a name="l00567"></a>00567   <span class="comment">//Selon l'action à faire</span>
+<a name="l00568"></a>00568   <span class="keywordflow">switch</span>(int_action)
+<a name="l00569"></a>00569   {
+<a name="l00570"></a>00570     <span class="comment">//Dans la cas d'un achat</span>
+<a name="l00571"></a>00571     <span class="keywordflow">case</span> <a class="code" href="constante_8h.html#89f8379249353c504598f1d150cffb33">ACTION_ACHAT</a>:
+<a name="l00572"></a>00572       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 2, <a class="code" href="constante_8h.html#508d7e105c593f32346c1360933e9e6c">BTN_ACHAT</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00573"></a>00573       <span class="keywordflow">break</span>;
+<a name="l00574"></a>00574     <span class="comment">//Dans le cas d'une deshypothèque</span>
+<a name="l00575"></a>00575     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#c850e214252fdab051443549ebecc375">ACTION_UNHYPOTHEQUE</a>:
+<a name="l00576"></a>00576       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 2, <a class="code" href="constante_8h.html#8672aa55067d0742ba6fc1af4411c1b6">BTN_UNHYPOTHEQUE</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00577"></a>00577       <span class="keywordflow">break</span>;
+<a name="l00578"></a>00578     <span class="comment">//Dans le cas d'une hypothèque</span>
+<a name="l00579"></a>00579     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#373dd36bea5fb6256211848902ab4b65">ACTION_HYPOTHEQUE</a>:
+<a name="l00580"></a>00580       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 2, <a class="code" href="constante_8h.html#8abb415e5329b3416280b4010d6eea94">BTN_HYPOTHEQUE</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00581"></a>00581       <span class="keywordflow">break</span>;
+<a name="l00582"></a>00582     <span class="comment">//Pour augmenter le niveau d'une salle</span>
+<a name="l00583"></a>00583     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#65f36e3e7153adbceabf84d48fef802b">ACTION_PLUS</a>:
+<a name="l00584"></a>00584       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 2, <a class="code" href="constante_8h.html#60818c4df194af25daf26bff4d0a2e90">BTN_PLUS</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00585"></a>00585       <span class="keywordflow">break</span>;
+<a name="l00586"></a>00586     <span class="comment">//Pour diminuer le niveau d'une salle</span>
+<a name="l00587"></a>00587     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#fc684f09ea2d95fff6d9dd12ac01c5cf">ACTION_MOINS</a>:
+<a name="l00588"></a>00588       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 2, <a class="code" href="constante_8h.html#39c151107431a614326f800cd30ef9f4">BTN_MOINS</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00589"></a>00589       <span class="keywordflow">break</span>;
+<a name="l00590"></a>00590     <span class="comment">//Pour augmenter ou diminuer le niveau d'une salle</span>
+<a name="l00591"></a>00591     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#bba8f560c39a4ef2d822a0c317133d61">ACTION_PLUS_MOINS</a>:
+<a name="l00592"></a>00592       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 3, <a class="code" href="constante_8h.html#60818c4df194af25daf26bff4d0a2e90">BTN_PLUS</a>, <a class="code" href="constante_8h.html#39c151107431a614326f800cd30ef9f4">BTN_MOINS</a>, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00593"></a>00593       <span class="keywordflow">break</span>;
+<a name="l00594"></a>00594     <span class="comment">//Pour finir l'action</span>
+<a name="l00595"></a>00595     <span class="keywordflow">case</span>  <a class="code" href="constante_8h.html#f8301527651379bfb82e0f24b87039af">ACTION_FINIR</a>:
+<a name="l00596"></a>00596       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 1, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00597"></a>00597       <span class="keywordflow">break</span>;
+<a name="l00598"></a>00598     <span class="comment">//Dans tout les autres cas</span>
+<a name="l00599"></a>00599     <span class="keywordflow">default</span>:
+<a name="l00600"></a>00600       <a class="code" href="sdl_8c.html#733742fc69cbf073d8d2d1da7fc0bff2">affich_validation_propriete</a>(surf_ecran, surf_fond, int_etat, 1, <a class="code" href="constante_8h.html#67ebcb6b36741458227713b613d12ee5">BTN_FINIR</a>);
+<a name="l00601"></a>00601       <span class="keywordflow">break</span>;
+<a name="l00602"></a>00602   }
+<a name="l00603"></a>00603   
+<a name="l00604"></a>00604 }
+<a name="l00605"></a>00605 
+<a name="l00606"></a><a class="code" href="outils_8h.html#113ece66046fa3db3fed49a3ada1b36e">00606</a> <span class="keywordtype">void</span> <a class="code" href="outils_8c.html#113ece66046fa3db3fed49a3ada1b36e">sauvegarde</a>(<a class="code" href="structcases.html">cases</a>** plateau, <a class="code" href="structjoueur.html">joueur</a>* pj_joueur_tete)
+<a name="l00607"></a>00607 {
+<a name="l00608"></a>00608   <span class="comment">//Joueur temporaire</span>
+<a name="l00609"></a>00609   <a class="code" href="structjoueur.html">joueur</a>* pj_joueur;
+<a name="l00610"></a>00610   
+<a name="l00611"></a>00611   <span class="comment">//Propriété temporaire</span>
+<a name="l00612"></a>00612   <a class="code" href="structpossession.html">possession</a>* possession_temp;
+<a name="l00613"></a>00613   
+<a name="l00614"></a>00614   <span class="comment">//Nombre de joueur</span>
+<a name="l00615"></a>00615   <span class="keywordtype">int</span> int_nombre_joueur;
+<a name="l00616"></a>00616   int_nombre_joueur=1;
+<a name="l00617"></a>00617   
+<a name="l00618"></a>00618   <span class="comment">//Nominateur de fin de joueur</span>
+<a name="l00619"></a>00619   <span class="keywordtype">int</span> int_fin;
+<a name="l00620"></a>00620   int_fin=-1;
+<a name="l00621"></a>00621   
+<a name="l00622"></a>00622   <span class="comment">//Compteur de propriété</span>
+<a name="l00623"></a>00623   <span class="keywordtype">int</span> i;
+<a name="l00624"></a>00624 
+<a name="l00625"></a>00625   <span class="comment">//On commence au premier joueur</span>
+<a name="l00626"></a>00626   pj_joueur=pj_joueur_tete;
+<a name="l00627"></a>00627   
+<a name="l00628"></a>00628   <span class="comment">//On compte le nombre de joueur</span>
+<a name="l00629"></a>00629   <span class="keywordflow">while</span>((pj_joueur=pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>)!=pj_joueur_tete) int_nombre_joueur++;
+<a name="l00630"></a>00630 
+<a name="l00631"></a>00631   <span class="comment">//On commence au premier joueur</span>
+<a name="l00632"></a>00632   pj_joueur=pj_joueur_tete;
+<a name="l00633"></a>00633   
+<a name="l00634"></a>00634   ofstream file(<span class="stringliteral">"sauvegarde_joueur.txt"</span>);
+<a name="l00635"></a>00635   
+<a name="l00636"></a>00636   file &lt;&lt; int_nombre_joueur&lt;&lt;endl;
+<a name="l00637"></a>00637   
+<a name="l00638"></a>00638   <span class="comment">//Tant qu'on est pas revenu au joueur de tete</span>
+<a name="l00639"></a>00639   <span class="keywordflow">while</span>(pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>!=pj_joueur_tete)
+<a name="l00640"></a>00640   {
+<a name="l00641"></a>00641     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#844787380e505616b9f1ba539febe9e0">str_nom</a> &lt;&lt; endl;
+<a name="l00642"></a>00642     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> &lt;&lt; endl;
+<a name="l00643"></a>00643     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &lt;&lt; endl;
+<a name="l00644"></a>00644     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#ecbece39087923f999df36d5107d3dee">int_certificat</a> &lt;&lt; endl;
+<a name="l00645"></a>00645     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#3007bbdde3256a72f4c1980d73f400e1">bool_debut</a> &lt;&lt; endl;
+<a name="l00646"></a>00646     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#383352e8bd61fe737ca01b2ad37da4a4">int_double_tire</a> &lt;&lt; endl;
+<a name="l00647"></a>00647     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#9674676a40014e7c313f37a481b70bb4">bool_laurence</a> &lt;&lt; endl;
+<a name="l00648"></a>00648     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#a9f44bfa8a4fd3de8b1de51a1c3c2f8e">int_laurence</a> &lt;&lt; endl;
+<a name="l00649"></a>00649     
+<a name="l00650"></a>00650     possession_temp=pj_joueur-&gt;<a class="code" href="structjoueur.html#90b8cedf328ed1f09cfafc9627146043">propriete</a>;
+<a name="l00651"></a>00651     <span class="keywordflow">while</span>(possession_temp!=NULL)
+<a name="l00652"></a>00652     {
+<a name="l00653"></a>00653       i=0;
+<a name="l00654"></a>00654       <span class="keywordflow">while</span> (plateau[i]!=possession_temp-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>) i++;
+<a name="l00655"></a>00655       file &lt;&lt; i &lt;&lt; endl;
+<a name="l00656"></a>00656       possession_temp=possession_temp-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00657"></a>00657     }
+<a name="l00658"></a>00658     
+<a name="l00659"></a>00659     file &lt;&lt; int_fin &lt;&lt; endl &lt;&lt; endl;
+<a name="l00660"></a>00660     <span class="comment">//On passe au joueur suivant</span>
+<a name="l00661"></a>00661     pj_joueur=pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00662"></a>00662   }
+<a name="l00663"></a>00663   
+<a name="l00664"></a>00664     <span class="comment">//Sauvegarde du dernier joueur</span>
+<a name="l00665"></a>00665     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#844787380e505616b9f1ba539febe9e0">str_nom</a> &lt;&lt; endl;
+<a name="l00666"></a>00666     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#47d7b57cd189c4324a0bc8b338aec618">int_position</a> &lt;&lt; endl;
+<a name="l00667"></a>00667     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#b82f4fde3382a41ee393fc1c64f9beb8">int_argent</a> &lt;&lt; endl;
+<a name="l00668"></a>00668     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#ecbece39087923f999df36d5107d3dee">int_certificat</a> &lt;&lt; endl;
+<a name="l00669"></a>00669     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#3007bbdde3256a72f4c1980d73f400e1">bool_debut</a> &lt;&lt; endl;
+<a name="l00670"></a>00670     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#383352e8bd61fe737ca01b2ad37da4a4">int_double_tire</a> &lt;&lt; endl;
+<a name="l00671"></a>00671     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#9674676a40014e7c313f37a481b70bb4">bool_laurence</a> &lt;&lt; endl;
+<a name="l00672"></a>00672     file &lt;&lt; pj_joueur-&gt;<a class="code" href="structjoueur.html#a9f44bfa8a4fd3de8b1de51a1c3c2f8e">int_laurence</a> &lt;&lt; endl;
+<a name="l00673"></a>00673     
+<a name="l00674"></a>00674     possession_temp=pj_joueur-&gt;<a class="code" href="structjoueur.html#90b8cedf328ed1f09cfafc9627146043">propriete</a>;
+<a name="l00675"></a>00675     <span class="keywordflow">while</span>(possession_temp!=NULL)
+<a name="l00676"></a>00676     {
+<a name="l00677"></a>00677       i=0;
+<a name="l00678"></a>00678       <span class="keywordflow">while</span> (plateau[i]!=possession_temp-&gt;<a class="code" href="structpossession.html#5e54d7b40815342bfd51737d5a96d620">propriete</a>) i++;
+<a name="l00679"></a>00679       file &lt;&lt; i &lt;&lt; endl;
+<a name="l00680"></a>00680       possession_temp=possession_temp-&gt;<a class="code" href="structpossession.html#d2cf0b1aadb1a869c82c6720dfbc9e36">suivant</a>;
+<a name="l00681"></a>00681     }
+<a name="l00682"></a>00682     
+<a name="l00683"></a>00683     file &lt;&lt; int_fin &lt;&lt; endl &lt;&lt; endl;
+<a name="l00684"></a>00684     <span class="comment">//On passe au joueur suivant</span>
+<a name="l00685"></a>00685     pj_joueur=pj_joueur-&gt;<a class="code" href="structjoueur.html#c1e6e55655821e532f1c4e6d67fc8d64">pjoueur_suivant</a>;
+<a name="l00686"></a>00686     
+<a name="l00687"></a>00687   <span class="comment">//Sauvegarde du plateau</span>
+<a name="l00688"></a>00688   ofstream file2(<span class="stringliteral">"sauvegarde_plateau.txt"</span>);
+<a name="l00689"></a>00689   
+<a name="l00690"></a>00690   <span class="comment">//On écrit le total de la cagnotte</span>
+<a name="l00691"></a>00691   file2 &lt;&lt; plateau[20]-&gt;<a class="code" href="structcases.html#74e60b0eaf92bd26ea10e0f65429f776">machine_a_cafe</a>.int_argent &lt;&lt; endl;
+<a name="l00692"></a>00692   <span class="comment">//Pour chacune des cases</span>
+<a name="l00693"></a>00693   <span class="keywordflow">for</span>(i=0;i&lt;40;i++)
+<a name="l00694"></a>00694   {
+<a name="l00695"></a>00695     <span class="comment">//S'il sagit d'une salle, on écrit son niveau</span>
+<a name="l00696"></a>00696     <span class="keywordflow">if</span>(plateau[i]-&gt;int_type==<a class="code" href="constante_8h.html#4e266faa65b920356441404c5c423272">SALLE</a>) file2 &lt;&lt; plateau[i]-&gt;case_salle.<a class="code" href="structcases.html#16070accdfd6cd2fc42f85eb700834ed">int_niveau</a> &lt;&lt; endl;
+<a name="l00697"></a>00697     <span class="comment">//Sinon on met -1</span>
+<a name="l00698"></a>00698     <span class="keywordflow">else</span> file2 &lt;&lt; int_fin &lt;&lt; endl;
+<a name="l00699"></a>00699   }
+<a name="l00700"></a>00700   
+<a name="l00701"></a>00701   
+<a name="l00702"></a>00702 }
+<a name="l00703"></a>00703 
+<a name="l00704"></a><a class="code" href="outils_8h.html#84d7e81745982f84055adbd586bc248e">00704</a> <a class="code" href="structjoueur.html">joueur</a>* <a class="code" href="outils_8c.html#ae4beb88d7abebc4264362e2f1054e90">chargement</a>(<a class="code" href="structjoueur.html">joueur</a>* pj_joueur, <a class="code" href="structcases.html">cases</a>** plateau, <a class="code" href="structrvb__couleur.html">rvb_couleur</a> couleurs[8], SDL_Surface* surf_ecran)
+<a name="l00705"></a>00705 {
+<a name="l00706"></a>00706   
+<a name="l00707"></a>00707   ifstream file1(<span class="stringliteral">"sauvegarde_joueur.txt"</span>, ios::in);
+<a name="l00708"></a>00708   <span class="keywordflow">if</span> (!file1)
+<a name="l00709"></a>00709   {
+<a name="l00710"></a>00710     cerr &lt;&lt; <span class="stringliteral">"Allocation inaboutie de sauvegarde_joueur.txt"</span> &lt;&lt; endl;
+<a name="l00711"></a>00711   }
+<a name="l00712"></a>00712   
+<a name="l00713"></a>00713   ifstream file2(<span class="stringliteral">"sauvegarde_plateau.txt"</span>,ios::in);
+<a name="l00714"></a>00714   <span class="keywordflow">if</span> (!file2)
+<a name="l00715"></a>00715   {
+<a name="l00716"></a>00716     cerr &lt;&lt; <span class="stringliteral">"Allocation inaboutie de sauvegarde_plateau.txt"</span> &lt;&lt; endl;
+<a name="l00717"></a>00717   }
+<a name="l00718"></a>00718   
+<a name="l00719"></a>00719   
+<a name="l00720"></a>00720   <span class="keywordtype">int</span> nb_joueurs;
+<a name="l00721"></a>00721   
+<a name="l00722"></a>00722   file1 &gt;&gt; nb_joueurs;
+<a name="l00723"></a>00723   
+<a name="l00724"></a>00724   pj_joueur=<a class="code" href="initialisation_8c.html#a52097126ac66707c621467e6c15e6fd">init_anneau_joueur_chargement</a>(nb_joueurs, &amp;file1,plateau);
+<a name="l00725"></a>00725   plateau=<a class="code" href="initialisation_8c.html#9895ce86e4099e961c772a1abfb1d9cc">init_plateau_chargement</a>(&amp;file2, plateau, couleurs,surf_ecran);
+<a name="l00726"></a>00726   
+<a name="l00727"></a>00727   file1.close();
+<a name="l00728"></a>00728   file2.close();
+<a name="l00729"></a>00729   
+<a name="l00730"></a>00730   <span class="keywordflow">return</span>(pj_joueur);
+<a name="l00731"></a>00731 
+<a name="l00732"></a>00732 }
+<a name="l00733"></a>00733 
+<a name="l00734"></a><a class="code" href="outils_8h.html#740c0c834395069b060fe8d7e31653cd">00734</a> <span class="keywordtype">bool</span> <a class="code" href="outils_8c.html#2f8e7ba560d7f4e48910a60e6414ad6e">is_readable</a>( <span class="keyword">const</span> std::string &amp; file ) 
+<a name="l00735"></a>00735 { 
+<a name="l00736"></a>00736     std::ifstream fichier( file.c_str() ); 
+<a name="l00737"></a>00737     <span class="keywordflow">return</span> !fichier.fail(); 
+<a name="l00738"></a>00738 } 
+</pre></div><hr size="1"><address style="align: right;"><small>G�n�r� le Thu Jan 10 16:53:20 2008 pour Correction des TPs par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

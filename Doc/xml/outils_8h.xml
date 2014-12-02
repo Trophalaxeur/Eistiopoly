@@ -1,0 +1,1748 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="outils_8h" kind="file">
+    <compoundname>outils.h</compoundname>
+    <includes refid="header_8h" local="yes">../header.h</includes>
+    <includedby refid="header_8h" local="yes">header.h</includedby>
+    <includedby refid="outils_8c" local="yes">outils.c</includedby>
+    <incdepgraph>
+      <node id="210">
+        <label>outils.h</label>
+        <link refid="outils.h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>initialisation/initialisation.h</label>
+        <link refid="initialisation_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>stdlib.h</label>
+      </node>
+      <node id="226">
+        <label>traitement/traitement.h</label>
+        <link refid="traitement_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>sdl/sdl.h</label>
+        <link refid="sdl_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>fstream</label>
+      </node>
+      <node id="211">
+        <label>../header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>structure.h</label>
+        <link refid="structure_8h"/>
+      </node>
+      <node id="217">
+        <label>string.h</label>
+      </node>
+      <node id="225">
+        <label>interaction/interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="222">
+        <label>constante.h</label>
+        <link refid="constante_8h"/>
+      </node>
+      <node id="218">
+        <label>time.h</label>
+      </node>
+      <node id="221">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="216">
+        <label>math.h</label>
+      </node>
+      <node id="212">
+        <label>iostream</label>
+      </node>
+      <node id="215">
+        <label>stdio.h</label>
+      </node>
+      <node id="220">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="240">
+        <label>outils.c</label>
+        <link refid="outils_8c"/>
+      </node>
+      <node id="228">
+        <label>outils.h</label>
+        <link refid="outils.h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>initialisation.c</label>
+        <link refid="initialisation_8c"/>
+      </node>
+      <node id="236">
+        <label>initialisation.h</label>
+        <link refid="initialisation_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>traitement.c</label>
+        <link refid="traitement_8c"/>
+      </node>
+      <node id="234">
+        <label>traitement.h</label>
+        <link refid="traitement_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>sdl.c</label>
+        <link refid="sdl_8c"/>
+      </node>
+      <node id="230">
+        <label>sdl.h</label>
+        <link refid="sdl_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>interaction.c</label>
+        <link refid="interaction_8c"/>
+      </node>
+      <node id="232">
+        <label>interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>monopoly.c</label>
+        <link refid="monopoly_8c"/>
+      </node>
+      <node id="238">
+        <label>monopoly.h</label>
+        <link refid="monopoly_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="">
+      <memberdef kind="function" id="outils_8h_139dfce9b2a45da995ceaab0aade1bdf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void joueur_possede_tout</definition>
+        <argsstring>(cases **plateau, joueur *joueur_encours)</argsstring>
+        <name>joueur_possede_tout</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>joueur_encours</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="14" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="90" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1c6601c0d36e455a4c5c53e21dba99163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ajout_caractere</definition>
+        <argsstring>(char *texte, int int_caractere)</argsstring>
+        <name>ajout_caractere</name>
+        <param>
+          <type>char *</type>
+          <declname>texte</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_caractere</declname>
+        </param>
+        <briefdescription>
+<para>ajoute un caractere (en code UTF-8) en fin de chaine </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>texte initial </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_caractere</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entier correspondant à une lettre</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>la chaine initiale avec le caractère à la fin </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="30" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="11" bodyend="50"/>
+        <referencedby refid="interaction_8h_1f196ea942cdf7af6071f82225d2d062c" compoundref="interaction_8c" startline="464" endline="750">attente_action_config</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1628b8ba74e55cbdc77d8c2e5e594bc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nombre_joueur_case</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>nombre_joueur_case</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>calcule le nombre de joueur sur une case </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le joueur actuellement en train de jouer son tour</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de joueur sur la case </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="43" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="52" bodyend="71"/>
+        <referencedby refid="traitement_8h_192076f8887242815786ee757fa20f20c" compoundref="traitement_8c" startline="280" endline="327">aller_a_jeton</referencedby>
+        <referencedby refid="traitement_8h_1179b66f3e6586b6640e89be8fa1f86f0" compoundref="traitement_8c" startline="329" endline="368">aller_en_prison_jeton</referencedby>
+        <referencedby refid="interaction_8h_13bf12a3fb5664e0581318e25e4ec2f58" compoundref="interaction_8c" startline="752" endline="926">attente_validation_propriete</referencedby>
+        <referencedby refid="traitement_8h_15c76676806c77b8f28d8a2af3922f3a6" compoundref="traitement_8c" startline="233" endline="278">avancer_jeton</referencedby>
+        <referencedby refid="traitement_8h_1f11f5db54dce465104914610020b7786" compoundref="traitement_8c" startline="188" endline="230">reculer_jeton</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1449869c420d1199183139e03451f2adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_carte</definition>
+        <argsstring>(information *cartes_a_melanger[16], int position_case1, int position_case2)</argsstring>
+        <name>swap_carte</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>cartes_a_melanger</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_case1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_case2</declname>
+        </param>
+        <briefdescription>
+<para>échange de cartes dans un tableau d&apos;un bureau </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cartes_a_melanger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes à mélanger </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_case1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position de la première carte à échanger dans le tableau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_case2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position de la seconde carte à échanger dans le tableau</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="58" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="81" bodyend="88"/>
+        <referencedby refid="outils_8h_1034d05be61f25003576b3ac8c5a2edb7" compoundref="outils_8c" startline="73" endline="79">melanger_cartes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1034d05be61f25003576b3ac8c5a2edb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void melanger_cartes</definition>
+        <argsstring>(information *cartes_a_melanger[16])</argsstring>
+        <name>melanger_cartes</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>cartes_a_melanger</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>mélange les cartes du bureau en effectuant une suite aléatoire d&apos;échanges </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cartes_a_melanger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes à mélanger</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="71" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="73" bodyend="79"/>
+        <referencedby refid="initialisation_8h_166b2c4e7d7f6497b9387edba09714fc1" compoundref="initialisation_8c" startline="350" endline="448">init_bureau_krystel</referencedby>
+        <referencedby refid="initialisation_8h_19653e9e1b67aa65f18bfe211c08273ce" compoundref="initialisation_8c" startline="450" endline="530">init_bureau_nadege</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* insertion_bonne_place_propriete</definition>
+        <argsstring>(possession *premier_maillon, cases *case_achetee)</argsstring>
+        <name>insertion_bonne_place_propriete</name>
+        <param>
+          <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+          <declname>premier_maillon</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>case_achetee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="85" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="104" bodyend="228"/>
+        <referencedby refid="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" compoundref="initialisation_8c" startline="601" endline="629">init_joueur_chargement</referencedby>
+        <referencedby refid="traitement_8h_1dd1dfecf4b64b55e60fe041d2616ac95" compoundref="traitement_8c" startline="370" endline="431">traitement_achat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1914637efff042e343c9bb0befab2f609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool possession_autres_cartes</definition>
+        <argsstring>(cases **plateau, joueur *pj_joueur)</argsstring>
+        <name>possession_autres_cartes</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>verifie si le joueur possède les autres cartes de la même couleur que celle ou il se trouve </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau contenant les cases du plateau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>vrai s&apos;il les possède sinon faux </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="99" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="230" bodyend="284"/>
+        <referencedby refid="outils_8h_1d1c532cdedd8b070691946cc83436c96" compoundref="outils_8c" startline="337" endline="502">action_possible</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1d1c532cdedd8b070691946cc83436c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int action_possible</definition>
+        <argsstring>(cases **plateau, int int_position_cases_etudiee, joueur *pj_joueur, int int_etat, int int_nb_tire)</argsstring>
+        <name>action_possible</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_position_cases_etudiee</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_etat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_nb_tire</declname>
+        </param>
+        <briefdescription>
+<para>analyse toutes les actions possibles pour un joueur pour une case donnée </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau contenant les cases du plateau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_position_cases_etudiee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cases à partir de laquelle on doit faire le traitement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_etat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indique si le joueur demande a modifier le niveau d&apos;une salle ou s&apos;il demande une hypothèque ou s&apos;il est seulement arriver sur une salle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_nb_tire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre indiqué par les dés</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>ACTION_ACHAT s&apos;il peut acheter, ACTION_HUNHYPOTHEQUE s&apos;il peut déshypotéquer, ACTION_PLUS s&apos;il peut augmenter le niveau de la salle, ACTION_MOINS s&apos;il peut diminuer le niveau de la salle, ACTION_PLUS_MOINS s&apos;il peut augmenter ou diminuer le niveau de la salle, ACTION_FINIR s&apos;il ne peut que finir le tour, ACTION_PAYER s&apos;il doit payer le loyer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="116" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="337" bodyend="502"/>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+        <referencedby refid="traitement_8h_1d4adf76b1576cb838f47fee69e533563" compoundref="traitement_8c" startline="694" endline="784">traitement_arrive_case</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_16f12b97af4dd149267a5a423e3e5e7a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int decoupage_string</definition>
+        <argsstring>(char ***str_tab, char *str_a_diviser)</argsstring>
+        <name>decoupage_string</name>
+        <param>
+          <type>char ***</type>
+          <declname>str_tab</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_a_diviser</declname>
+        </param>
+        <briefdescription>
+<para>divise une chaine en caractère en tableau de chaîne caractère </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str_tab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de chaine de caractère pour le retour de la chaine une fois divisé </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_a_diviser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la chaine de caractère à diviser</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de lignes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="130" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="286" bodyend="335"/>
+        <referencedby refid="interaction_8h_1232bfa13a7e55819d63a9cc0d6e475ac" compoundref="interaction_8c" startline="928" endline="1124">attente_validation_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1564f1b7b3845867298d667c4811cbff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+        <definition>cases* int_to_cases</definition>
+        <argsstring>(int int_indice_case, joueur *pj_joueur)</argsstring>
+        <name>int_to_cases</name>
+        <param>
+          <type>int</type>
+          <declname>int_indice_case</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>à partir de l&apos;indice de chaine des propriété elle trouve la case correspondante </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_indice_case</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indice de la case recherché fourni a partir de la liste de propriété du panneau gauche</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>la case voulue </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="144" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="521" bodyend="536"/>
+        <referencedby refid="outils_8h_1d1c532cdedd8b070691946cc83436c96" compoundref="outils_8c" startline="337" endline="502">action_possible</referencedby>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_172f8d3fa346a685e363d2aa16537c971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nombre_propriete</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>nombre_propriete</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>compte le nombre de propriétés du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de propriété du joueur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="157" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="504" bodyend="519"/>
+        <referencedby refid="sdl_8h_183fed3d7a65d02378d31795cab19b73d" compoundref="sdl_8c" startline="1983" endline="2111">affich_panneau_possessions</referencedby>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1f24e5d6a3c8482c890219439e48dfe74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool verification_victoire</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>verification_victoire</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>compte le nombre de propriétés du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>true si le joueur à gagnersinon false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="170" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="538" bodyend="562"/>
+        <referencedby refid="traitement_8h_1e7669eea6f59aeac459a2d4a42229a00" compoundref="traitement_8c" startline="12" endline="104">jeu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1a5265e7645b52f6efcbfd18323082a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void action_to_boutons</definition>
+        <argsstring>(SDL_Surface *surf_ecran, SDL_Surface *surf_fond, int int_action, int int_etat)</argsstring>
+        <name>action_to_boutons</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_fond</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_etat</declname>
+        </param>
+        <briefdescription>
+<para>définit les boutons à afficher en fonction des actions possibles sur une propriété </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_fond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de la propriété </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>actions possibles </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_etat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>état des boutons</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>nothing </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="186" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="564" bodyend="604"/>
+        <referencedby refid="interaction_8h_13bf12a3fb5664e0581318e25e4ec2f58" compoundref="interaction_8c" startline="752" endline="926">attente_validation_propriete</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1113ece66046fa3db3fed49a3ada1b36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sauvegarde</definition>
+        <argsstring>(cases **plateau, joueur *pj_joueur_tete)</argsstring>
+        <name>sauvegarde</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur_tete</declname>
+        </param>
+        <briefdescription>
+<para>sauvegarde de la partie </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau du jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur_tete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur en cours</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>nothing </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="200" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="606" bodyend="702"/>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+        <referencedby refid="traitement_8h_1e7669eea6f59aeac459a2d4a42229a00" compoundref="traitement_8c" startline="12" endline="104">jeu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_184d7e81745982f84055adbd586bc248e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* chargement</definition>
+        <argsstring>(joueur *pj_joueur, cases **plateau, rvb_couleur couleurs[8], SDL_Surface *surf_ecran)</argsstring>
+        <name>chargement</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <briefdescription>
+<para>chargement de la partie </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau du jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur en cours </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>un joueur de la liste de joueur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="216" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="704" bodyend="732"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1740c0c834395069b060fe8d7e31653cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_readable</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>is_readable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>test si un fichier existe </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le fichier à tester</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>si le fichier existe ou non </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="229" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="734" bodyend="738"/>
+        <referencedby refid="interaction_8h_1e4dfe0c2c8be2b77870c32442253dcb8" compoundref="interaction_8c" startline="222" endline="462">attente_action_accueil</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="">
+      <memberdef kind="function" id="outils_8h_139dfce9b2a45da995ceaab0aade1bdf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void joueur_possede_tout</definition>
+        <argsstring>(cases **plateau, joueur *joueur_encours)</argsstring>
+        <name>joueur_possede_tout</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>joueur_encours</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="14" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="90" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1c6601c0d36e455a4c5c53e21dba99163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ajout_caractere</definition>
+        <argsstring>(char *texte, int int_caractere)</argsstring>
+        <name>ajout_caractere</name>
+        <param>
+          <type>char *</type>
+          <declname>texte</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_caractere</declname>
+        </param>
+        <briefdescription>
+<para>ajoute un caractere (en code UTF-8) en fin de chaine </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>texte initial </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_caractere</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entier correspondant à une lettre</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>la chaine initiale avec le caractère à la fin </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="30" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="11" bodyend="50"/>
+        <referencedby refid="interaction_8h_1f196ea942cdf7af6071f82225d2d062c" compoundref="interaction_8c" startline="464" endline="750">attente_action_config</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1628b8ba74e55cbdc77d8c2e5e594bc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nombre_joueur_case</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>nombre_joueur_case</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>calcule le nombre de joueur sur une case </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le joueur actuellement en train de jouer son tour</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de joueur sur la case </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="43" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="52" bodyend="71"/>
+        <referencedby refid="traitement_8h_192076f8887242815786ee757fa20f20c" compoundref="traitement_8c" startline="280" endline="327">aller_a_jeton</referencedby>
+        <referencedby refid="traitement_8h_1179b66f3e6586b6640e89be8fa1f86f0" compoundref="traitement_8c" startline="329" endline="368">aller_en_prison_jeton</referencedby>
+        <referencedby refid="interaction_8h_13bf12a3fb5664e0581318e25e4ec2f58" compoundref="interaction_8c" startline="752" endline="926">attente_validation_propriete</referencedby>
+        <referencedby refid="traitement_8h_15c76676806c77b8f28d8a2af3922f3a6" compoundref="traitement_8c" startline="233" endline="278">avancer_jeton</referencedby>
+        <referencedby refid="traitement_8h_1f11f5db54dce465104914610020b7786" compoundref="traitement_8c" startline="188" endline="230">reculer_jeton</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1449869c420d1199183139e03451f2adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_carte</definition>
+        <argsstring>(information *cartes_a_melanger[16], int position_case1, int position_case2)</argsstring>
+        <name>swap_carte</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>cartes_a_melanger</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_case1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_case2</declname>
+        </param>
+        <briefdescription>
+<para>échange de cartes dans un tableau d&apos;un bureau </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cartes_a_melanger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes à mélanger </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_case1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position de la première carte à échanger dans le tableau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_case2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position de la seconde carte à échanger dans le tableau</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="58" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="81" bodyend="88"/>
+        <referencedby refid="outils_8h_1034d05be61f25003576b3ac8c5a2edb7" compoundref="outils_8c" startline="73" endline="79">melanger_cartes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1034d05be61f25003576b3ac8c5a2edb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void melanger_cartes</definition>
+        <argsstring>(information *cartes_a_melanger[16])</argsstring>
+        <name>melanger_cartes</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>cartes_a_melanger</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>mélange les cartes du bureau en effectuant une suite aléatoire d&apos;échanges </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cartes_a_melanger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes à mélanger</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="71" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="73" bodyend="79"/>
+        <referencedby refid="initialisation_8h_166b2c4e7d7f6497b9387edba09714fc1" compoundref="initialisation_8c" startline="350" endline="448">init_bureau_krystel</referencedby>
+        <referencedby refid="initialisation_8h_19653e9e1b67aa65f18bfe211c08273ce" compoundref="initialisation_8c" startline="450" endline="530">init_bureau_nadege</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* insertion_bonne_place_propriete</definition>
+        <argsstring>(possession *premier_maillon, cases *case_achetee)</argsstring>
+        <name>insertion_bonne_place_propriete</name>
+        <param>
+          <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+          <declname>premier_maillon</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>case_achetee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="85" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="104" bodyend="228"/>
+        <referencedby refid="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" compoundref="initialisation_8c" startline="601" endline="629">init_joueur_chargement</referencedby>
+        <referencedby refid="traitement_8h_1dd1dfecf4b64b55e60fe041d2616ac95" compoundref="traitement_8c" startline="370" endline="431">traitement_achat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1914637efff042e343c9bb0befab2f609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool possession_autres_cartes</definition>
+        <argsstring>(cases **plateau, joueur *pj_joueur)</argsstring>
+        <name>possession_autres_cartes</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>verifie si le joueur possède les autres cartes de la même couleur que celle ou il se trouve </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau contenant les cases du plateau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>vrai s&apos;il les possède sinon faux </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="99" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="230" bodyend="284"/>
+        <referencedby refid="outils_8h_1d1c532cdedd8b070691946cc83436c96" compoundref="outils_8c" startline="337" endline="502">action_possible</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1d1c532cdedd8b070691946cc83436c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int action_possible</definition>
+        <argsstring>(cases **plateau, int int_position_cases_etudiee, joueur *pj_joueur, int int_etat, int int_nb_tire)</argsstring>
+        <name>action_possible</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_position_cases_etudiee</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_etat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_nb_tire</declname>
+        </param>
+        <briefdescription>
+<para>analyse toutes les actions possibles pour un joueur pour une case donnée </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau contenant les cases du plateau </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_position_cases_etudiee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cases à partir de laquelle on doit faire le traitement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_etat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indique si le joueur demande a modifier le niveau d&apos;une salle ou s&apos;il demande une hypothèque ou s&apos;il est seulement arriver sur une salle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_nb_tire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre indiqué par les dés</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>ACTION_ACHAT s&apos;il peut acheter, ACTION_HUNHYPOTHEQUE s&apos;il peut déshypotéquer, ACTION_PLUS s&apos;il peut augmenter le niveau de la salle, ACTION_MOINS s&apos;il peut diminuer le niveau de la salle, ACTION_PLUS_MOINS s&apos;il peut augmenter ou diminuer le niveau de la salle, ACTION_FINIR s&apos;il ne peut que finir le tour, ACTION_PAYER s&apos;il doit payer le loyer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="116" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="337" bodyend="502"/>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+        <referencedby refid="traitement_8h_1d4adf76b1576cb838f47fee69e533563" compoundref="traitement_8c" startline="694" endline="784">traitement_arrive_case</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_16f12b97af4dd149267a5a423e3e5e7a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int decoupage_string</definition>
+        <argsstring>(char ***str_tab, char *str_a_diviser)</argsstring>
+        <name>decoupage_string</name>
+        <param>
+          <type>char ***</type>
+          <declname>str_tab</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_a_diviser</declname>
+        </param>
+        <briefdescription>
+<para>divise une chaine en caractère en tableau de chaîne caractère </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str_tab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de chaine de caractère pour le retour de la chaine une fois divisé </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_a_diviser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la chaine de caractère à diviser</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de lignes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="130" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="286" bodyend="335"/>
+        <referencedby refid="interaction_8h_1232bfa13a7e55819d63a9cc0d6e475ac" compoundref="interaction_8c" startline="928" endline="1124">attente_validation_message</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1564f1b7b3845867298d667c4811cbff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+        <definition>cases* int_to_cases</definition>
+        <argsstring>(int int_indice_case, joueur *pj_joueur)</argsstring>
+        <name>int_to_cases</name>
+        <param>
+          <type>int</type>
+          <declname>int_indice_case</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>à partir de l&apos;indice de chaine des propriété elle trouve la case correspondante </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_indice_case</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indice de la case recherché fourni a partir de la liste de propriété du panneau gauche</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>la case voulue </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="144" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="521" bodyend="536"/>
+        <referencedby refid="outils_8h_1d1c532cdedd8b070691946cc83436c96" compoundref="outils_8c" startline="337" endline="502">action_possible</referencedby>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_172f8d3fa346a685e363d2aa16537c971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nombre_propriete</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>nombre_propriete</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>compte le nombre de propriétés du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>le nombre de propriété du joueur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="157" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="504" bodyend="519"/>
+        <referencedby refid="sdl_8h_183fed3d7a65d02378d31795cab19b73d" compoundref="sdl_8c" startline="1983" endline="2111">affich_panneau_possessions</referencedby>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1f24e5d6a3c8482c890219439e48dfe74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool verification_victoire</definition>
+        <argsstring>(joueur *pj_joueur)</argsstring>
+        <name>verification_victoire</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <briefdescription>
+<para>compte le nombre de propriétés du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur qui joue actuellement</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>true si le joueur à gagnersinon false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="170" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="538" bodyend="562"/>
+        <referencedby refid="traitement_8h_1e7669eea6f59aeac459a2d4a42229a00" compoundref="traitement_8c" startline="12" endline="104">jeu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1a5265e7645b52f6efcbfd18323082a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void action_to_boutons</definition>
+        <argsstring>(SDL_Surface *surf_ecran, SDL_Surface *surf_fond, int int_action, int int_etat)</argsstring>
+        <name>action_to_boutons</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_fond</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_etat</declname>
+        </param>
+        <briefdescription>
+<para>définit les boutons à afficher en fonction des actions possibles sur une propriété </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_fond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de la propriété </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>actions possibles </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_etat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>état des boutons</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>nothing </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="186" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="564" bodyend="604"/>
+        <referencedby refid="interaction_8h_13bf12a3fb5664e0581318e25e4ec2f58" compoundref="interaction_8c" startline="752" endline="926">attente_validation_propriete</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1113ece66046fa3db3fed49a3ada1b36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sauvegarde</definition>
+        <argsstring>(cases **plateau, joueur *pj_joueur_tete)</argsstring>
+        <name>sauvegarde</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur_tete</declname>
+        </param>
+        <briefdescription>
+<para>sauvegarde de la partie </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau du jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur_tete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur en cours</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>nothing </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="200" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="606" bodyend="702"/>
+        <referencedby refid="interaction_8h_1ceef01ee631e6d4f4a515f599e04dd2e" compoundref="interaction_8c" startline="11" endline="220">attente_clic</referencedby>
+        <referencedby refid="traitement_8h_1e7669eea6f59aeac459a2d4a42229a00" compoundref="traitement_8c" startline="12" endline="104">jeu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_184d7e81745982f84055adbd586bc248e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* chargement</definition>
+        <argsstring>(joueur *pj_joueur, cases **plateau, rvb_couleur couleurs[8], SDL_Surface *surf_ecran)</argsstring>
+        <name>chargement</name>
+        <param>
+          <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+          <declname>pj_joueur</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <briefdescription>
+<para>chargement de la partie </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau du jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pj_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joueur en cours </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>un joueur de la liste de joueur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="216" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="704" bodyend="732"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="outils_8h_1740c0c834395069b060fe8d7e31653cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_readable</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>is_readable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>test si un fichier existe </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le fichier à tester</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="return"><para>si le fichier existe ou non </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/outils/outils.h" line="229" bodyfile="/root/workspace/monopoly/outils/outils.c" bodystart="734" bodyend="738"/>
+        <referencedby refid="interaction_8h_1e4dfe0c2c8be2b77870c32442253dcb8" compoundref="interaction_8c" startline="222" endline="462">attente_action_accueil</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>en tete des outils </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:florian.lefevre@eisti.fr">florian.lefevre@eisti.fr</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>09/01/2006 </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>\file<sp/>outils.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>\brief<sp/>en<sp/>tete<sp/>des<sp/>outils</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>\date<sp/>09/01/2006</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__MONOPOLY_OUTILS_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__MONOPOLY_OUTILS_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="outils_8c_139dfce9b2a45da995ceaab0aade1bdf8" kindref="member">joueur_possede_tout</ref>(<ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,<sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>joueur_encours);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>\fn<sp/>char*<sp/>ajout_caractere(char*<sp/>texte,<sp/>int<sp/>int_caractere)</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/>\brief<sp/>ajoute<sp/>un<sp/>caractere<sp/>(en<sp/>code<sp/>UTF-8)<sp/>en<sp/>fin<sp/>de<sp/>chaine</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/>\param<sp/>texte<sp/>texte<sp/>initial</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/>\param<sp/>int_caractere<sp/>entier<sp/>correspondant<sp/>à<sp/>une<sp/>lettre</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/>\return<sp/>la<sp/>chaine<sp/>initiale<sp/>avec<sp/>le<sp/>caractère<sp/>à<sp/>la<sp/>fin</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="outils_8c_11020af4a7a407165a0f3b4e75307a3fc" kindref="member">ajout_caractere</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>texte,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_caractere);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/>\fn<sp/>int<sp/>nombre_joueur_case(joueur*<sp/>pj_joueur)</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/>\brief<sp/>calcule<sp/>le<sp/>nombre<sp/>de<sp/>joueur<sp/>sur<sp/>une<sp/>case</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>le<sp/>joueur<sp/>actuellement<sp/>en<sp/>train<sp/>de<sp/>jouer<sp/>son<sp/>tour</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"></highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/>\return<sp/>le<sp/>nombre<sp/>de<sp/>joueur<sp/>sur<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1628b8ba74e55cbdc77d8c2e5e594bc8e" kindref="member">nombre_joueur_case</ref>(<ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="45"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>swap_carte(information*<sp/>cartes_a_melanger[16],<sp/>int<sp/>position_case1,<sp/>int<sp/>position_case2)</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/>\brief<sp/>échange<sp/>de<sp/>cartes<sp/>dans<sp/>un<sp/>tableau<sp/>d&apos;un<sp/>bureau</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/>\param<sp/>cartes_a_melanger<sp/>tableau<sp/>des<sp/>cartes<sp/>à<sp/>mélanger</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/>\param<sp/>position_case1<sp/>position<sp/>de<sp/>la<sp/>première<sp/>carte<sp/>à<sp/>échanger<sp/>dans<sp/>le<sp/>tableau</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/>\param<sp/>position_case2<sp/>position<sp/>de<sp/>la<sp/>seconde<sp/>carte<sp/>à<sp/>échanger<sp/>dans<sp/>le<sp/>tableau</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"></highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/>\return<sp/>rien</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1449869c420d1199183139e03451f2adf" kindref="member">swap_carte</ref>(<ref refid="structinformation" kindref="compound">information</ref>*<sp/>cartes_a_melanger[16],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position_case1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position_case2);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>melanger_cartes(information*<sp/>cartes_a_melanger[16])</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"></highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/>\brief<sp/>mélange<sp/>les<sp/>cartes<sp/>du<sp/>bureau<sp/>en<sp/>effectuant<sp/>une<sp/>suite<sp/>aléatoire<sp/>d&apos;échanges</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/>\param<sp/>cartes_a_melanger<sp/>tableau<sp/>des<sp/>cartes<sp/>à<sp/>mélanger</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/>\return<sp/>rien</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1034d05be61f25003576b3ac8c5a2edb7" kindref="member">melanger_cartes</ref>(<ref refid="structinformation" kindref="compound">information</ref>*<sp/>cartes_a_melanger[16]);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="73"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>melanger_cartes(information*<sp/>cartes_a_melanger[16])</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"></highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/>\brief<sp/>insert<sp/>une<sp/>propriété<sp/>dans<sp/>une<sp/>liste<sp/>de<sp/>propriétés<sp/>trié<sp/>par<sp/>type<sp/>à<sp/>la<sp/>place<sp/>qu&apos;il<sp/>faut</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"></highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/>\param<sp/>premier_maillon<sp/>tête<sp/>de<sp/>la<sp/>liste<sp/>chaînée<sp/>de<sp/>propriété</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/>\param<sp/>case_achetee<sp/>propriété<sp/>à<sp/>ajouter<sp/>à<sp/>la<sp/>liste</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/>\return<sp/>la<sp/>tête<sp/>de<sp/>la<sp/>liste<sp/>de<sp/>propriétés</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="structpossession" kindref="compound">possession</ref>*<sp/><ref refid="outils_8c_1d53767c5dbc0daa1a8de086094690eaa" kindref="member">insertion_bonne_place_propriete</ref>(<ref refid="structpossession" kindref="compound">possession</ref>*<sp/>premier_maillon,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>case_achetee);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/>\fn<sp/>bool<sp/>possession_autres_cartes(cases**<sp/>plateau,joueur*<sp/>pj_joueur)</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"></highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/>\brief<sp/>verifie<sp/>si<sp/>le<sp/>joueur<sp/>possède<sp/>les<sp/>autres<sp/>cartes<sp/>de<sp/>la<sp/>même<sp/>couleur<sp/>que<sp/>celle<sp/>ou<sp/>il<sp/>se<sp/>trouve</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"></highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>tableau<sp/>contenant<sp/>les<sp/>cases<sp/>du<sp/>plateau</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>qui<sp/>joue<sp/>actuellement</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/>\return<sp/>vrai<sp/>s&apos;il<sp/>les<sp/>possède<sp/>sinon<sp/>faux</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1914637efff042e343c9bb0befab2f609" kindref="member">possession_autres_cartes</ref>(<ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,<ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/>\fn<sp/>int<sp/>action_possible<sp/>(cases**<sp/>plateau,int<sp/>int_position_cases_etudiee,<sp/>joueur*<sp/>pj_joueur,<sp/>int<sp/>int_etat,<sp/>int<sp/>int_nb_tire)</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"></highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/>\brief<sp/>analyse<sp/>toutes<sp/>les<sp/>actions<sp/>possibles<sp/>pour<sp/>un<sp/>joueur<sp/>pour<sp/>une<sp/>case<sp/>donnée</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"></highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>tableau<sp/>contenant<sp/>les<sp/>cases<sp/>du<sp/>plateau</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/>\param<sp/>int_position_cases_etudiee<sp/>cases<sp/>à<sp/>partir<sp/>de<sp/>laquelle<sp/>on<sp/>doit<sp/>faire<sp/>le<sp/>traitement</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>qui<sp/>joue<sp/>actuellement</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/>\param<sp/>int_etat<sp/>indique<sp/>si<sp/>le<sp/>joueur<sp/>demande<sp/>a<sp/>modifier<sp/>le<sp/>niveau<sp/>d&apos;une<sp/>salle<sp/>ou<sp/>s&apos;il<sp/>demande<sp/>une<sp/>hypothèque<sp/>ou<sp/>s&apos;il<sp/>est<sp/>seulement<sp/>arriver<sp/>sur<sp/>une<sp/>salle</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/>\param<sp/>int_nb_tire<sp/>nombre<sp/>indiqué<sp/>par<sp/>les<sp/>dés</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/>\return<sp/>ACTION_ACHAT<sp/>s&apos;il<sp/>peut<sp/>acheter,<sp/>ACTION_HUNHYPOTHEQUE<sp/>s&apos;il<sp/>peut<sp/>déshypotéquer,<sp/>ACTION_PLUS<sp/>s&apos;il<sp/>peut<sp/>augmenter<sp/>le<sp/>niveau<sp/>de<sp/>la<sp/>salle,<sp/>ACTION_MOINS<sp/>s&apos;il<sp/>peut<sp/>diminuer<sp/>le<sp/>niveau<sp/>de<sp/>la<sp/>salle,<sp/>ACTION_PLUS_MOINS<sp/>s&apos;il<sp/>peut<sp/>augmenter<sp/>ou<sp/>diminuer<sp/>le<sp/>niveau<sp/>de<sp/>la<sp/>salle,<sp/>ACTION_FINIR<sp/>s&apos;il<sp/>ne<sp/>peut<sp/>que<sp/>finir<sp/>le<sp/>tour,<sp/>ACTION_PAYER<sp/>s&apos;il<sp/>doit<sp/>payer<sp/>le<sp/>loyer</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1d1c532cdedd8b070691946cc83436c96" kindref="member">action_possible</ref><sp/>(<ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_position_cases_etudiee,<sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_etat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_nb_tire);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="118"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/>\fn<sp/>int<sp/>decoupage_string<sp/>(char***<sp/>str_tab,<sp/>char*<sp/>str_a_diviser)</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"></highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/>\brief<sp/>divise<sp/>une<sp/>chaine<sp/>en<sp/>caractère<sp/>en<sp/>tableau<sp/>de<sp/>chaîne<sp/>caractère</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"></highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/>\param<sp/>str_tab<sp/>tableau<sp/>de<sp/>chaine<sp/>de<sp/>caractère<sp/>pour<sp/>le<sp/>retour<sp/>de<sp/>la<sp/>chaine<sp/>une<sp/>fois<sp/>divisé</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/>\param<sp/>str_a_diviser<sp/>la<sp/>chaine<sp/>de<sp/>caractère<sp/>à<sp/>diviser</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/>\return<sp/>le<sp/>nombre<sp/>de<sp/>lignes</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="outils_8c_16f12b97af4dd149267a5a423e3e5e7a7" kindref="member">decoupage_string</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>str_tab,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str_a_diviser);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/>\fn<sp/>cases*<sp/>int_to_cases<sp/>(int<sp/>int_indice_case,<sp/>joueur*<sp/>pj_joueur)</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/>\brief<sp/>à<sp/>partir<sp/>de<sp/>l&apos;indice<sp/>de<sp/>chaine<sp/>des<sp/>propriété<sp/>elle<sp/>trouve<sp/>la<sp/>case<sp/>correspondante</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"></highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>qui<sp/>joue<sp/>actuellement</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/>\param<sp/>int_indice_case<sp/>indice<sp/>de<sp/>la<sp/>case<sp/>recherché<sp/>fourni<sp/>a<sp/>partir<sp/>de<sp/>la<sp/>liste<sp/>de<sp/>propriété<sp/>du<sp/>panneau<sp/>gauche</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/>\return<sp/>la<sp/>case<sp/>voulue</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="structcases" kindref="compound">cases</ref>*<sp/><ref refid="outils_8c_1b0d8a34b21e6a9200451fdb0e46db386" kindref="member">int_to_cases</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_indice_case,<sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="146"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/>\fn<sp/>int<sp/>nombre_propriete(joueur*<sp/>pj_joueur)</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"></highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/>\brief<sp/>compte<sp/>le<sp/>nombre<sp/>de<sp/>propriétés<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"></highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>qui<sp/>joue<sp/>actuellement</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/>\return<sp/>le<sp/>nombre<sp/>de<sp/>propriété<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="156"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="outils_8c_172f8d3fa346a685e363d2aa16537c971" kindref="member">nombre_propriete</ref>(<ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="159"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/>\fn<sp/>bool<sp/>verification_victoire<sp/>(joueur*<sp/>pj_joueur)</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"></highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/>\brief<sp/>compte<sp/>le<sp/>nombre<sp/>de<sp/>propriétés<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"></highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>qui<sp/>joue<sp/>actuellement</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/>\return<sp/>true<sp/>si<sp/>le<sp/>joueur<sp/>à<sp/>gagnersinon<sp/>false</highlight></codeline>
+<codeline lineno="169"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1f24e5d6a3c8482c890219439e48dfe74" kindref="member">verification_victoire</ref><sp/>(<ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="172"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>action_to_boutons(SDL_Surface*<sp/>surf_ecran,<sp/>SDL_Surface*<sp/>surf_fond,<sp/>int<sp/>int_action,int<sp/>int_etat)</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"></highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/>\brief<sp/>définit<sp/>les<sp/>boutons<sp/>à<sp/>afficher<sp/>en<sp/>fonction<sp/>des<sp/>actions<sp/>possibles<sp/>sur<sp/>une<sp/>propriété</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"></highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/>\param<sp/>surf_fond<sp/>surface<sp/>de<sp/>la<sp/>propriété</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/>\param<sp/>int_action<sp/>actions<sp/>possibles</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/>\param<sp/>int_etat<sp/>état<sp/>des<sp/>boutons</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/>\return<sp/>nothing</highlight></codeline>
+<codeline lineno="185"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1a5265e7645b52f6efcbfd18323082a1c" kindref="member">action_to_boutons</ref>(SDL_Surface*<sp/>surf_ecran,<sp/>SDL_Surface*<sp/>surf_fond,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_action,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_etat);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="188"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>sauvegarde(cases**<sp/>plateau,<sp/>joueur*<sp/>pj_joueur_tete)</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/>\brief<sp/>sauvegarde<sp/>de<sp/>la<sp/>partie</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"></highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>plateau<sp/>du<sp/>jeu</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur_tete<sp/>joueur<sp/>en<sp/>cours</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/>\return<sp/>nothing</highlight></codeline>
+<codeline lineno="199"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="outils_8c_1113ece66046fa3db3fed49a3ada1b36e" kindref="member">sauvegarde</ref>(<ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,<sp/><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur_tete);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="202"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/>\fn<sp/>joueur*<sp/>chargement(joueur*<sp/>pj_joueur,<sp/>cases**<sp/>plateau,<sp/>rvb_couleur<sp/>couleurs[8],<sp/>SDL_Surface*<sp/>surf_ecran)</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"></highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/>\brief<sp/>chargement<sp/>de<sp/>la<sp/>partie</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"></highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>plateau<sp/>du<sp/>jeu</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/>\param<sp/>pj_joueur<sp/>joueur<sp/>en<sp/>cours</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/>\param<sp/>couleurs<sp/>tableau<sp/>de<sp/>couleur</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/>\return<sp/>un<sp/>joueur<sp/>de<sp/>la<sp/>liste<sp/>de<sp/>joueur</highlight></codeline>
+<codeline lineno="215"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="outils_8c_1ae4beb88d7abebc4264362e2f1054e90" kindref="member">chargement</ref>(<ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/>pj_joueur,<sp/><ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,<sp/><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/>couleurs[8],<sp/>SDL_Surface*<sp/>surf_ecran);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="218"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/>\fn<sp/>joueur*<sp/>bool<sp/>is_readable(<sp/>const<sp/>std::string<sp/>&amp;<sp/>file<sp/>)</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"></highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/>\brief<sp/>test<sp/>si<sp/>un<sp/>fichier<sp/>existe</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"></highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/>\param<sp/>file<sp/>le<sp/>fichier<sp/>à<sp/>tester</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/>\version<sp/>1.0</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/><sp/>\return<sp/>si<sp/>le<sp/>fichier<sp/>existe<sp/>ou<sp/>non</highlight></codeline>
+<codeline lineno="228"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="outils_8c_12f8e7ba560d7f4e48910a60e6414ad6e" kindref="member">is_readable</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>file<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/root/workspace/monopoly/outils/outils.h"/>
+  </compounddef>
+</doxygen>

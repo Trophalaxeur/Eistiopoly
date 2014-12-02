@@ -1,0 +1,1657 @@
+\section{R\'{e}f\'{e}rence du fichier traitement.h}
+\label{traitement_8h}\index{traitement.h@{traitement.h}}
+en tete des fonctions de traitement. 
+
+\subsection*{Fonctions}
+\begin{CompactItemize}
+\item 
+int {\bf lancer\_\-des} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau)
+\begin{CompactList}\small\item\em fonction charg\'{e}e de simuler le lancement des d\'{e}s \item\end{CompactList}\item 
+void {\bf avancer\_\-jeton} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, int int\_\-nb\_\-tire, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em avance le jeton case par case, traite le passage par la case d\'{e}part \item\end{CompactList}\item 
+void {\bf jeu} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf joueur} $\ast$pj\_\-joueur\_\-encours, {\bf cases} $\ast$$\ast$plateau, int nombre\_\-joueur, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em initialise le jeu \item\end{CompactList}\item 
+void {\bf aller\_\-a\_\-jeton} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, int int\_\-position\_\-voulue, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16], int delai)
+\begin{CompactList}\small\item\em avance le jeton case par case, traite le passage par la case d\'{e}part \item\end{CompactList}\item 
+void {\bf aller\_\-en\_\-prison\_\-jeton} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau)
+\begin{CompactList}\small\item\em envoi le joueur directement en prison \item\end{CompactList}\item 
+void {\bf reculer\_\-jeton} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em recule le joueur de 3 cases \item\end{CompactList}\item 
+void {\bf traitement\_\-case\_\-depart} (SDL\_\-Surface $\ast$surf\_\-ecran, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em ajoute l'argent au joueur \item\end{CompactList}\item 
+bool {\bf traitement\_\-rachat\_\-hypotheque} ({\bf joueur} $\ast$joueur\_\-actuel, {\bf cases} $\ast$case\_\-hypothequee)
+\begin{CompactList}\small\item\em rach\`{e}te une hypoth\`{e}que \item\end{CompactList}\item 
+bool {\bf traitement\_\-mise\_\-en\_\-hypotheque} ({\bf joueur} $\ast$joueur\_\-actuel, {\bf cases} $\ast$case\_\-hypothequee)
+\begin{CompactList}\small\item\em met en place une hypoth\`{e}que \item\end{CompactList}\item 
+bool {\bf traitement\_\-payer\_\-loyer} ({\bf joueur} $\ast$joueur\_\-qui\_\-paye, {\bf joueur} $\ast$joueur\_\-paye, int int\_\-montant)
+\begin{CompactList}\small\item\em paye les loyer d'une salle \item\end{CompactList}\item 
+int {\bf traitement\_\-loyer\_\-lieu\_\-commun} ({\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em calcul le loyer pour les lieux communs \item\end{CompactList}\item 
+int {\bf traitement\_\-loyer\_\-association} ({\bf joueur} $\ast$joueur\_\-paye, int int\_\-nb\_\-tire)
+\begin{CompactList}\small\item\em calcul le loyer d'une association \item\end{CompactList}\item 
+bool {\bf traitement\_\-achat} ({\bf cases} $\ast$case\_\-achetee, {\bf joueur} $\ast$joueur\_\-actuel)
+\begin{CompactList}\small\item\em traitement l'achat d'une propri\'{e}t\'{e} \item\end{CompactList}\item 
+bool {\bf traitement\_\-augmentation\_\-niveau} ({\bf cases} $\ast$pcase, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em augmente le niveau d'une case \item\end{CompactList}\item 
+void {\bf traitement\_\-diminution\_\-niveau} ({\bf cases} $\ast$pcase, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em diminue le niveau d'une case \item\end{CompactList}\item 
+void {\bf traitement\_\-arrive\_\-case} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16], int int\_\-nombre\_\-tire)
+\begin{CompactList}\small\item\em effectue les action necessaire lors de l'arriv\'{e}e sur une case en fonction de son type \item\end{CompactList}\item 
+void {\bf traitement\_\-elimination\_\-joueur} ({\bf joueur} $\ast$joueur\_\-eliminer)
+\begin{CompactList}\small\item\em lib\`{e}re les propri\'{e}t\'{e} et l'espace m\'{e}moire du joueur et de ses possessions \item\end{CompactList}\item 
+void {\bf traitement\_\-machine\_\-a\_\-cafe} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur)
+\begin{CompactList}\small\item\em donne au joueur l'argent de la machine \`{a} caf\'{e} \item\end{CompactList}\item 
+void {\bf traitement\_\-bureau} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur, {\bf information} $\ast$le\_\-bureau[16], {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16], int int\_\-id\_\-bureau)
+\begin{CompactList}\small\item\em tire une carte du bureau voulue et effectue le traitement en fonction de la carte tir\'{e}e \item\end{CompactList}\item 
+void {\bf traitement\_\-soiree} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf joueur} $\ast$pj\_\-joueur, {\bf cases} $\ast$$\ast$plateau)
+\begin{CompactList}\small\item\em fait payer le joueur suivant la case soir\'{e}e sur laquelle il est \item\end{CompactList}\item 
+void {\bf traitement\_\-bureau\_\-laurence} (SDL\_\-Surface $\ast$surf\_\-ecran, SDL\_\-Surface $\ast$surf\_\-centre, {\bf cases} $\ast$$\ast$plateau, {\bf joueur} $\ast$pj\_\-joueur, {\bf information} $\ast$bureau\_\-de\_\-krystel[16], {\bf information} $\ast$bureau\_\-de\_\-nadege[16])
+\begin{CompactList}\small\item\em effectue les traitement necessaire lorsqu'un joueur est dans le bureau de laurence \item\end{CompactList}\item 
+void {\bf traitement\_\-perdu} ({\bf joueur} $\ast$pj\_\-joueur)
+\end{CompactItemize}
+
+
+\subsection{Description d\'{e}taill\'{e}e}
+en tete des fonctions de traitement. 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$ \end{Desc}
+\begin{Desc}
+\item[Date:]09/01/2006 \end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+
+
+D\'{e}finition dans le fichier {\bf traitement.h}.
+
+\subsection{Documentation des fonctions}
+\index{traitement.h@{traitement.h}!lancer_des@{lancer\_\-des}}
+\index{lancer_des@{lancer\_\-des}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int lancer\_\-des (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau})}\label{traitement_8h_00fa44e91ea147802f626fed5c5a5e54}
+
+
+fonction charg\'{e}e de simuler le lancement des d\'{e}s 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le nombre obtenue par les d\'{e}s \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 106 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et traitement\_\-bureau\_\-laurence().
+
+\begin{Code}\begin{verbatim}107 {
+108   int int_1; //valeur du premier dé
+109   int int_2; //valeur du second dé
+110   int int_rebond1; //nb de rebonds du premier dé
+111   int int_rebond2; //nb de rebonds du second dé
+112   
+113   int i=0;
+114   
+115   SDL_Surface** surf_des;
+116   
+117   //calcul du nombre de rebond du premier dé
+118   int_rebond1=rand()%10+5;
+119   
+120   //calcul de nombre de rebond du second dé
+121   int_rebond2=rand()%10+5;
+122   
+123   //initialisation a 0 des deux dés
+124   int_1=0;
+125   int_2=0;
+126   
+127   surf_des=creation_des();
+128   
+129   if (int_rebond1 > int_rebond2)
+130   {
+131     while (i < int_rebond2)
+132     {
+133       int_1=(rand()%6)+1;
+134       int_2=(rand()%6)+1;
+135   
+136       affich_panneau_des(surf_ecran,surf_des,int_1,int_2);
+137       SDL_Delay(DELAY);
+138       i++;
+139     }
+140     for(i=0;i<(int_rebond1-int_rebond2-1);i++)
+141     {
+142       int_1=(rand()%6)+1;
+143     
+144       affich_panneau_des(surf_ecran,surf_des,int_1,int_2);
+145       SDL_Delay(DELAY);
+146     }
+147   }
+148   else
+149   {
+150     while (i < int_rebond1)
+151     {
+152       int_1=(rand()%6)+1;
+153       int_2=(rand()%6)+1;
+154   
+155       affich_panneau_des(surf_ecran,surf_des,int_1,int_2);  
+156       SDL_Delay(DELAY);
+157       i++;
+158     }
+159     for(i=0;i<(int_rebond1-int_rebond2-1);i++)
+160     {
+161       int_1=(rand()%6)+1;
+162     
+163       affich_panneau_des(surf_ecran,surf_des,int_1,int_2);
+164       SDL_Delay(DELAY);
+165     }
+166   }
+167   if (int_1==int_2)
+168   {
+169     pj_joueur->int_double_tire++;
+170   }
+171   else 
+172   {
+173     pj_joueur->int_double_tire=0;
+174   }
+175   
+176   //si le joueur a fait 3 doubles il va en prison
+177   if (pj_joueur->int_double_tire == 3)
+178   {
+179     attente_validation_message(surf_ecran, surf_centre, "PRISON" , "Vous avez fait 3 doubles consecutif", MESSAGE_NORMAL);
+180     aller_en_prison_jeton(surf_ecran, pj_joueur,plateau);
+181     pj_joueur->int_double_tire = 0;
+182   }
+183     
+184   destruction_des(surf_des);
+185   return(int_1+int_2);
+186 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!avancer_jeton@{avancer\_\-jeton}}
+\index{avancer_jeton@{avancer\_\-jeton}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void avancer\_\-jeton (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, int {\em int\_\-nb\_\-tire}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{traitement_8h_5c76676806c77b8f28d8a2af3922f3a6}
+
+
+avance le jeton case par case, traite le passage par la case d\'{e}part 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em int\_\-nb\_\-tire}]nombre obtenu lors du lancer des d\'{e}s \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 233 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et traitement\_\-bureau\_\-laurence().
+
+\begin{Code}\begin{verbatim}234 {
+235   int int_position;
+236   int int_position2;
+237   
+238   joueur* pj_joueur_test;
+239   
+240   //on le fait avancer case par case
+241   for (int i=0;i<int_nb_tire;i++)
+242   {
+243     //on réactualise la case ou se trouve le joueur afin qu'il efface le jeton
+244     affich_case(surf_ecran,plateau[pj_joueur->int_position]);
+245     //on avance le joueur de 1 en faisant attention que la position reste dans les 40 cases du plateau
+246     pj_joueur->int_position=(pj_joueur->int_position+1)%40;
+247     //on compte le nombre de personne sur la case ou doit être afficher le joueur actuel
+248     int_position=nombre_joueur_case(pj_joueur);
+249     //on affiche le joueur sur la nouvelle case
+250     affich_joueur(surf_ecran, pj_joueur,int_position+1, plateau[pj_joueur->int_position]);
+251     // on lui indique que le premier joueur test est le suivant
+252     pj_joueur_test=pj_joueur->pjoueur_suivant;
+253     int_position2=0;
+254     //on verifie pour chaque joueur s'il se trouvait là où était le joueur avant
+255     while (pj_joueur_test != pj_joueur)
+256     {
+257       if (pj_joueur_test->int_position==((pj_joueur->int_position)-1))
+258       {
+259         int_position2++;
+260         //on l'affiche sur la case:
+261         affich_joueur(surf_ecran, pj_joueur_test,int_position2, plateau[pj_joueur_test->int_position]);
+262       }
+263       pj_joueur_test=pj_joueur_test->pjoueur_suivant;
+264     }
+265     //on rafraichi l'affichage
+266     SDL_Flip(surf_ecran);
+267     //petit delay pour que l'utilisateur puisse apprécier l'affichage
+268     SDL_Delay(DELAY);
+269     
+270     //si il se trouve sur la case départ 
+271     if (pj_joueur->int_position==0)
+272     {
+273       //on effectue le traitement adequat
+274       traitement_case_depart (surf_ecran,pj_joueur);
+275     }
+276   } 
+277   traitement_arrive_case(surf_ecran, surf_centre,plateau,pj_joueur, bureau_de_krystel, bureau_de_nadege, int_nb_tire);
+278 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!jeu@{jeu}}
+\index{jeu@{jeu}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void jeu (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf joueur} $\ast$ {\em pj\_\-joueur\_\-encours}, {\bf cases} $\ast$$\ast$ {\em plateau}, int {\em nombre\_\-joueur}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{traitement_8h_e7669eea6f59aeac459a2d4a42229a00}
+
+
+initialise le jeu 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pj\_\-joueur\_\-encours}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em nombre\_\-joueur}]nombre de joueurs qui jouent \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 12 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par main().
+
+\begin{Code}\begin{verbatim}13 {
+14   int i;
+15   
+16   //Valeur de retour
+17   int int_retour;
+18   
+19   //Surface du centre
+20   SDL_Surface* surf_centre = NULL;
+21   
+22   //Création du centre
+23   surf_centre=SDL_LoadBMP("sdl/images/logo.bmp");
+24 
+25   //Affichage des cases du plateau
+26   for(i=0;i<40;i++) affich_case(surf_ecran, plateau[i]);
+27   
+28   //joueur_possede_tout(plateau, pj_joueur_encours);                         //<<<================================== POUR ESSAYER LA MODIFICATION DE NIVEAU RAPIDEMENT
+29     
+30   //on affiche les joueurs sur la cases depart
+31   affich_joueur_depart (surf_ecran,plateau,pj_joueur_encours,nombre_joueur);
+32   //Affichage du centre
+33   affich_centre(surf_ecran, surf_centre);
+34 
+35   //Affichage du panneau du menu
+36   affich_panneau_menu(surf_ecran,0);
+37   
+38   //Affichage du panneau contenant les informations du premier joueur
+39   affich_panneau_joueur(surf_ecran,pj_joueur_encours);
+40   
+41   //Affichage du panneau du bouton lancer dés
+42   affich_panneau_des_bouton(surf_ecran,0);
+43   
+44   //Affichage du panneau de fin de tour
+45   affich_panneau_fdt(surf_ecran,false);
+46   
+47   //Affichage contenant les informations sur les possessions du joueur
+48   affich_panneau_possessions(surf_ecran,pj_joueur_encours);
+49   
+50   //Attente du premier événement souris
+51   int_retour=attente_clic(surf_ecran, surf_centre, pj_joueur_encours,plateau,bureau_de_krystel,bureau_de_nadege);
+52   if(int_retour==0)
+53   {
+54     int_retour=attente_validation_message(surf_ecran, surf_centre, NULL, "Etes vous sûr de vouloir réellement envisager l'idée de la possibilité que vous puissiez avoir envie de quitter ce programme sans avoir effleurer l'idée d'une possible sauvegarde de la partie ?", MESSAGE_QUITTER);
+55 
+56   }
+57   //Tant que le joueur ne décide pas de quitter
+58   while(int_retour)
+59   {
+60     //si le joueur n'a pas fait de double on passe au joueur suivant
+61     if (pj_joueur_encours->int_double_tire == 0)
+62     {
+63       //Passage au joueur suivant
+64       pj_joueur_encours=pj_joueur_encours->pjoueur_suivant;
+65     } 
+66     
+67     //on affiche le panneau du nouveau joueur
+68     affich_panneau_joueur(surf_ecran,pj_joueur_encours);
+69     //Affichage du cache pour le panneau des possession
+70     affich_possessions_cache(surf_ecran);
+71     //On réaffiche le panneau des possessions
+72     affich_panneau_possessions(surf_ecran,pj_joueur_encours);
+73     //Affichage du panneau du bouton lancer dés
+74     affich_panneau_des_bouton(surf_ecran,0);
+75     //Mise à jour de l'écran
+76     SDL_Flip(surf_ecran);
+77     //Attente d'un événement souris
+78     int_retour=attente_clic(surf_ecran, surf_centre, pj_joueur_encours, plateau, bureau_de_krystel, bureau_de_nadege);
+79     //Si le joueur souhaite quitter
+80     if(int_retour==0)
+81     {
+82       //Demande de confirmation d'action
+83       int_retour=attente_validation_message(surf_ecran, surf_centre, NULL, "Etes vous sûr de vouloir réellement envisager l'idée de la possibilité que vous puissiez avoir envie de quitter ce programme sans avoir effleurer l'idée d'une possible sauvegarde de la partie ?", MESSAGE_QUITTER);
+84       //Si le joueur demande de sauvegarder
+85       if(int_retour==3)
+86       {
+87         //On sauvegarde
+88         sauvegarde(plateau, pj_joueur_encours);
+89         //Message de confirmation de sauvegarde
+90         attente_validation_message(surf_ecran, surf_centre, "Sauvegarde", "La sauvegarde à été effectué avec un très grand succès ! Toutes nos félicitations. (Il ne peut n'y avoir qu'un seul fichier de sauvegarde. Toute nouvelle sauvegarde écrase la précédente.)",MESSAGE_NORMAL);
+91         //Fin du jeu
+92         int_retour=0;
+93       }
+94     }
+95     //on vérifie que le joueur n'a pas gagné
+96     if(verification_victoire(pj_joueur_encours))
+97     {
+98       //Message de victoire
+99       attente_validation_message(surf_ecran,surf_centre,"VICTOIRE", "Félicitation vous avez ruiné tous vos adversaires !",MESSAGE_NORMAL);
+100       //Fin du jeu
+101       int_retour=0;
+102     }
+103   }
+104 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!aller_a_jeton@{aller\_\-a\_\-jeton}}
+\index{aller_a_jeton@{aller\_\-a\_\-jeton}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void aller\_\-a\_\-jeton (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, int {\em int\_\-position\_\-voulue}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16], int {\em delai})}\label{traitement_8h_92076f8887242815786ee757fa20f20c}
+
+
+avance le jeton case par case, traite le passage par la case d\'{e}part 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface du centre du plateau \item[{\em int\_\-position\_\-voulue}]position voulue \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge \item[{\em delai}]d\'{e}lai du d\'{e}placement entre deux cases\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 280 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-bureau().
+
+\begin{Code}\begin{verbatim}281 {
+282   int int_position;
+283   int int_position2;
+284   joueur* pj_joueur_test;
+285   
+286   //on le fait avancer case par case  
+287   while (pj_joueur->int_position != int_position_voulue)
+288   {
+289     //on réactualise la case ou se trouve le joueur afin qu'il efface le jeton
+290     affich_case(surf_ecran,plateau[pj_joueur->int_position]);
+291     //on avance le joueur de 1 en faisant attention que la position reste dans les 40 cases du plateau
+292     pj_joueur->int_position=(pj_joueur->int_position+1)%40;
+293     //on compte le nombre de personne sur la case ou doit être afficher le joueur actuel
+294     int_position=nombre_joueur_case(pj_joueur);
+295     //on affiche le joueur sur la nouvelle case
+296     affich_joueur(surf_ecran, pj_joueur, int_position+1, plateau[pj_joueur->int_position]);
+297     
+298     // on lui indique que le premier joueur test est le suivant
+299     pj_joueur_test=pj_joueur->pjoueur_suivant;
+300     int_position2=0;
+301     //on verifie pour chaque joueur s'il se trouvait là où était le joueur avant
+302     while (pj_joueur_test != pj_joueur)
+303     {
+304       if (pj_joueur_test->int_position==((pj_joueur->int_position)-1))
+305       {
+306         int_position2++;
+307         //on l'affiche sur la case:
+308         affich_joueur(surf_ecran, pj_joueur_test,int_position2, plateau[pj_joueur_test->int_position]);
+309       }
+310       pj_joueur_test=pj_joueur_test->pjoueur_suivant;
+311     }
+312     //on rafraichi l'affichage
+313     SDL_Flip(surf_ecran);
+314     //petit delay pour que l'utilisateur puisse apprécier l'affichage
+315     SDL_Delay(delai);
+316     //si il se trouve sur la case départ 
+317     if (pj_joueur->int_position==0)
+318     {
+319       //on effectue le traitement adequat
+320       traitement_case_depart (surf_ecran,pj_joueur);
+321     }
+322   }
+323   //on lance la fonction traitement associé à la case ou il s'arrete
+324   //plateau[pj_joueur->int_position]->ptraitement(pj_joueur->int_position);
+325   
+326   traitement_arrive_case(surf_ecran, surf_centre,plateau,pj_joueur, bureau_de_krystel, bureau_de_nadege, 0);
+327 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!aller_en_prison_jeton@{aller\_\-en\_\-prison\_\-jeton}}
+\index{aller_en_prison_jeton@{aller\_\-en\_\-prison\_\-jeton}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void aller\_\-en\_\-prison\_\-jeton (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau})}\label{traitement_8h_179b66f3e6586b6640e89be8fa1f86f0}
+
+
+envoi le joueur directement en prison 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 329 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par lancer\_\-des(), traitement\_\-arrive\_\-case(), et traitement\_\-bureau().
+
+\begin{Code}\begin{verbatim}330 {
+331   int int_position;
+332   int int_position2;
+333   
+334   joueur* pj_joueur_test;
+335 
+336   
+337   //on réactualise la case ou se trouve le joueur afin qu'il efface le jeton
+338   affich_case(surf_ecran,plateau[pj_joueur->int_position]);
+339   
+340   // on lui indique que le premier joueur test est le suivant
+341   pj_joueur_test=pj_joueur->pjoueur_suivant;
+342   int_position2=0;
+343   //on verifie pour chaque joueur s'il se trouvait là où était le joueur avant
+344   while (pj_joueur_test != pj_joueur)
+345   {
+346     if (pj_joueur_test->int_position==((pj_joueur->int_position)-1))
+347     {
+348       int_position2++;
+349       //on l'affiche sur la case:
+350       affich_joueur(surf_ecran, pj_joueur_test,int_position2, plateau[pj_joueur_test->int_position]);
+351     }
+352     pj_joueur_test=pj_joueur_test->pjoueur_suivant;
+353   }
+354   
+355   //on envoi le jeton directement en prison
+356   pj_joueur->int_position=10;
+357   //on indique qu'il est emprisonner
+358   pj_joueur->bool_laurence=true;
+359   
+360   //on compte le nombre de personne sur la case ou doit être afficher le joueur actuel
+361   int_position=nombre_joueur_case(pj_joueur);
+362   
+363   //on affiche le joueur sur la nouvelle case
+364   affich_joueur(surf_ecran, pj_joueur, int_position+1, plateau[pj_joueur->int_position]);
+365   
+366   //on rafraichi l'affichage
+367   SDL_Flip(surf_ecran);
+368 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!reculer_jeton@{reculer\_\-jeton}}
+\index{reculer_jeton@{reculer\_\-jeton}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void reculer\_\-jeton (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{traitement_8h_f11f5db54dce465104914610020b7786}
+
+
+recule le joueur de 3 cases 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 188 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-bureau().
+
+\begin{Code}\begin{verbatim}189 {
+190   int int_position;
+191   int int_position2;
+192   int i;
+193   
+194   i=0;
+195   
+196   joueur* pj_joueur_test;
+197   
+198   //on le fait avancer case par case
+199   for (i=0;i<3;i++)
+200   {
+201     //on réactualise la case ou se trouve le joueur afin qu'il efface le jeton
+202     affich_case(surf_ecran,plateau[pj_joueur->int_position]);
+203     //on avance le joueur de 1 en faisant attention que la position reste dans les 40 cases du plateau
+204     pj_joueur->int_position=(pj_joueur->int_position+39)%40;
+205     //on compte le nombre de personne sur la case ou doit être afficher le joueur actuel
+206     int_position=nombre_joueur_case(pj_joueur);
+207     //on affiche le joueur sur la nouvelle case
+208     affich_joueur(surf_ecran, pj_joueur,int_position+1, plateau[pj_joueur->int_position]);
+209     // on lui indique que le premier joueur test est le suivant
+210     pj_joueur_test=pj_joueur->pjoueur_suivant;
+211     int_position2=0;
+212     //on verifie pour chaque joueur s'il se trouvait là où était le joueur avant
+213     while (pj_joueur_test != pj_joueur)
+214     {
+215       if (pj_joueur_test->int_position==((pj_joueur->int_position)-1))
+216       {
+217         int_position2++;
+218         //on l'affiche sur la case:
+219         affich_joueur(surf_ecran, pj_joueur_test,int_position2, plateau[pj_joueur_test->int_position]);
+220       }
+221       pj_joueur_test=pj_joueur_test->pjoueur_suivant;
+222     }
+223     //on rafraichi l'affichage
+224     SDL_Flip(surf_ecran);
+225     //petit delay pour que l'utilisateur puisse apprécier l'affichage
+226     SDL_Delay(DELAY);
+227   }
+228   
+229   traitement_arrive_case(surf_ecran, surf_centre,plateau,pj_joueur, bureau_de_krystel, bureau_de_nadege, 0);
+230 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_case_depart@{traitement\_\-case\_\-depart}}
+\index{traitement_case_depart@{traitement\_\-case\_\-depart}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-case\_\-depart (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_b6da656c373c936678350f563de01833}
+
+
+ajoute l'argent au joueur 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em pj\_\-joueur}]joueur qui joue actuellement\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 434 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par aller\_\-a\_\-jeton(), et avancer\_\-jeton().
+
+\begin{Code}\begin{verbatim}435 {
+436   //on ajoute 2000 Fintz au compte du joueur
+437   pj_joueur->int_argent=(pj_joueur->int_argent)+2000;
+438   pj_joueur->bool_debut=false;
+439 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_rachat_hypotheque@{traitement\_\-rachat\_\-hypotheque}}
+\index{traitement_rachat_hypotheque@{traitement\_\-rachat\_\-hypotheque}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool traitement\_\-rachat\_\-hypotheque ({\bf joueur} $\ast$ {\em joueur\_\-actuel}, {\bf cases} $\ast$ {\em case\_\-hypothequee})}\label{traitement_8h_d4919760c6ef767d1bc6112c6f9bbf7a}
+
+
+rach\`{e}te une hypoth\`{e}que 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em joueur\_\-actuel}]joueur qui joue actuellement \item[{\em case\_\-hypothequee}]indice de la case \`{a} d\'{e}shypoth\'{e}quer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en indiquant si la fonction c'est bien d\'{e}rouler \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 582 du fichier traitement.c.
+
+\begin{Code}\begin{verbatim}583 {
+584   //on agit selon le type de la case
+585   switch (case_hypothequee->int_type)
+586   {
+587     case SALLE:
+588       //si le joueur a assez d'argent
+589       if (joueur_actuel->int_argent >= case_hypothequee->case_salle.int_valeur_hypotheque+case_hypothequee->case_salle.int_valeur_hypotheque*0.10)
+590       {
+591       //il rachete l'hypothèque
+592       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_salle.int_valeur_hypotheque+case_hypothequee->case_salle.int_valeur_hypotheque*0.10));
+593       case_hypothequee->case_salle.bool_hypotheque=false;
+594       }
+595       return(true);
+596       break;
+597             
+598     case BDS:
+599       //si le joueur a assez d'argent
+600       if (joueur_actuel->int_argent >= (case_hypothequee->case_association.int_valeur_hypotheque+case_hypothequee->case_association.int_valeur_hypotheque*0.10))
+601       {
+602       //il rachete l'hypothèque
+603       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_association.int_valeur_hypotheque+case_hypothequee->case_association.int_valeur_hypotheque*0.10));
+604       case_hypothequee->case_association.bool_hypotheque=false;
+605       }
+606       return(true);
+607       break;    
+608     
+609     case BDE:
+610       //si le joueur a assez d'argent
+611       if (joueur_actuel->int_argent >= (case_hypothequee->case_association.int_valeur_hypotheque+case_hypothequee->case_association.int_valeur_hypotheque*0.10))
+612       {
+613       //il rachete l'hypothèque
+614       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_association.int_valeur_hypotheque+case_hypothequee->case_association.int_valeur_hypotheque*0.10));
+615       case_hypothequee->case_association.bool_hypotheque=false;
+616       }
+617       return(true);
+618       break;  
+619       
+620     case LC_WC:
+621       //si le joueur a assez d'argent
+622       if (joueur_actuel->int_argent >=(case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10))
+623       {
+624       //il rachete l'hypothèque
+625       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10));
+626       case_hypothequee->case_lieu_commun.bool_hypotheque=false;
+627       }
+628       return(true);
+629       break;
+630       
+631     case LC_ASCENSEUR:
+632       //si le joueur a assez d'argent
+633       if (joueur_actuel->int_argent >= (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10))
+634       {
+635       //il rachete l'hypothèque
+636       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10));
+637       case_hypothequee->case_lieu_commun.bool_hypotheque=false;
+638       }
+639       return(true);
+640       break;
+641             
+642     case LC_RU:
+643       //si le joueur a assez d'argent
+644       if (joueur_actuel->int_argent >= (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10))
+645       {
+646       //il rachete l'hypothèque
+647       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10));
+648       case_hypothequee->case_lieu_commun.bool_hypotheque=false;
+649       }
+650       return(true);
+651       break;
+652             
+653     case LC_PARKING:            
+654       //si le joueur a assez d'argent
+655       if (joueur_actuel->int_argent >= (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10))
+656       {
+657       //il rachete l'hypothèque
+658       joueur_actuel->int_argent=(int)(joueur_actuel->int_argent - (case_hypothequee->case_lieu_commun.int_valeur_hypotheque+case_hypothequee->case_lieu_commun.int_valeur_hypotheque*0.10));
+659       case_hypothequee->case_lieu_commun.bool_hypotheque=false;
+660       }
+661       return(true);
+662       break;
+663       
+664     default:
+665       return(false);
+666       break;
+667   }
+668   return(false);
+669 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_mise_en_hypotheque@{traitement\_\-mise\_\-en\_\-hypotheque}}
+\index{traitement_mise_en_hypotheque@{traitement\_\-mise\_\-en\_\-hypotheque}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool traitement\_\-mise\_\-en\_\-hypotheque ({\bf joueur} $\ast$ {\em joueur\_\-actuel}, {\bf cases} $\ast$ {\em case\_\-hypothequee})}\label{traitement_8h_c3994350d2c8dbdcb995c7354c788c88}
+
+
+met en place une hypoth\`{e}que 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em joueur\_\-actuel}]joueur qui joue actuellement \item[{\em case\_\-hypothequee}]indice de la case \`{a} hypoth\'{e}quer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en indiquant si la fonction c'est bien d\'{e}rouler \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 458 du fichier traitement.c.
+
+\begin{Code}\begin{verbatim}459 {
+460   //on agit selon le type de la case
+461   switch (case_hypothequee->int_type)
+462   {
+463     case SALLE:
+464       //si la case n'est pas déja hypotheque
+465       if (!(case_hypothequee->case_salle.bool_hypotheque))
+466       {
+467         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_salle.int_valeur_hypotheque;
+468         case_hypothequee->case_salle.bool_hypotheque=true;
+469         return(case_hypothequee->case_salle.bool_hypotheque);
+470       }
+471       break;
+472             
+473     case BDS:
+474       if (!(case_hypothequee->case_association.bool_hypotheque))
+475       {
+476         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_association.int_valeur_hypotheque;
+477         case_hypothequee->case_association.bool_hypotheque=true;
+478         return(case_hypothequee->case_association.bool_hypotheque);
+479       }
+480       break;    
+481     
+482     case BDE:
+483       if (!(case_hypothequee->case_association.bool_hypotheque))
+484       {
+485         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_association.int_valeur_hypotheque;
+486         case_hypothequee->case_association.bool_hypotheque=true;
+487         return(case_hypothequee->case_association.bool_hypotheque);
+488       }
+489       break;
+490       
+491     case LC_WC:
+492       if (!(case_hypothequee->case_lieu_commun.bool_hypotheque))
+493       {
+494         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_lieu_commun.int_valeur_hypotheque;
+495         case_hypothequee->case_lieu_commun.bool_hypotheque=true;
+496         return(case_hypothequee->case_lieu_commun.bool_hypotheque);
+497       }
+498       break;
+499       
+500     case LC_ASCENSEUR:
+501       if (!(case_hypothequee->case_lieu_commun.bool_hypotheque))
+502       {
+503         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_lieu_commun.int_valeur_hypotheque;
+504         case_hypothequee->case_lieu_commun.bool_hypotheque=true;
+505         return(case_hypothequee->case_lieu_commun.bool_hypotheque);
+506       }
+507       break;
+508             
+509     case LC_RU:
+510       if (!(case_hypothequee->case_lieu_commun.bool_hypotheque))
+511       {
+512         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_lieu_commun.int_valeur_hypotheque;
+513         case_hypothequee->case_lieu_commun.bool_hypotheque=true;
+514         return(case_hypothequee->case_lieu_commun.bool_hypotheque);
+515       }
+516       break;
+517             
+518     case LC_PARKING:            
+519       if (!(case_hypothequee->case_lieu_commun.bool_hypotheque))
+520       {
+521         joueur_actuel->int_argent=joueur_actuel->int_argent + case_hypothequee->case_lieu_commun.int_valeur_hypotheque;
+522         case_hypothequee->case_lieu_commun.bool_hypotheque=true;
+523         return(case_hypothequee->case_lieu_commun.bool_hypotheque);
+524       }
+525       break;
+526       
+527     default:
+528       return(false);
+529       break;
+530   }
+531   return(false);
+532 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_payer_loyer@{traitement\_\-payer\_\-loyer}}
+\index{traitement_payer_loyer@{traitement\_\-payer\_\-loyer}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool traitement\_\-payer\_\-loyer ({\bf joueur} $\ast$ {\em joueur\_\-qui\_\-paye}, {\bf joueur} $\ast$ {\em joueur\_\-paye}, int {\em int\_\-montant})}\label{traitement_8h_c348a8e35a81c8d0e00e947478e06fb6}
+
+
+paye les loyer d'une salle 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em joueur\_\-qui\_\-paye}]joueur \`{a} qui on prend les sous \item[{\em joueur\_\-paye}]joueur \`{a} qui on donne les sous \item[{\em int\_\-montant}]montant de la transaction\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en indiquant si la fonction c'est bien d\'{e}rouler \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 442 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}443 {
+444   //si le joueur a assez d'argent
+445   if (joueur_qui_paye->int_argent >= int_montant)
+446   {
+447     //il paye
+448     joueur_qui_paye->int_argent=joueur_qui_paye->int_argent-int_montant;
+449     joueur_paye->int_argent=joueur_paye->int_argent+int_montant;
+450     return(true);
+451   }
+452   else
+453   {
+454     return(false);
+455   }
+456 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_loyer_lieu_commun@{traitement\_\-loyer\_\-lieu\_\-commun}}
+\index{traitement_loyer_lieu_commun@{traitement\_\-loyer\_\-lieu\_\-commun}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int traitement\_\-loyer\_\-lieu\_\-commun ({\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_75826dfc26c45fb35071e334a0d1a6a6}
+
+
+calcul le loyer pour les lieux communs 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur \`{a} qui on doit les sous\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le montant du loyer \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 564 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), et traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}565 {
+566   
+567   possession* propriete_temp;
+568   int i;
+569   i=0;
+570 
+571   propriete_temp=pj_joueur->propriete;
+572   
+573   while(propriete_temp!=NULL)
+574   {
+575     i++;
+576     propriete_temp=propriete_temp->suivant;
+577   }
+578   
+579   return(i*250);
+580 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_loyer_association@{traitement\_\-loyer\_\-association}}
+\index{traitement_loyer_association@{traitement\_\-loyer\_\-association}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int traitement\_\-loyer\_\-association ({\bf joueur} $\ast$ {\em joueur\_\-paye}, int {\em int\_\-nb\_\-tire})}\label{traitement_8h_bdfc1ebd2d8ecfcd5d3b01937f529839}
+
+
+calcul le loyer d'une association 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em joueur\_\-paye}]joueur \`{a} qui on doit les sous \item[{\em int\_\-nb\_\-tire}]nombre indiqu\'{e} par le d\'{e}s\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]le loyer \`{a} payer \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 534 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), et traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}535 {
+536   possession* propriete_test;
+537   int i; //compteur
+538   
+539   i=0;
+540   
+541   propriete_test=joueur_paye->propriete;
+542   //on comptabilise le nombre de case association du joueur payé
+543   while (propriete_test != NULL)
+544   {
+545     if ((propriete_test->propriete->int_type == BDS) || (propriete_test->propriete->int_type == BDE))
+546     {
+547       i++;
+548     }
+549     
+550     propriete_test=propriete_test->suivant;
+551   }
+552   //on a ainsi compatibilisé le nombe d'association du joueur
+553   //si il n'y a qu'une on multiplie les nombre des dés par 40
+554   if (i == 1)
+555   {
+556     return(int_nb_tire*40);   
+557   }
+558   else 
+559   {
+560     return(int_nb_tire*100);
+561   }
+562 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_achat@{traitement\_\-achat}}
+\index{traitement_achat@{traitement\_\-achat}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool traitement\_\-achat ({\bf cases} $\ast$ {\em case\_\-achetee}, {\bf joueur} $\ast$ {\em joueur\_\-actuel})}\label{traitement_8h_dd1dfecf4b64b55e60fe041d2616ac95}
+
+
+traitement l'achat d'une propri\'{e}t\'{e} 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em case\_\-achetee}]indice des la case achet\'{e}e \item[{\em joueur\_\-actuel}]l'acheteur\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en qui indique si la fonction s'est bbien d\'{e}roul\'{e}e \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 370 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-validation\_\-propriete(), et joueur\_\-possede\_\-tout().
+
+\begin{Code}\begin{verbatim}371 {
+372   //on verifie si la case n'appartient a aucun joueur
+373 
+374   //on détermine le type de la case
+375   if (case_achetee->int_type==SALLE)
+376   {
+377     //on verifie si le joueur a assez d'argent pour l'acheter et si la case n'appartient a personne
+378     if ((joueur_actuel->int_argent >= case_achetee->case_salle.int_prix) && (case_achetee->case_salle.pjoueur_joueur==NULL))
+379     {
+380       //on effectue la transaction
+381       joueur_actuel->int_argent=joueur_actuel->int_argent-case_achetee->case_salle.int_prix;
+382       joueur_actuel->propriete=insertion_bonne_place_propriete(joueur_actuel->propriete,case_achetee);
+383       case_achetee->case_salle.pjoueur_joueur=joueur_actuel;
+384       
+385       return(true);
+386     }
+387     else
+388     {
+389       return(false);
+390     }
+391   }
+392   else 
+393   {
+394     if((case_achetee->int_type == BDE) || (case_achetee->int_type == BDS))
+395     {
+396       //on verifie si le joueur a assez d'argent pour l'acheter
+397       if ((joueur_actuel->int_argent >= case_achetee->case_association.int_prix) && (case_achetee->case_association.pjoueur_joueur==NULL))
+398       {
+399         //on effectue la transaction
+400         joueur_actuel->int_argent=joueur_actuel->int_argent-case_achetee->case_association.int_prix;
+401         joueur_actuel->propriete=insertion_bonne_place_propriete(joueur_actuel->propriete,case_achetee);
+402         case_achetee->case_association.pjoueur_joueur=joueur_actuel;
+403       
+404         return(true);
+405       }
+406     }
+407     else
+408     {
+409       if(    (case_achetee->int_type == LC_WC) 
+410         || (case_achetee->int_type == LC_RU)
+411         || (case_achetee->int_type == LC_PARKING)
+412         || (case_achetee->int_type == LC_ASCENSEUR))
+413         {
+414           //on verifie si le joueur a assez d'argent pour l'acheter
+415           if ((joueur_actuel->int_argent >= case_achetee->case_lieu_commun.int_prix) && (case_achetee->case_lieu_commun.pjoueur_joueur==NULL))
+416           {
+417             //on effectue la transaction
+418             joueur_actuel->int_argent=joueur_actuel->int_argent-case_achetee->case_lieu_commun.int_prix;
+419             joueur_actuel->propriete=insertion_bonne_place_propriete(joueur_actuel->propriete,case_achetee);
+420             case_achetee->case_lieu_commun.pjoueur_joueur=joueur_actuel;
+421             return(true);
+422           }
+423           else
+424           {
+425             return(false);
+426           }
+427         }
+428       }
+429     }
+430     return(false);
+431 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_augmentation_niveau@{traitement\_\-augmentation\_\-niveau}}
+\index{traitement_augmentation_niveau@{traitement\_\-augmentation\_\-niveau}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool traitement\_\-augmentation\_\-niveau ({\bf cases} $\ast$ {\em pcase}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_e2926eec46d90cac351a92593d9e61ca}
+
+
+augmente le niveau d'une case 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em pcase}]case dont on doit changer le niveau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en indiquant si la fonction s'est bien d\'{e}roul\'{e}e \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 671 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-validation\_\-propriete().
+
+\begin{Code}\begin{verbatim}672 {
+673   //on vérifie si le joueur a assez d'argent
+674   if (pj_joueur->int_argent >= pcase->case_salle.int_prix_niveau)
+675   {
+676     //il les achète
+677     pj_joueur->int_argent=(pj_joueur->int_argent) - (pcase->case_salle.int_prix_niveau);
+678     pcase->case_salle.int_niveau=pcase->case_salle.int_niveau + 1;
+679     return(true);
+680   }
+681   else
+682   {
+683     return(false);
+684   } 
+685 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_diminution_niveau@{traitement\_\-diminution\_\-niveau}}
+\index{traitement_diminution_niveau@{traitement\_\-diminution\_\-niveau}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-diminution\_\-niveau ({\bf cases} $\ast$ {\em pcase}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_fd826ff98ce317d815964eba125ad0bc}
+
+
+diminue le niveau d'une case 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em pcase}]case dont on doit changer le niveau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]bool\'{e}en indiquant si la fonction s'est bien d\'{e}roul\'{e}e \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 687 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-validation\_\-propriete().
+
+\begin{Code}\begin{verbatim}688 {
+689     //il les vend
+690     pj_joueur->int_argent=(pj_joueur->int_argent) + ((pcase->case_salle.int_prix_niveau)/2);
+691     pcase->case_salle.int_niveau=pcase->case_salle.int_niveau - 1;
+692 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_arrive_case@{traitement\_\-arrive\_\-case}}
+\index{traitement_arrive_case@{traitement\_\-arrive\_\-case}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-arrive\_\-case (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16], int {\em int\_\-nombre\_\-tire})}\label{traitement_8h_d4adf76b1576cb838f47fee69e533563}
+
+
+effectue les action necessaire lors de l'arriv\'{e}e sur une case en fonction de son type 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em int\_\-nombre\_\-tire}]nombre obtenu lors du lancer des d\'{e}s \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 694 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par aller\_\-a\_\-jeton(), avancer\_\-jeton(), et reculer\_\-jeton().
+
+\begin{Code}\begin{verbatim}695 {
+696   char message[512];
+697   
+698   int action_possible_resultat;
+699   
+700   action_possible_resultat=action_possible(plateau, 0, pj_joueur, ARRIVE_CASE, int_nombre_tire);
+701   
+702   if(plateau[pj_joueur->int_position]->int_type==SALLE)
+703   { 
+704     if ((plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur!=pj_joueur) && (plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur != NULL))
+705     {
+706       //on lui affiche un message lui indiquant ce qu'il paye et a qui
+707       sprintf(message, "Vous êtes chez %s : vous payer le loyer %d Fintz", plateau[pj_joueur->int_position]->case_salle.pjoueur_joueur->str_nom, plateau[pj_joueur->int_position]->case_salle.int_prix/10*(plateau[pj_joueur->int_position]->case_salle.int_niveau+1));
+708       attente_validation_message(surf_ecran,surf_centre,"Loyer",message,MESSAGE_NORMAL);
+709     }
+710     else 
+711     {
+712       attente_validation_propriete(surf_ecran, plateau, surf_centre, plateau[pj_joueur->int_position],pj_joueur, action_possible_resultat);
+713     }
+714   }
+715   else if (plateau[pj_joueur->int_position]->int_type==BUREAU_KRYSTEL)
+716   {
+717     //le joueur tire une carte et agit en fonction d'elle
+718     traitement_bureau(surf_ecran,surf_centre,plateau, pj_joueur,bureau_de_krystel,bureau_de_krystel, bureau_de_nadege,BUREAU_KRYSTEL);
+719     //reculer_jeton(surf_ecran, surf_centre, pj_joueur,plateau,bureau_de_krystel, bureau_de_nadege);
+720   }
+721   else if (plateau[pj_joueur->int_position]->int_type==BUREAU_NADEGE)
+722   {
+723     //le joueur tire une carte et agit en fonction d'elle
+724     traitement_bureau(surf_ecran,surf_centre,plateau, pj_joueur,bureau_de_nadege, bureau_de_krystel, bureau_de_nadege,BUREAU_NADEGE);
+725   } 
+726   else if (plateau[pj_joueur->int_position]->int_type==SP_BUREAU_LAURENCE)
+727   {
+728     traitement_bureau_laurence(surf_ecran, surf_centre, plateau, pj_joueur, bureau_de_krystel, bureau_de_nadege);
+729   }
+730   else if (plateau[pj_joueur->int_position]->int_type == SP_TABLEAU)
+731   {
+732     //on envoi le joueur directement en prison
+733     aller_en_prison_jeton(surf_ecran, pj_joueur,plateau);
+734   }
+735   else if (plateau[pj_joueur->int_position]->int_type == SP_MACHINE_CAFE) 
+736   {
+737     //le joueur récolte l'argent de la machine a café
+738     traitement_machine_a_cafe(surf_ecran, surf_centre, plateau, pj_joueur);
+739   }
+740   else if (plateau[pj_joueur->int_position]->int_type == SOIREE_GALA || plateau[pj_joueur->int_position]->int_type == SOIREE_AREA)  
+741   {
+742     traitement_soiree(surf_ecran, surf_centre ,pj_joueur, plateau);
+743   }
+744   else if (  (plateau[pj_joueur->int_position]->int_type == LC_WC)
+745       || (plateau[pj_joueur->int_position]->int_type == LC_ASCENSEUR)
+746       || (plateau[pj_joueur->int_position]->int_type == LC_RU)
+747       || (plateau[pj_joueur->int_position]->int_type == LC_PARKING))
+748   {
+749     //si la case appartient a un adversaire
+750     if ((plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur!=pj_joueur) && (plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur != NULL))
+751     {
+752       //on prépare le message et il paye en même temps
+753       sprintf(message, "Vous êtes chez %s : vous payer le loyer %d Fintz", plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur->str_nom, traitement_loyer_lieu_commun(plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur));
+754       //on lui fait payer le loyer en fonction du nombre de 
+755       traitement_payer_loyer(pj_joueur, plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur, traitement_loyer_lieu_commun(plateau[pj_joueur->int_position]->case_lieu_commun.pjoueur_joueur));
+756       //on affiche le message
+757       attente_validation_message(surf_ecran,surf_centre,"Loyer",message,MESSAGE_NORMAL);
+758     }
+759     else 
+760     {
+761       attente_validation_propriete(surf_ecran,plateau, surf_centre, plateau[pj_joueur->int_position],pj_joueur, action_possible_resultat);
+762     }
+763   }
+764   else if (  (plateau[pj_joueur->int_position]->int_type == BDE)
+765       || (plateau[pj_joueur->int_position]->int_type == BDS))
+766   {
+767     //si la case appartient à un adversaire
+768     if ((plateau[pj_joueur->int_position]->case_association.pjoueur_joueur!=pj_joueur) && (plateau[pj_joueur->int_position]->case_association.pjoueur_joueur != NULL))
+769     {
+770       //on prépare le message
+771       sprintf(message, "Vous êtes chez %s : vous payer le loyer %d Fintz", plateau[pj_joueur->int_position]->case_association.pjoueur_joueur->str_nom, traitement_loyer_association(plateau[pj_joueur->int_position]->case_association.pjoueur_joueur, int_nombre_tire));
+772       //il paye
+773       traitement_payer_loyer(pj_joueur, plateau[pj_joueur->int_position]->case_association.pjoueur_joueur,traitement_loyer_association(plateau[pj_joueur->int_position]->case_association.pjoueur_joueur, int_nombre_tire));
+774       
+775       //on affiche le message
+776       attente_validation_message(surf_ecran,surf_centre,"Loyer",message,MESSAGE_NORMAL);
+777     }
+778     else 
+779     {
+780       attente_validation_propriete(surf_ecran,plateau, surf_centre, plateau[pj_joueur->int_position],pj_joueur, action_possible_resultat);
+781     }
+782     
+783   }
+784 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_elimination_joueur@{traitement\_\-elimination\_\-joueur}}
+\index{traitement_elimination_joueur@{traitement\_\-elimination\_\-joueur}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-elimination\_\-joueur ({\bf joueur} $\ast$ {\em joueur\_\-eliminer})}\label{traitement_8h_12c087ef5d94868443731b4c92032e14}
+
+
+lib\`{e}re les propri\'{e}t\'{e} et l'espace m\'{e}moire du joueur et de ses possessions 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em joueur\_\-eliminer}]le joueur \`{a} \'{e}liminer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 994 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-perdu().
+
+\begin{Code}\begin{verbatim}994 {
+995   possession* propriete_joueur_encours;
+996   possession* propriete_joueur_precedent;
+997   joueur* pj_joueur_precedent;
+998   joueur* pj_joueur_encours;
+999   
+1000   propriete_joueur_encours=joueur_eliminer->propriete;
+1001   
+1002   //il faut libérer tous les propriétés du joueur
+1003   //pour chaque propriété du joueur
+1004   while (propriete_joueur_encours != NULL)
+1005   {
+1006     //on test le type de la case
+1007     switch (propriete_joueur_encours->propriete->int_type)
+1008     {
+1009       case SALLE: 
+1010         //la case n'a plus de propriétère
+1011         propriete_joueur_encours->propriete->case_salle.pjoueur_joueur=NULL;
+1012         //la case n'a plus de maison
+1013         propriete_joueur_encours->propriete->case_salle.int_niveau=0;
+1014         break;
+1015       case BDE:
+1016         //la case n'a plus de propriétère
+1017         propriete_joueur_encours->propriete->case_association.pjoueur_joueur=NULL;
+1018         break;
+1019       case BDS:
+1020         //la case n'a plus de propriétère
+1021         propriete_joueur_encours->propriete->case_association.pjoueur_joueur=NULL;
+1022         break;
+1023       case LC_WC:
+1024         //la case n'a plus de propriétère
+1025         propriete_joueur_encours->propriete->case_lieu_commun.pjoueur_joueur=NULL;
+1026         break;
+1027       case LC_PARKING:
+1028         //la case n'a plus de propriétère
+1029         propriete_joueur_encours->propriete->case_lieu_commun.pjoueur_joueur=NULL;
+1030         break;
+1031       case LC_RU:
+1032         //la case n'a plus de propriétère
+1033         propriete_joueur_encours->propriete->case_lieu_commun.pjoueur_joueur=NULL;
+1034         break;
+1035       case LC_ASCENSEUR:
+1036         //la case n'a plus de propriétère
+1037         propriete_joueur_encours->propriete->case_lieu_commun.pjoueur_joueur=NULL;
+1038         break;
+1039       default:
+1040         break;
+1041     }
+1042     
+1043     propriete_joueur_precedent = propriete_joueur_encours;
+1044     propriete_joueur_encours = propriete_joueur_encours->suivant;
+1045     delete propriete_joueur_precedent;
+1046   }
+1047   //ensuite on libère la place en mémoire du joueur
+1048   //on trouve le joueur précédent celui éliminer
+1049   pj_joueur_precedent=joueur_eliminer;
+1050   pj_joueur_encours=joueur_eliminer->pjoueur_suivant;
+1051   
+1052   while (pj_joueur_encours != joueur_eliminer)
+1053   {
+1054     pj_joueur_precedent=pj_joueur_encours;
+1055     pj_joueur_encours=pj_joueur_encours->pjoueur_suivant;
+1056   }
+1057   pj_joueur_precedent->pjoueur_suivant=joueur_eliminer->pjoueur_suivant;
+1058   
+1059   delete joueur_eliminer;
+1060 }
+1061 
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_machine_a_cafe@{traitement\_\-machine\_\-a\_\-cafe}}
+\index{traitement_machine_a_cafe@{traitement\_\-machine\_\-a\_\-cafe}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-machine\_\-a\_\-cafe (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_af4566e5dd13d5a2ecc63bb86ddd8567}
+
+
+donne au joueur l'argent de la machine \`{a} caf\'{e} 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 806 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}807 {
+808   char message[128];
+809   
+810   //on donne l'argent au joueur
+811   pj_joueur->int_argent=pj_joueur->int_argent+plateau[20]->machine_a_cafe.int_argent;
+812   sprintf(message,"Vous recevez %d Fintz de la machine à café", plateau[20]->machine_a_cafe.int_argent);
+813   //on vide la machine a café
+814   plateau[20]->machine_a_cafe.int_argent=0;
+815   
+816   
+817   
+818   attente_validation_message(surf_ecran,surf_centre,"Machine à café",message,MESSAGE_NORMAL);
+819   
+820 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_bureau@{traitement\_\-bureau}}
+\index{traitement_bureau@{traitement\_\-bureau}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-bureau (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf information} $\ast$ {\em le\_\-bureau}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16], int {\em int\_\-id\_\-bureau})}\label{traitement_8h_be19ec4331bcef51ef67b4a083f5f1db}
+
+
+tire une carte du bureau voulue et effectue le traitement en fonction de la carte tir\'{e}e 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em le\_\-bureau}]tableau des cartes bureau \`{a} utiliser \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge \item[{\em int\_\-id\_\-bureau}]id du bureau \`{a} utiliser\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 888 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-arrive\_\-case(), et traitement\_\-bureau().
+
+\begin{Code}\begin{verbatim}888 {
+889   information* carte;
+890   joueur* pjoueur_encours;
+891   possession* propriete_encours;
+892   int i;
+893   int k;
+894   
+895   k=0;
+896   
+897   //on traite toute cette partie avec la première carte du tableau
+898   
+899   if (int_id_bureau == BUREAU_KRYSTEL)
+900   {
+901     attente_validation_message(surf_ecran,surf_centre,"Bureau de Krystel",le_bureau[0]->texte,MESSAGE_KRYSTEL);
+902   }
+903   else 
+904   {
+905     attente_validation_message(surf_ecran,surf_centre,"Bureau de Nadege",le_bureau[0]->texte,MESSAGE_NADEGE);
+906   }
+907   
+908   //traitement selon la carte
+909   if (le_bureau[0]->type == ARGENT)
+910   {
+911     //ajoute ou enlève de l'argent au joueur
+912     pj_joueur->int_argent=pj_joueur->int_argent+le_bureau[0]->valeur;
+913     //on ajoute l'argent à la machine a café
+914     plateau[20]->machine_a_cafe.int_argent=plateau[20]->machine_a_cafe.int_argent-le_bureau[0]->valeur;
+915   }
+916   else if(le_bureau[0]->type == POSITION)
+917   {
+918     if (le_bureau[0]->valeur < 0)
+919     {
+920       reculer_jeton(surf_ecran, surf_centre, pj_joueur,plateau,bureau_de_krystel, bureau_de_nadege);
+921     }
+922     else
+923     {
+924       //on avance le jeton jusqu'a la case voulue
+925       aller_a_jeton(surf_ecran, surf_centre, le_bureau[0]->valeur, pj_joueur,plateau,bureau_de_krystel, bureau_de_nadege,DELAY/3);
+926     }
+927   }
+928   else if(le_bureau[0]->type == ASTRID)
+929   {
+930     traitement_bureau(surf_ecran,surf_centre,plateau, pj_joueur,bureau_de_nadege, bureau_de_krystel, bureau_de_nadege,BUREAU_NADEGE);
+931   }
+932   else if(le_bureau[0]->type == ANNIVERSAIRE)
+933   {
+934     pjoueur_encours=pj_joueur->pjoueur_suivant;
+935     //on prend l'argent à chaque joueur et on le donne à l'actuel
+936     while (pjoueur_encours != pj_joueur)
+937     {
+938       pjoueur_encours->int_argent = pjoueur_encours->int_argent-le_bureau[0]->valeur;
+939       k++;
+940       pjoueur_encours=pjoueur_encours->pjoueur_suivant;
+941     }
+942     //on donne l'argent récolté au joueur
+943     pj_joueur->int_argent = pj_joueur->int_argent+((le_bureau[0]->valeur)*k);     
+944   }
+945   else if(le_bureau[0]->type == CTI)
+946   { 
+947     propriete_encours=pj_joueur->propriete; 
+948     //on regarde chaque propriété du joueur
+949     
+950     k=0;
+951     
+952     while (propriete_encours != NULL)
+953     {
+954       if (propriete_encours->propriete->int_type == SALLE)
+955       {
+956         k=k+(propriete_encours->propriete->case_salle.int_niveau)-1;    
+957         propriete_encours=propriete_encours->suivant;   
+958       }
+959     }
+960     //on retire l'argent au joueur
+961     pj_joueur->int_argent = pj_joueur->int_argent+(-(le_bureau[0]->valeur)*k);    
+962     //on l'ajoute à la machine à café
+963     plateau[20]->machine_a_cafe.int_argent=plateau[20]->machine_a_cafe.int_argent-(-(le_bureau[0]->valeur)*k);
+964   }
+965   else if (le_bureau[0]->type == CARTE_LAURENCE)
+966   {
+967     //on envoie le joueur directement en prison
+968     aller_en_prison_jeton(surf_ecran, pj_joueur, plateau);
+969   }
+970   else if(le_bureau[0]->type == CERTIFICAT)
+971   {
+972     //le joueur possède un certificat de plus
+973     pj_joueur->int_certificat++;
+974   }
+975   
+976   //puis on remet la carte à la fin du tableau
+977 
+978   carte=le_bureau[0];
+979 
+980   for (i = 0; i < 15; i++)
+981   {
+982     le_bureau[i]=le_bureau[i+1];
+983     le_bureau[15]=carte;
+984   }
+985   //si le solde du joueur devient négatif il perd
+986   if (pj_joueur->int_argent < 0)
+987   {
+988     traitement_perdu(pj_joueur);
+989   }
+990   
+991 }
+992 
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_soiree@{traitement\_\-soiree}}
+\index{traitement_soiree@{traitement\_\-soiree}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-soiree (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf cases} $\ast$$\ast$ {\em plateau})}\label{traitement_8h_41c5c48babb69e4ed2112ea2b4b4135f}
+
+
+fait payer le joueur suivant la case soir\'{e}e sur laquelle il est 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]1.0 \end{Desc}
+\begin{Desc}
+\item[Renvoie:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 786 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}787 {
+788   //le joueur peut-être soit sur le gala soit sur l'area
+789   if (pj_joueur->int_position==38)
+790   {
+791     //le joueur se trouve à la soirée du gala
+792     attente_validation_message(surf_ecran,surf_centre,"Cotisation pour le Gala","Payez 1500 Fintz",MESSAGE_NORMAL);
+793   }
+794   else 
+795   {
+796     //le joueur se trouve sur la case area
+797     attente_validation_message(surf_ecran,surf_centre,"Soirée à l'Area !","Payez 1500 Fintz",MESSAGE_NORMAL);
+798   }
+799   //on retire au joueur l'argent
+800   pj_joueur->int_argent=pj_joueur->int_argent - plateau[pj_joueur->int_position]->case_soiree.int_prix;
+801   //on ajoute l'argent à la machine a café
+802   plateau[20]->machine_a_cafe.int_argent=plateau[20]->machine_a_cafe.int_argent + plateau[pj_joueur->int_position]->case_soiree.int_prix;
+803   
+804 }
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_bureau_laurence@{traitement\_\-bureau\_\-laurence}}
+\index{traitement_bureau_laurence@{traitement\_\-bureau\_\-laurence}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-bureau\_\-laurence (SDL\_\-Surface $\ast$ {\em surf\_\-ecran}, SDL\_\-Surface $\ast$ {\em surf\_\-centre}, {\bf cases} $\ast$$\ast$ {\em plateau}, {\bf joueur} $\ast$ {\em pj\_\-joueur}, {\bf information} $\ast$ {\em bureau\_\-de\_\-krystel}[16], {\bf information} $\ast$ {\em bureau\_\-de\_\-nadege}[16])}\label{traitement_8h_254f5e87b0380c79a01aaf444c6aff9e}
+
+
+effectue les traitement necessaire lorsqu'un joueur est dans le bureau de laurence 
+
+\begin{Desc}
+\item[Auteur:]Franck Trey $<${\tt franck.trey@eisti.fr}$>$, Florian Lefevre $<${\tt Florian.lefevre@eisti.fr}$>$\end{Desc}
+\begin{Desc}
+\item[Param\`{e}tres:]
+\begin{description}
+\item[{\em surf\_\-ecran}]surface de l'\'{e}cran \item[{\em surf\_\-centre}]surface centrale du plateau \item[{\em pj\_\-joueur}]joueur qui joue actuellement \item[{\em plateau}]tableau contenant les cases du plateau \item[{\em bureau\_\-de\_\-krystel}]tableau des cartes bureau de krystel \item[{\em bureau\_\-de\_\-nadege}]tableau des cartes bureau de nad\`{e}ge\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Version:]rien \end{Desc}
+
+
+D\'{e}finition \`{a} la ligne 821 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par attente\_\-clic(), et traitement\_\-arrive\_\-case().
+
+\begin{Code}\begin{verbatim}822 {
+823   int int_des;
+824   int int_choix;
+825   
+826   //on verifie si le joueur est emprisonner
+827   if (pj_joueur->bool_laurence==true)
+828   {
+829     //il lance les dés afin d'essayer de faire un double
+830     int_des=lancer_des(surf_ecran, surf_centre,pj_joueur, plateau);
+831 
+832     if (pj_joueur->int_double_tire == 1)
+833     {
+834       //le jeton est libéré
+835       pj_joueur->bool_laurence=false;
+836       pj_joueur->int_laurence=0;
+837       avancer_jeton(surf_ecran, surf_centre, int_des, pj_joueur,plateau,bureau_de_krystel, bureau_de_nadege);
+838     }
+839     //sinon on verifie si les trois tours de prison n'ont pas aboutis
+840     else if (pj_joueur->int_laurence == 3)
+841     {
+842       //on le libère
+843       pj_joueur->bool_laurence=false;
+844       pj_joueur->int_laurence=0;
+845       avancer_jeton(surf_ecran, surf_centre, int_des, pj_joueur,plateau,bureau_de_krystel, bureau_de_nadege);
+846     }
+847     else 
+848     {
+849       int_choix=attente_validation_message(surf_ecran,surf_centre,"Bureau de Laurence","Que vous voulez vous faire ? Tenter vainement un double ? Soudoyer Laurence pour qu'elle vous laisse sortir ? Ou juste faire genre le type qui fait vanne de faire semblant d'être malade gràce au certificat médical ?",MESSAGE_PRISON);
+850       switch (int_choix)
+851       {
+852         case 4: 
+853           //on indique qu'il a passe un tour de plus
+854           pj_joueur->int_laurence++;
+855           break;
+856         case 5:
+857           pj_joueur->bool_laurence=false;
+858           pj_joueur->int_laurence=0;
+859           //on lui fait payer les 500 Fintz à la machine a café
+860           //on retire au joueur l'argent
+861           pj_joueur->int_argent=pj_joueur->int_argent - 500;
+862           //on ajoute l'argent à la machine a café
+863           plateau[20]->machine_a_cafe.int_argent=plateau[20]->machine_a_cafe.int_argent + 500;
+864           break;
+865         case 6:
+866           if (pj_joueur->int_certificat > 0)
+867             {
+868               pj_joueur->bool_laurence=false;
+869               pj_joueur->int_laurence=0;
+870               pj_joueur->int_certificat-=1;
+871             }
+872           else
+873             {
+874               //on indique qu'il a passe un tour de plus
+875               pj_joueur->int_laurence++;
+876             }
+877           break;
+878         default: 
+879           break;
+880       }
+881       
+882     }
+883   }
+884 }
+885 
+\end{verbatim}\end{Code}
+
+
+\index{traitement.h@{traitement.h}!traitement_perdu@{traitement\_\-perdu}}
+\index{traitement_perdu@{traitement\_\-perdu}!traitement.h@{traitement.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void traitement\_\-perdu ({\bf joueur} $\ast$ {\em pj\_\-joueur})}\label{traitement_8h_f8722e066ea3e80427909d9efbe1b0b6}
+
+
+
+
+D\'{e}finition \`{a} la ligne 1063 du fichier traitement.c.
+
+R\'{e}f\'{e}renc\'{e} par traitement\_\-bureau().
+
+\begin{Code}\begin{verbatim}1063 {
+1064   //on affiche le message
+1065   
+1066   //on l'élimine
+1067   traitement_elimination_joueur(pj_joueur);
+1068 }
+1069 }
+\end{verbatim}\end{Code}
+
+

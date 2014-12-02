@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="dir_333af98aea4920d93cb02e65ac96577a" kind="dir">
+    <compoundname>outils/</compoundname>
+    <innerfile refid="outils_8c">outils.c</innerfile>
+    <innerfile refid="outils_8h">outils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/root/workspace/monopoly/outils/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,157 @@
+\section{R\'{e}f\'{e}rence de la structure joueur}
+\label{structjoueur}\index{joueur@{joueur}}
+\subsection*{Champs de donn\'{e}es}
+\begin{CompactItemize}
+\item 
+int {\bf int\_\-argent}
+\item 
+int {\bf int\_\-certificat}
+\begin{CompactList}\small\item\em $>$ argent total du joueur \item\end{CompactList}\item 
+int {\bf int\_\-position}
+\begin{CompactList}\small\item\em $>$ nb de certificats m\'{e}dicaux du joueurs \item\end{CompactList}\item 
+int {\bf bool\_\-debut}
+\begin{CompactList}\small\item\em $>$ num\'{e}ro de la case actuelle du joueur \item\end{CompactList}\item 
+char {\bf str\_\-nom} [64]
+\begin{CompactList}\small\item\em $>$ indique si le joueur est \`{a} son premier tour \item\end{CompactList}\item 
+{\bf joueur} $\ast$ {\bf pjoueur\_\-suivant}
+\begin{CompactList}\small\item\em $>$ le nom du joueur \item\end{CompactList}\item 
+SDL\_\-Surface $\ast$ {\bf surf\_\-image}
+\begin{CompactList}\small\item\em $>$ pointe vers le joueur suivant \item\end{CompactList}\item 
+int {\bf int\_\-double\_\-tire}
+\begin{CompactList}\small\item\em $>$ image du jeton du joueur \item\end{CompactList}\item 
+bool {\bf bool\_\-laurence}
+\begin{CompactList}\small\item\em $>$ nombre de doubles effectu\'{e}s par le joueur \item\end{CompactList}\item 
+int {\bf int\_\-laurence}
+\begin{CompactList}\small\item\em $>$ permet de savoir si le joueur est en prison ou pas \item\end{CompactList}\item 
+{\bf possession} $\ast$ {\bf propriete}
+\begin{CompactList}\small\item\em $>$ nombre de tours pass\'{e}s dans le bureau de laurence \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Description d\'{e}taill\'{e}e}
+
+
+
+
+D\'{e}finition \`{a} la ligne 41 du fichier structure.h.
+
+\subsection{Documentation des champs}
+\index{joueur@{joueur}!int_argent@{int\_\-argent}}
+\index{int_argent@{int\_\-argent}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf int\_\-argent}}\label{structjoueur_b82f4fde3382a41ee393fc1c64f9beb8}
+
+
+
+
+D\'{e}finition \`{a} la ligne 42 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), affich\_\-panneau\_\-joueur(), init\_\-joueur(), init\_\-joueur\_\-chargement(), joueur\_\-possede\_\-tout(), sauvegarde(), traitement\_\-achat(), traitement\_\-augmentation\_\-niveau(), traitement\_\-bureau(), traitement\_\-bureau\_\-laurence(), traitement\_\-case\_\-depart(), traitement\_\-diminution\_\-niveau(), traitement\_\-machine\_\-a\_\-cafe(), traitement\_\-mise\_\-en\_\-hypotheque(), traitement\_\-payer\_\-loyer(), traitement\_\-rachat\_\-hypotheque(), et traitement\_\-soiree().\index{joueur@{joueur}!int_certificat@{int\_\-certificat}}
+\index{int_certificat@{int\_\-certificat}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf int\_\-certificat}}\label{structjoueur_ecbece39087923f999df36d5107d3dee}
+
+
+$>$ argent total du joueur 
+
+
+
+D\'{e}finition \`{a} la ligne 43 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-panneau\_\-joueur(), init\_\-joueur(), init\_\-joueur\_\-chargement(), sauvegarde(), traitement\_\-bureau(), et traitement\_\-bureau\_\-laurence().\index{joueur@{joueur}!int_position@{int\_\-position}}
+\index{int_position@{int\_\-position}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf int\_\-position}}\label{structjoueur_47d7b57cd189c4324a0bc8b338aec618}
+
+
+$>$ nb de certificats m\'{e}dicaux du joueurs 
+
+
+
+D\'{e}finition \`{a} la ligne 44 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), affich\_\-joueur\_\-depart(), aller\_\-a\_\-jeton(), aller\_\-en\_\-prison\_\-jeton(), attente\_\-validation\_\-propriete(), avancer\_\-jeton(), init\_\-joueur(), init\_\-joueur\_\-chargement(), nombre\_\-joueur\_\-case(), possession\_\-autres\_\-cartes(), reculer\_\-jeton(), sauvegarde(), traitement\_\-arrive\_\-case(), et traitement\_\-soiree().\index{joueur@{joueur}!bool_debut@{bool\_\-debut}}
+\index{bool_debut@{bool\_\-debut}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf bool\_\-debut}}\label{structjoueur_3007bbdde3256a72f4c1980d73f400e1}
+
+
+$>$ num\'{e}ro de la case actuelle du joueur 
+
+
+
+D\'{e}finition \`{a} la ligne 45 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par action\_\-possible(), init\_\-joueur(), init\_\-joueur\_\-chargement(), sauvegarde(), et traitement\_\-case\_\-depart().\index{joueur@{joueur}!str_nom@{str\_\-nom}}
+\index{str_nom@{str\_\-nom}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char {\bf str\_\-nom}[64]}\label{structjoueur_844787380e505616b9f1ba539febe9e0}
+
+
+$>$ indique si le joueur est \`{a} son premier tour 
+
+
+
+D\'{e}finition \`{a} la ligne 46 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-panneau\_\-joueur(), init\_\-joueur(), init\_\-joueur\_\-chargement(), et sauvegarde().\index{joueur@{joueur}!pjoueur_suivant@{pjoueur\_\-suivant}}
+\index{pjoueur_suivant@{pjoueur\_\-suivant}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf joueur}$\ast$ {\bf pjoueur\_\-suivant}}\label{structjoueur_c1e6e55655821e532f1c4e6d67fc8d64}
+
+
+$>$ le nom du joueur 
+
+
+
+D\'{e}finition \`{a} la ligne 47 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-joueur\_\-depart(), aller\_\-a\_\-jeton(), aller\_\-en\_\-prison\_\-jeton(), avancer\_\-jeton(), init\_\-anneau\_\-joueur(), init\_\-anneau\_\-joueur\_\-chargement(), init\_\-joueur(), init\_\-joueur\_\-chargement(), jeu(), main(), nombre\_\-joueur\_\-case(), reculer\_\-jeton(), sauvegarde(), traitement\_\-bureau(), traitement\_\-elimination\_\-joueur(), et verification\_\-victoire().\index{joueur@{joueur}!surf_image@{surf\_\-image}}
+\index{surf_image@{surf\_\-image}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ {\bf surf\_\-image}}\label{structjoueur_f3f87b368012a35e80ab79e151e25cfd}
+
+
+$>$ pointe vers le joueur suivant 
+
+
+
+D\'{e}finition \`{a} la ligne 48 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-joueur(), affich\_\-panneau\_\-joueur(), init\_\-joueur(), et init\_\-joueur\_\-chargement().\index{joueur@{joueur}!int_double_tire@{int\_\-double\_\-tire}}
+\index{int_double_tire@{int\_\-double\_\-tire}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf int\_\-double\_\-tire}}\label{structjoueur_383352e8bd61fe737ca01b2ad37da4a4}
+
+
+$>$ image du jeton du joueur 
+
+
+
+D\'{e}finition \`{a} la ligne 49 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-joueur(), init\_\-joueur\_\-chargement(), jeu(), lancer\_\-des(), sauvegarde(), et traitement\_\-bureau\_\-laurence().\index{joueur@{joueur}!bool_laurence@{bool\_\-laurence}}
+\index{bool_laurence@{bool\_\-laurence}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf bool\_\-laurence}}\label{structjoueur_9674676a40014e7c313f37a481b70bb4}
+
+
+$>$ nombre de doubles effectu\'{e}s par le joueur 
+
+
+
+D\'{e}finition \`{a} la ligne 50 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par aller\_\-en\_\-prison\_\-jeton(), attente\_\-clic(), init\_\-joueur(), init\_\-joueur\_\-chargement(), sauvegarde(), et traitement\_\-bureau\_\-laurence().\index{joueur@{joueur}!int_laurence@{int\_\-laurence}}
+\index{int_laurence@{int\_\-laurence}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf int\_\-laurence}}\label{structjoueur_a9f44bfa8a4fd3de8b1de51a1c3c2f8e}
+
+
+$>$ permet de savoir si le joueur est en prison ou pas 
+
+
+
+D\'{e}finition \`{a} la ligne 51 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par init\_\-joueur(), init\_\-joueur\_\-chargement(), sauvegarde(), et traitement\_\-bureau\_\-laurence().\index{joueur@{joueur}!propriete@{propriete}}
+\index{propriete@{propriete}!joueur@{joueur}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf possession}$\ast$ {\bf propriete}}\label{structjoueur_90b8cedf328ed1f09cfafc9627146043}
+
+
+$>$ nombre de tours pass\'{e}s dans le bureau de laurence 
+
+
+
+D\'{e}finition \`{a} la ligne 52 du fichier structure.h.
+
+R\'{e}f\'{e}renc\'{e} par affich\_\-panneau\_\-possessions(), init\_\-joueur(), init\_\-joueur\_\-chargement(), int\_\-to\_\-cases(), nombre\_\-propriete(), sauvegarde(), traitement\_\-achat(), traitement\_\-bureau(), traitement\_\-loyer\_\-association(), et traitement\_\-loyer\_\-lieu\_\-commun().

@@ -1,0 +1,2302 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="initialisation_8h" kind="file">
+    <compoundname>initialisation.h</compoundname>
+    <includes refid="header_8h" local="yes">../header.h</includes>
+    <includedby refid="header_8h" local="yes">header.h</includedby>
+    <includedby refid="initialisation_8c" local="yes">initialisation.c</includedby>
+    <incdepgraph>
+      <node id="82">
+        <label>outils/outils.h</label>
+        <link refid="outils_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>initialisation.h</label>
+        <link refid="initialisation.h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>stdlib.h</label>
+      </node>
+      <node id="83">
+        <label>traitement/traitement.h</label>
+        <link refid="traitement_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>sdl/sdl.h</label>
+        <link refid="sdl_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>fstream</label>
+      </node>
+      <node id="67">
+        <label>../header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>structure.h</label>
+        <link refid="structure_8h"/>
+      </node>
+      <node id="73">
+        <label>string.h</label>
+      </node>
+      <node id="81">
+        <label>interaction/interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="78">
+        <label>constante.h</label>
+        <link refid="constante_8h"/>
+      </node>
+      <node id="74">
+        <label>time.h</label>
+      </node>
+      <node id="77">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="72">
+        <label>math.h</label>
+      </node>
+      <node id="68">
+        <label>iostream</label>
+      </node>
+      <node id="71">
+        <label>stdio.h</label>
+      </node>
+      <node id="76">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="91">
+        <label>outils.c</label>
+        <link refid="outils_8c"/>
+      </node>
+      <node id="90">
+        <label>outils.h</label>
+        <link refid="outils_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>initialisation.c</label>
+        <link refid="initialisation_8c"/>
+      </node>
+      <node id="84">
+        <label>initialisation.h</label>
+        <link refid="initialisation.h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>traitement.c</label>
+        <link refid="traitement_8c"/>
+      </node>
+      <node id="92">
+        <label>traitement.h</label>
+        <link refid="traitement_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>sdl.c</label>
+        <link refid="sdl_8c"/>
+      </node>
+      <node id="86">
+        <label>sdl.h</label>
+        <link refid="sdl_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>interaction.c</label>
+        <link refid="interaction_8c"/>
+      </node>
+      <node id="88">
+        <label>interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>monopoly.c</label>
+        <link refid="monopoly_8c"/>
+      </node>
+      <node id="94">
+        <label>monopoly.h</label>
+        <link refid="monopoly_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="">
+      <memberdef kind="function" id="initialisation_8h_1eb3ff7682d9d35d19d585ed90af45784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+        <definition>rvb_couleur init_rvb_couleur</definition>
+        <argsstring>(int rouge, int vert, int bleu)</argsstring>
+        <name>init_rvb_couleur</name>
+        <param>
+          <type>int</type>
+          <declname>rouge</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vert</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bleu</declname>
+        </param>
+        <briefdescription>
+<para>initialise une structure joueur en fonction des paramètre </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rouge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur rouge </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur vert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bleu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur bleu</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>la couleur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="28" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="11" bodyend="18"/>
+        <referencedby refid="initialisation_8h_1204063826311c6bb5b02e7d8b4c153c8" compoundref="initialisation_8c" startline="20" endline="30">init_tab_rvb_couleur</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1204063826311c6bb5b02e7d8b4c153c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_tab_rvb_couleur</definition>
+        <argsstring>(rvb_couleur couleur[8])</argsstring>
+        <name>init_tab_rvb_couleur</name>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleur</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+<para>initialise le tableau de couleur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>couleur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="41" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="20" bodyend="30"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1f3f1830a25895cce08a3704b5dbe4188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_salle</definition>
+        <argsstring>(SDL_Surface *surf_ecran, rvb_couleur couleurs[8], cases *pcase, int int_type, int int_numero, int int_prix, char *str_nom1, char *str_nom2, int int_groupe, int int_prix_niveau)</argsstring>
+        <name>init_case_salle</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_prix</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_nom1</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_nom2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_groupe</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_prix_niveau</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases salles </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le type de case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numero de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_prix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prix de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_groupe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>groupe de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_prix_niveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prix pour augmenter d&apos;un niveau</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="63" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="32" bodyend="76"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1fd2d7cea599ec9cf2a3e5dba79fa542f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_association</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_association</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases associations </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="79" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="78" bodyend="120"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_12a41f60dfa70c873024b0960c9645dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_lieu_commun</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_lieu_commun</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases lieu commun </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="95" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="122" bodyend="178"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1bf8bcf752a766858a3ad36a1aaa6d6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_soiree</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_soiree</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases soirée </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="111" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="212" bodyend="244"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_12cfc6089b89ed8c70ed97650c80f98d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_special</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_special</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases spéciales </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="127" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="246" bodyend="280"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1a74c44713afc24152ed52a98e4fdb5c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_administration</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_administration</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases adimnistration </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="143" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="180" bodyend="210"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1bae63fd138bcf62660ed3f6b10f74804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* init_anneau_possesions</definition>
+        <argsstring>()</argsstring>
+        <name>init_anneau_possesions</name>
+        <briefdescription>
+<para>initialise l&apos;anneau des possesions du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>NULL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="154" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="532" bodyend="535"/>
+        <referencedby refid="initialisation_8h_1b98a0cd209ea767ba97eb8be1727995c" compoundref="initialisation_8c" startline="327" endline="346">init_joueur</referencedby>
+        <referencedby refid="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" compoundref="initialisation_8c" startline="601" endline="629">init_joueur_chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_17890e9d171550eee14e174ea5d8cc13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* creation_possession</definition>
+        <argsstring>(cases *propriete)</argsstring>
+        <name>creation_possession</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>propriete</declname>
+        </param>
+        <briefdescription>
+<para>ajoute de façon ordonnée une propriété dans la liste </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>propriete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>propriété a ajouter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>la tète de la chaine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="167" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="538" bodyend="556"/>
+        <referencedby refid="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" compoundref="outils_8c" startline="104" endline="228">insertion_bonne_place_propriete</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1b98a0cd209ea767ba97eb8be1727995c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_joueur</definition>
+        <argsstring>(char *nom, int numero_joueur)</argsstring>
+        <name>init_joueur</name>
+        <param>
+          <type>char *</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero_joueur</declname>
+        </param>
+        <briefdescription>
+<para>initialise le joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du joueur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numero_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le numéro du joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le joueur ainsi créé </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="181" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="327" bodyend="346"/>
+        <referencedby refid="initialisation_8h_1c63520740681b004b0e764941de7550d" compoundref="initialisation_8c" startline="558" endline="577">init_anneau_joueur</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_166b2c4e7d7f6497b9387edba09714fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_bureau_krystel</definition>
+        <argsstring>(information *bureau_de_krystel[16])</argsstring>
+        <name>init_bureau_krystel</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>bureau_de_krystel</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>initialise les cartes bureau de krystel </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bureau_de_krystel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes bureau de krystel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="194" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="350" bodyend="448"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_19653e9e1b67aa65f18bfe211c08273ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_bureau_nadege</definition>
+        <argsstring>(information *bureau_de_nadege[16])</argsstring>
+        <name>init_bureau_nadege</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>bureau_de_nadege</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>initialise les cartes bureau de nadège </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bureau_de_nadege</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes bureau de nadege</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="207" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="450" bodyend="530"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_plateau</definition>
+        <argsstring>(SDL_Surface *surf_ecran, rvb_couleur couleurs[8], cases **plateau)</argsstring>
+        <name>init_plateau</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="222" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="282" bodyend="325"/>
+        <referencedby refid="initialisation_8h_154ad36bf2c7883be8967c0dd2397b31e" compoundref="initialisation_8c" startline="631" endline="653">init_plateau_chargement</referencedby>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1c63520740681b004b0e764941de7550d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_anneau_joueur</definition>
+        <argsstring>(int nombre_joueur, char **str_nom_joueur)</argsstring>
+        <name>init_anneau_joueur</name>
+        <param>
+          <type>int</type>
+          <declname>nombre_joueur</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>str_nom_joueur</declname>
+        </param>
+        <briefdescription>
+<para>initialise le ring des joueurs </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre de joueurs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau du nom des joueurs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>un des joueurs de l&apos;anneau </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="236" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="558" bodyend="577"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_154ad36bf2c7883be8967c0dd2397b31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+        <definition>cases** init_plateau_chargement</definition>
+        <argsstring>(ifstream *file, cases **plateau, rvb_couleur couleurs[8], SDL_Surface *surf_ecran)</argsstring>
+        <name>init_plateau_chargement</name>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <briefdescription>
+<para>charge les données du plateau </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleurs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le plateau </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="252" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="631" bodyend="653"/>
+        <referencedby refid="outils_8h_184d7e81745982f84055adbd586bc248e" compoundref="outils_8c" startline="704" endline="732">chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_147cbc51084a056aeb4ac1e52937a2a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_anneau_joueur_chargement</definition>
+        <argsstring>(int nombre_joueur, ifstream *file, cases **plateau)</argsstring>
+        <name>init_anneau_joueur_chargement</name>
+        <param>
+          <type>int</type>
+          <declname>nombre_joueur</declname>
+        </param>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+<para>créer la liste des joueurs </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nombre_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre de joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le premier joueur à joué </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="266" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="579" bodyend="599"/>
+        <referencedby refid="outils_8h_184d7e81745982f84055adbd586bc248e" compoundref="outils_8c" startline="704" endline="732">chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_joueur_chargement</definition>
+        <argsstring>(int numero_joueur, ifstream *file, cases **plateau)</argsstring>
+        <name>init_joueur_chargement</name>
+        <param>
+          <type>int</type>
+          <declname>numero_joueur</declname>
+        </param>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+<para>créer un joueur à partir de la sauvagarde </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numero_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro du joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le premier joueur à joué </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="281" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="601" bodyend="629"/>
+        <referencedby refid="initialisation_8h_147cbc51084a056aeb4ac1e52937a2a87" compoundref="initialisation_8c" startline="579" endline="599">init_anneau_joueur_chargement</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="">
+      <memberdef kind="function" id="initialisation_8h_1eb3ff7682d9d35d19d585ed90af45784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+        <definition>rvb_couleur init_rvb_couleur</definition>
+        <argsstring>(int rouge, int vert, int bleu)</argsstring>
+        <name>init_rvb_couleur</name>
+        <param>
+          <type>int</type>
+          <declname>rouge</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vert</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bleu</declname>
+        </param>
+        <briefdescription>
+<para>initialise une structure joueur en fonction des paramètre </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rouge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur rouge </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur vert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bleu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur pour la valeur bleu</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>la couleur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="28" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="11" bodyend="18"/>
+        <referencedby refid="initialisation_8h_1204063826311c6bb5b02e7d8b4c153c8" compoundref="initialisation_8c" startline="20" endline="30">init_tab_rvb_couleur</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1204063826311c6bb5b02e7d8b4c153c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_tab_rvb_couleur</definition>
+        <argsstring>(rvb_couleur couleur[8])</argsstring>
+        <name>init_tab_rvb_couleur</name>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleur</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+<para>initialise le tableau de couleur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>couleur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="41" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="20" bodyend="30"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1f3f1830a25895cce08a3704b5dbe4188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_salle</definition>
+        <argsstring>(SDL_Surface *surf_ecran, rvb_couleur couleurs[8], cases *pcase, int int_type, int int_numero, int int_prix, char *str_nom1, char *str_nom2, int int_groupe, int int_prix_niveau)</argsstring>
+        <name>init_case_salle</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_prix</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_nom1</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str_nom2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_groupe</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_prix_niveau</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases salles </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le type de case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numero de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_prix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prix de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_groupe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>groupe de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_prix_niveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prix pour augmenter d&apos;un niveau</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="63" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="32" bodyend="76"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1fd2d7cea599ec9cf2a3e5dba79fa542f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_association</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_association</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases associations </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="79" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="78" bodyend="120"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_12a41f60dfa70c873024b0960c9645dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_lieu_commun</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_lieu_commun</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases lieu commun </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="95" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="122" bodyend="178"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1bf8bcf752a766858a3ad36a1aaa6d6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_soiree</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_soiree</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases soirée </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="111" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="212" bodyend="244"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_12cfc6089b89ed8c70ed97650c80f98d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_special</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_special</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases spéciales </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="127" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="246" bodyend="280"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1a74c44713afc24152ed52a98e4fdb5c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_case_administration</definition>
+        <argsstring>(SDL_Surface *surf_ecran, cases *pcase, int int_type, int int_numero)</argsstring>
+        <name>init_case_administration</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>pcase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>int_numero</declname>
+        </param>
+        <briefdescription>
+<para>initialise les cases adimnistration </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pcase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>case en cours de création </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type de la case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro de la case</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="143" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="180" bodyend="210"/>
+        <referencedby refid="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" compoundref="initialisation_8c" startline="282" endline="325">init_plateau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1bae63fd138bcf62660ed3f6b10f74804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* init_anneau_possesions</definition>
+        <argsstring>()</argsstring>
+        <name>init_anneau_possesions</name>
+        <briefdescription>
+<para>initialise l&apos;anneau des possesions du joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>NULL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="154" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="532" bodyend="535"/>
+        <referencedby refid="initialisation_8h_1b98a0cd209ea767ba97eb8be1727995c" compoundref="initialisation_8c" startline="327" endline="346">init_joueur</referencedby>
+        <referencedby refid="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" compoundref="initialisation_8c" startline="601" endline="629">init_joueur_chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_17890e9d171550eee14e174ea5d8cc13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpossession" kindref="compound">possession</ref> *</type>
+        <definition>possession* creation_possession</definition>
+        <argsstring>(cases *propriete)</argsstring>
+        <name>creation_possession</name>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> *</type>
+          <declname>propriete</declname>
+        </param>
+        <briefdescription>
+<para>ajoute de façon ordonnée une propriété dans la liste </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>propriete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>propriété a ajouter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>la tète de la chaine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="167" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="538" bodyend="556"/>
+        <referencedby refid="outils_8h_1d53767c5dbc0daa1a8de086094690eaa" compoundref="outils_8c" startline="104" endline="228">insertion_bonne_place_propriete</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1b98a0cd209ea767ba97eb8be1727995c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_joueur</definition>
+        <argsstring>(char *nom, int numero_joueur)</argsstring>
+        <name>init_joueur</name>
+        <param>
+          <type>char *</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero_joueur</declname>
+        </param>
+        <briefdescription>
+<para>initialise le joueur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du joueur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numero_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le numéro du joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le joueur ainsi créé </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="181" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="327" bodyend="346"/>
+        <referencedby refid="initialisation_8h_1c63520740681b004b0e764941de7550d" compoundref="initialisation_8c" startline="558" endline="577">init_anneau_joueur</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_166b2c4e7d7f6497b9387edba09714fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_bureau_krystel</definition>
+        <argsstring>(information *bureau_de_krystel[16])</argsstring>
+        <name>init_bureau_krystel</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>bureau_de_krystel</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>initialise les cartes bureau de krystel </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bureau_de_krystel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes bureau de krystel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="194" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="350" bodyend="448"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_19653e9e1b67aa65f18bfe211c08273ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_bureau_nadege</definition>
+        <argsstring>(information *bureau_de_nadege[16])</argsstring>
+        <name>init_bureau_nadege</name>
+        <param>
+          <type><ref refid="structinformation" kindref="compound">information</ref> *</type>
+          <declname>bureau_de_nadege</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>initialise les cartes bureau de nadège </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bureau_de_nadege</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau des cartes bureau de nadege</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>rien </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="207" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="450" bodyend="530"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1747195b12cac623e1d7b0c8f192eb073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_plateau</definition>
+        <argsstring>(SDL_Surface *surf_ecran, rvb_couleur couleurs[8], cases **plateau)</argsstring>
+        <name>init_plateau</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="222" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="282" bodyend="325"/>
+        <referencedby refid="initialisation_8h_154ad36bf2c7883be8967c0dd2397b31e" compoundref="initialisation_8c" startline="631" endline="653">init_plateau_chargement</referencedby>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_1c63520740681b004b0e764941de7550d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_anneau_joueur</definition>
+        <argsstring>(int nombre_joueur, char **str_nom_joueur)</argsstring>
+        <name>init_anneau_joueur</name>
+        <param>
+          <type>int</type>
+          <declname>nombre_joueur</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>str_nom_joueur</declname>
+        </param>
+        <briefdescription>
+<para>initialise le ring des joueurs </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre de joueurs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_nom_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau du nom des joueurs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>un des joueurs de l&apos;anneau </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="236" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="558" bodyend="577"/>
+        <referencedby refid="monopoly_8h_10ddf1224851353fc92bfbff6f499fa97" compoundref="monopoly_8c" startline="13" endline="161">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_154ad36bf2c7883be8967c0dd2397b31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+        <definition>cases** init_plateau_chargement</definition>
+        <argsstring>(ifstream *file, cases **plateau, rvb_couleur couleurs[8], SDL_Surface *surf_ecran)</argsstring>
+        <name>init_plateau_chargement</name>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <param>
+          <type><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref></type>
+          <declname>couleurs</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>surf_ecran</declname>
+        </param>
+        <briefdescription>
+<para>charge les données du plateau </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>couleurs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tableau de couleurs </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surf_ecran</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>surface de l&apos;écran</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le plateau </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="252" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="631" bodyend="653"/>
+        <referencedby refid="outils_8h_184d7e81745982f84055adbd586bc248e" compoundref="outils_8c" startline="704" endline="732">chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_147cbc51084a056aeb4ac1e52937a2a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_anneau_joueur_chargement</definition>
+        <argsstring>(int nombre_joueur, ifstream *file, cases **plateau)</argsstring>
+        <name>init_anneau_joueur_chargement</name>
+        <param>
+          <type>int</type>
+          <declname>nombre_joueur</declname>
+        </param>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+<para>créer la liste des joueurs </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nombre_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nombre de joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le premier joueur à joué </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="266" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="579" bodyend="599"/>
+        <referencedby refid="outils_8h_184d7e81745982f84055adbd586bc248e" compoundref="outils_8c" startline="704" endline="732">chargement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="initialisation_8h_109625d3fc915b81e9380b3d8303d3fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoueur" kindref="compound">joueur</ref> *</type>
+        <definition>joueur* init_joueur_chargement</definition>
+        <argsstring>(int numero_joueur, ifstream *file, cases **plateau)</argsstring>
+        <name>init_joueur_chargement</name>
+        <param>
+          <type>int</type>
+          <declname>numero_joueur</declname>
+        </param>
+        <param>
+          <type>ifstream *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="structcases" kindref="compound">cases</ref> **</type>
+          <declname>plateau</declname>
+        </param>
+        <briefdescription>
+<para>créer un joueur à partir de la sauvagarde </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fichier de sauvegarde </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plateau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plateau de jeu </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numero_joueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numéro du joueur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+<simplesect kind="return"><para>le premier joueur à joué </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/initialisation/initialisation.h" line="281" bodyfile="/root/workspace/monopoly/initialisation/initialisation.c" bodystart="601" bodyend="629"/>
+        <referencedby refid="initialisation_8h_147cbc51084a056aeb4ac1e52937a2a87" compoundref="initialisation_8c" startline="579" endline="599">init_anneau_joueur_chargement</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>en tete des fonctions necessaires à l&apos;initialisation du monopoly </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Franck Trey &lt;<ulink url="mailto:franck.trey@eisti.fr">franck.trey@eisti.fr</ulink>&gt;, Florian Lefevre &lt;<ulink url="mailto:Florian.lefevre@eisti.fr">Florian.lefevre@eisti.fr</ulink>&gt; </para></simplesect>
+<simplesect kind="date"><para>09/01/2006 </para></simplesect>
+<simplesect kind="version"><para>0.0.1 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>\file<sp/>initialisation.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>\brief<sp/>en<sp/>tete<sp/>des<sp/>fonctions<sp/>necessaires<sp/>à<sp/>l&apos;initialisation<sp/>du<sp/>monopoly</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>\date<sp/>09/01/2006</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__MONOPOLY_INIT_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__MONOPOLY_INIT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>\fn<sp/>rvb_couleur<sp/>init_rvb_couleur(int<sp/>rouge,<sp/>int<sp/>vert,<sp/>int<sp/>bleu)</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>une<sp/>structure<sp/>joueur<sp/>en<sp/>fonction<sp/>des<sp/>paramètre</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/>\param<sp/>rouge<sp/>valeur<sp/>pour<sp/>la<sp/>valeur<sp/>rouge</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/>\param<sp/>vert<sp/>valeur<sp/>pour<sp/>la<sp/>valeur<sp/>vert</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/>\param<sp/>bleu<sp/>valeur<sp/>pour<sp/>la<sp/>valeur<sp/>bleu</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>la<sp/>couleur</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/><ref refid="initialisation_8c_1eb3ff7682d9d35d19d585ed90af45784" kindref="member">init_rvb_couleur</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rouge,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vert,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bleu);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_tab_rvb_couleur(rvb_couleur<sp/>couleur[8]);</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"></highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>le<sp/>tableau<sp/>de<sp/>couleur</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/>\param<sp/>couleur<sp/>tableau<sp/>de<sp/>couleur</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1204063826311c6bb5b02e7d8b4c153c8" kindref="member">init_tab_rvb_couleur</ref>(<ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/>couleur[8]);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_salle(SDL_Surface*<sp/>surf_ecran,<sp/>rvb_couleur<sp/>couleurs[8],<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero,<sp/>int<sp/>int_prix,<sp/>char*<sp/>str_nom1,<sp/>char*<sp/>str_nom2,<sp/>int<sp/>int_groupe,<sp/>int<sp/>int_prix_niveau)</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>salles</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/>\param<sp/>couleurs<sp/>tableau<sp/>de<sp/>couleur</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>le<sp/>type<sp/>de<sp/>case</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numero<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/>\param<sp/>int_prix<sp/>prix<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/>\param<sp/>str_nom1<sp/>nom<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/>\param<sp/>str_nom2<sp/>nom<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/>\param<sp/>int_groupe<sp/>groupe<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/>\param<sp/>int_prix_niveau<sp/>prix<sp/>pour<sp/>augmenter<sp/>d&apos;un<sp/>niveau</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1f3f1830a25895cce08a3704b5dbe4188" kindref="member">init_case_salle</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/>couleurs[8],<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_prix,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str_nom1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str_nom2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_groupe,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_prix_niveau);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_association(SDL_Surface*<sp/>surf_ecran,<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero);</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"></highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>associations</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"></highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>type<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numéro<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"></highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1fd2d7cea599ec9cf2a3e5dba79fa542f" kindref="member">init_case_association</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="81"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_lieu_commun(SDL_Surface*<sp/>surf_ecran,<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero)</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"></highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>lieu<sp/>commun</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>type<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numéro<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"></highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_12a41f60dfa70c873024b0960c9645dea" kindref="member">init_case_lieu_commun</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="97"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_soiree(SDL_Surface*<sp/>surf_ecran,<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero);</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"></highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>soirée</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"></highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>type<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numéro<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1bf8bcf752a766858a3ad36a1aaa6d6e0" kindref="member">init_case_soiree</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="113"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_special(SDL_Surface*<sp/>surf_ecran,<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero)</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>spéciales</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"></highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>type<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numéro<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"></highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_12cfc6089b89ed8c70ed97650c80f98d6" kindref="member">init_case_special</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="129"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_case_administration(SDL_Surface*<sp/>surf_ecran,<sp/>cases*<sp/>pcase,<sp/>int<sp/>int_type,<sp/>int<sp/>int_numero)</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cases<sp/>adimnistration</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/>\param<sp/>pcase<sp/>case<sp/>en<sp/>cours<sp/>de<sp/>création</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/>\param<sp/>int_type<sp/>type<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/>\param<sp/>int_numero<sp/>numéro<sp/>de<sp/>la<sp/>case</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"></highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1a74c44713afc24152ed52a98e4fdb5c5" kindref="member">init_case_administration</ref>(SDL_Surface*<sp/>surf_ecran,<sp/><ref refid="structcases" kindref="compound">cases</ref>*<sp/>pcase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_numero);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="145"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/>\fn<sp/>possession*<sp/>init_anneau_possesions()</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"></highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>l&apos;anneau<sp/>des<sp/>possesions<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"></highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>NULL</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="structpossession" kindref="compound">possession</ref>*<sp/><ref refid="initialisation_8c_1795c1a0719b2f95886bbfbc7a83f5721" kindref="member">init_anneau_possesions</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="156"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/>\fn<sp/>possession*<sp/>creation_possession(cases*<sp/>propriete)</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"></highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/>\brief<sp/>ajoute<sp/>de<sp/>façon<sp/>ordonnée<sp/>une<sp/>propriété<sp/>dans<sp/>la<sp/>liste</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"></highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/>\param<sp/>propriete<sp/>propriété<sp/>a<sp/>ajouter</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"></highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>la<sp/>tète<sp/>de<sp/>la<sp/>chaine</highlight></codeline>
+<codeline lineno="166"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="structpossession" kindref="compound">possession</ref>*<sp/><ref refid="initialisation_8c_1834387e0d2a523eed4330495ea2de593" kindref="member">creation_possession</ref>(<ref refid="structcases" kindref="compound">cases</ref>*<sp/>propriete);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="169"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/>\fn<sp/>joueur*<sp/>init_joueur(char*<sp/>nom,<sp/>int<sp/>numero_joueur)</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"></highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>le<sp/>joueur</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"></highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/>\param<sp/>nom<sp/>le<sp/>nom<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/>\param<sp/>numero_joueur<sp/>le<sp/>numéro<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"></highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>le<sp/>joueur<sp/>ainsi<sp/>créé</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="initialisation_8c_1d7533ba3b33c9bbc0e321550de4c1d28" kindref="member">init_joueur</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>nom,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero_joueur);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="183"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_bureau_krystel(information*<sp/>bureau_de_krystel[16])</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"></highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cartes<sp/>bureau<sp/>de<sp/>krystel</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"></highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/>\param<sp/>bureau_de_krystel<sp/>tableau<sp/>des<sp/>cartes<sp/>bureau<sp/>de<sp/>krystel</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_166b2c4e7d7f6497b9387edba09714fc1" kindref="member">init_bureau_krystel</ref>(<ref refid="structinformation" kindref="compound">information</ref>*<sp/>bureau_de_krystel[16]);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="196"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_bureau_nadege(information*<sp/>bureau_de_nadege[16])</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"></highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>les<sp/>cartes<sp/>bureau<sp/>de<sp/>nadège</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"></highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/><sp/>\param<sp/>bureau_de_nadege<sp/>tableau<sp/>des<sp/>cartes<sp/>bureau<sp/>de<sp/>nadege</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"></highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_19653e9e1b67aa65f18bfe211c08273ce" kindref="member">init_bureau_nadege</ref>(<ref refid="structinformation" kindref="compound">information</ref>*<sp/>bureau_de_nadege[16]);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="209"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/>\fn<sp/>void<sp/>init_bureau_nadege(information*<sp/>bureau_de_nadege[16])</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"></highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>le<sp/>plateau<sp/>et<sp/>toutes<sp/>ses<sp/>cases</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"></highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/>\param<sp/>couleur<sp/>tableau<sp/>des<sp/>couleur<sp/>des<sp/>cases</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>le<sp/>plateau<sp/>de<sp/>jeu</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"></highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>rien</highlight></codeline>
+<codeline lineno="221"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialisation_8c_1747195b12cac623e1d7b0c8f192eb073" kindref="member">init_plateau</ref>(SDL_Surface*<sp/>surf_ecran,<ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/>couleurs[8],<sp/><ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="224"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/><sp/>\fn<sp/>joueur*<sp/>init_anneau_joueur(int<sp/>nombre_joueur,char**<sp/>str_nom_joueur)</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"></highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/><sp/>\brief<sp/>initialise<sp/>le<sp/>ring<sp/>des<sp/>joueurs</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"></highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/><sp/>\param<sp/>nombre_joueur<sp/>nombre<sp/>de<sp/>joueurs</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/>\param<sp/>str_nom_joueur<sp/>tableau<sp/>du<sp/>nom<sp/>des<sp/>joueurs</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"></highlight></codeline>
+<codeline lineno="233"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="234"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>un<sp/>des<sp/>joueurs<sp/>de<sp/>l&apos;anneau</highlight></codeline>
+<codeline lineno="235"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="initialisation_8c_184d40e5291a7ab3fdc0c46e0f33be6cb" kindref="member">init_anneau_joueur</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nombre_joueur,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>str_nom_joueur);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="238"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"><sp/><sp/>\fn<sp/>cases**<sp/>init_plateau_chargement(ifstream*<sp/>file,<sp/>cases**<sp/>plateau,<sp/>rvb_couleur<sp/>couleurs[8],<sp/>SDL_Surface*<sp/>surf_ecran)</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"></highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/>\brief<sp/>charge<sp/>les<sp/>données<sp/>du<sp/>plateau</highlight></codeline>
+<codeline lineno="243"><highlight class="comment"></highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/><sp/>\param<sp/>file<sp/>fichier<sp/>de<sp/>sauvegarde</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>plateau<sp/>de<sp/>jeu</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/>\param<sp/>couleurs<sp/>tableau<sp/>de<sp/>couleurs</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/>\param<sp/>surf_ecran<sp/>surface<sp/>de<sp/>l&apos;écran</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"></highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="250"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>le<sp/>plateau</highlight></codeline>
+<codeline lineno="251"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><ref refid="structcases" kindref="compound">cases</ref>**<sp/><ref refid="initialisation_8c_19895ce86e4099e961c772a1abfb1d9cc" kindref="member">init_plateau_chargement</ref>(ifstream*<sp/>file,<sp/><ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau,<sp/><ref refid="structrvb__couleur" kindref="compound">rvb_couleur</ref><sp/>couleurs[8],<sp/>SDL_Surface*<sp/>surf_ecran);</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="253"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/>\fn<sp/>cases**<sp/>joueur*<sp/>init_anneau_joueur_chargement(int<sp/>nombre_joueur,<sp/>ifstream*<sp/>file,<sp/>cases**<sp/>plateau)</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"></highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/>\brief<sp/>créer<sp/>la<sp/>liste<sp/>des<sp/>joueurs</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"></highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/><sp/>\param<sp/>file<sp/>fichier<sp/>de<sp/>sauvegarde</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>plateau<sp/>de<sp/>jeu</highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/>\param<sp/>nombre_joueur<sp/>nombre<sp/>de<sp/>joueur</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"></highlight></codeline>
+<codeline lineno="263"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>le<sp/>premier<sp/>joueur<sp/>à<sp/>joué</highlight></codeline>
+<codeline lineno="265"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="initialisation_8c_1a52097126ac66707c621467e6c15e6fd" kindref="member">init_anneau_joueur_chargement</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nombre_joueur,<sp/>ifstream*<sp/>file,<sp/><ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="268"><highlight class="comment">/*!</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/>\fn<sp/>joueur*<sp/>init_joueur_chargement(int<sp/>numero_joueur,<sp/>ifstream*<sp/>file,<sp/>cases**<sp/>plateau)</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"></highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/>\author<sp/>Franck<sp/>Trey<sp/>&lt;franck.trey@eisti.fr&gt;,<sp/>Florian<sp/>Lefevre<sp/>&lt;Florian.lefevre@eisti.fr&gt;</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/>\brief<sp/>créer<sp/>un<sp/>joueur<sp/>à<sp/>partir<sp/>de<sp/>la<sp/>sauvagarde</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"></highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/>\param<sp/>file<sp/>fichier<sp/>de<sp/>sauvegarde</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/>\param<sp/>plateau<sp/>plateau<sp/>de<sp/>jeu</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/><sp/>\param<sp/>numero_joueur<sp/>numéro<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="277"><highlight class="comment"></highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/>\version<sp/>0.0.1</highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/>\return<sp/><sp/>le<sp/>premier<sp/>joueur<sp/>à<sp/>joué</highlight></codeline>
+<codeline lineno="280"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><ref refid="structjoueur" kindref="compound">joueur</ref>*<sp/><ref refid="initialisation_8c_1800292d9eac8ddacaba9c62e94fb9897" kindref="member">init_joueur_chargement</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero_joueur,<sp/>ifstream*<sp/>file,<sp/><ref refid="structcases" kindref="compound">cases</ref>**<sp/>plateau);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/root/workspace/monopoly/initialisation/initialisation.h"/>
+  </compounddef>
+</doxygen>

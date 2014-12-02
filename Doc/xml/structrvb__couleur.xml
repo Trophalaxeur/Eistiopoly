@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1">
+  <compounddef id="structrvb__couleur" kind="struct" prot="public">
+    <compoundname>rvb_couleur</compoundname>
+    <includes refid="structure_8h" local="no">structure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrvb__couleur_11bd9ee8c34a5177744bb7b2856c33610" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rouge</definition>
+        <argsstring></argsstring>
+        <name>rouge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/structure.h" line="21" bodyfile="/root/workspace/monopoly/structure.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="sdl_8h_109b7f3618c7c26100a55f071bd8509ac" compoundref="sdl_8c" startline="164" endline="313">creation_case</referencedby>
+        <referencedby refid="sdl_8h_1708f0509fe2475ba92310819487d5a68" compoundref="sdl_8c" startline="791" endline="1007">creation_case_detail</referencedby>
+        <referencedby refid="sdl_8h_14189d89ef557b4bd3e77db23bb453de1" compoundref="sdl_8c" startline="1354" endline="1416">creation_case_propriete</referencedby>
+        <referencedby refid="initialisation_8h_1fd2d7cea599ec9cf2a3e5dba79fa542f" compoundref="initialisation_8c" startline="78" endline="120">init_case_association</referencedby>
+        <referencedby refid="initialisation_8h_12a41f60dfa70c873024b0960c9645dea" compoundref="initialisation_8c" startline="122" endline="178">init_case_lieu_commun</referencedby>
+        <referencedby refid="initialisation_8h_1eb3ff7682d9d35d19d585ed90af45784" compoundref="initialisation_8c" startline="11" endline="18">init_rvb_couleur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrvb__couleur_1816a7bb71de16d574a2aac953f57f918" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vert</definition>
+        <argsstring></argsstring>
+        <name>vert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/structure.h" line="22" bodyfile="/root/workspace/monopoly/structure.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="sdl_8h_109b7f3618c7c26100a55f071bd8509ac" compoundref="sdl_8c" startline="164" endline="313">creation_case</referencedby>
+        <referencedby refid="sdl_8h_1708f0509fe2475ba92310819487d5a68" compoundref="sdl_8c" startline="791" endline="1007">creation_case_detail</referencedby>
+        <referencedby refid="sdl_8h_14189d89ef557b4bd3e77db23bb453de1" compoundref="sdl_8c" startline="1354" endline="1416">creation_case_propriete</referencedby>
+        <referencedby refid="initialisation_8h_1fd2d7cea599ec9cf2a3e5dba79fa542f" compoundref="initialisation_8c" startline="78" endline="120">init_case_association</referencedby>
+        <referencedby refid="initialisation_8h_12a41f60dfa70c873024b0960c9645dea" compoundref="initialisation_8c" startline="122" endline="178">init_case_lieu_commun</referencedby>
+        <referencedby refid="initialisation_8h_1eb3ff7682d9d35d19d585ed90af45784" compoundref="initialisation_8c" startline="11" endline="18">init_rvb_couleur</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structrvb__couleur_1ffc4de061aea007870237c665d22177c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bleu</definition>
+        <argsstring></argsstring>
+        <name>bleu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/workspace/monopoly/structure.h" line="23" bodyfile="/root/workspace/monopoly/structure.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="sdl_8h_109b7f3618c7c26100a55f071bd8509ac" compoundref="sdl_8c" startline="164" endline="313">creation_case</referencedby>
+        <referencedby refid="sdl_8h_1708f0509fe2475ba92310819487d5a68" compoundref="sdl_8c" startline="791" endline="1007">creation_case_detail</referencedby>
+        <referencedby refid="sdl_8h_14189d89ef557b4bd3e77db23bb453de1" compoundref="sdl_8c" startline="1354" endline="1416">creation_case_propriete</referencedby>
+        <referencedby refid="initialisation_8h_1fd2d7cea599ec9cf2a3e5dba79fa542f" compoundref="initialisation_8c" startline="78" endline="120">init_case_association</referencedby>
+        <referencedby refid="initialisation_8h_12a41f60dfa70c873024b0960c9645dea" compoundref="initialisation_8c" startline="122" endline="178">init_case_lieu_commun</referencedby>
+        <referencedby refid="initialisation_8h_1eb3ff7682d9d35d19d585ed90af45784" compoundref="initialisation_8c" startline="11" endline="18">init_rvb_couleur</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/root/workspace/monopoly/structure.h" line="20" bodyfile="/root/workspace/monopoly/structure.h" bodystart="20" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structrvb__couleur_1ffc4de061aea007870237c665d22177c" prot="public" virt="non-virtual"><scope>rvb_couleur</scope><name>bleu</name></member>
+      <member refid="structrvb__couleur_11bd9ee8c34a5177744bb7b2856c33610" prot="public" virt="non-virtual"><scope>rvb_couleur</scope><name>rouge</name></member>
+      <member refid="structrvb__couleur_1816a7bb71de16d574a2aac953f57f918" prot="public" virt="non-virtual"><scope>rvb_couleur</scope><name>vert</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
