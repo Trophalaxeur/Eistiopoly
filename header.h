@@ -18,6 +18,7 @@ using namespace std;
 #include <math.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>

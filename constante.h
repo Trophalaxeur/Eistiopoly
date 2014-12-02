@@ -191,7 +191,7 @@
 #define POLICE_1 0
 #define POLICE_2 1
 
-#define MSG_INFO_TIME 2
+#define MSG_INFO_TIME 2000
 
 #define PAGE_MENU 0
 #define PAGE_NBRE_JOUEUR 1

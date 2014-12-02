@@ -2280,7 +2280,7 @@ void affich_msg_info(SDL_Surface* surf_ecran, SDL_Surface* surf_centre, char* ti
 	SDL_Flip(surf_ecran);
 	
 	//Timer d'attente
-	sleep(MSG_INFO_TIME);
+	usleep(MSG_INFO_TIME);
 	
 	//Réaffichage du centre
 	affich_centre(surf_ecran,surf_centre);
